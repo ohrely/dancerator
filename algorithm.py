@@ -8,7 +8,9 @@ class Move(object):
         self.values = values
         self.length = length
 
-progression = # randomly chosen progression as tuple
+
+# progression = # randomly chosen progression as tuple
+progression = ("llfb", "nswg")
 first_move = progression[1]
 last_move = progression[0]
 
@@ -19,15 +21,28 @@ dance = []
 
 
 def find_curr_values(key):
-    # TODO query database for list of possible next keys
-    # TODO return a randomly sorted list of those keys
+    """Return a randomly sorted list of possible next keys
 
+    query database and randomly sort list of what comes back
 
-# recursively build dance using a non-binary tree
+    TODO doctest when there's a database
+    """
+
+# For testing - not real data
+llfb = Move(llfb, pswg, 4)
+pswg = Move(pswg, fchn, 8)
+
 def build_dance(curr_key, len_left, dance):
+    """Build 'legal' dance using recursion to ensure constraint satisfaction
+
+    >>>build_dance(llfb, 8, [what, yass])
+    [what, yass, llfb, pswg]
+
+    """
 
     # find out time left if current move were added to dance
     len_left = len_left - curr_key.length
+    curr_values = find_curr_values(curr_key)
 
     # fail condition
     if len_left < 0:
@@ -41,13 +56,13 @@ def build_dance(curr_key, len_left, dance):
         return dance
         # TODO - ensure that this stops the function
 
-    curr_values = find_curr_values(curr_key)
-
     # recursive call
     if len_left > 0:
         dance.append(curr_key)
         for next_key in curr_values:
             build_dance(next_key, len_left, dance)
+
+    return dance
 
 
 print build_dance(first_move, len_left, dance)
