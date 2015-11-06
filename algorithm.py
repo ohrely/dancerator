@@ -49,7 +49,7 @@ def build_dance(curr_key, len_left, dance):
         print "too long"
         return
 
-    # base case
+    # base case - move out to own function for testing ease
     if len_left == 0:
         dance.append(curr_key)
         dance.append(last_move)

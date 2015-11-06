@@ -1,0 +1,10 @@
+allemande,0,0,
+chain,0,1,
+circle,1,5,
+dosido,0,0,
+hey,0,1,
+gnat,0,0,
+petronella,0,2,
+star,1,5,
+swing,1,3
+passthru,0,0,
