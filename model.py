@@ -8,7 +8,6 @@ class Move(db.Model):
 
     Additional fields can be added over time to help satisfy additional constraints.
     """
-
     __tablename__ = "Moves"
 
     move_code = db.Column(db.String(12), primary_key=True)
@@ -29,7 +28,6 @@ class Type_(db.Model):
 
     Additional fields can be added over time to help satisfy additional constraints.
     """
-
     __tablename__ = "Types"
 
     type_code = db.Column(db.String(24), primary_key=True)
@@ -51,7 +49,6 @@ class Chain(db.Model):
     Data will be seeded ___________(what intermediate steps will I use?) from 
     pre-existing dance choreography.
     """
-
     __tablename__ = "Chains"
 
     chain_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
@@ -74,7 +71,6 @@ class Progression(db.Model):
     Data will be seeded ___________(what intermediate steps will I use?) from 
     pre-existing dance choreography.
     """
-
     __tablename__ = "Progressions"
 
     prog_id = db.Column(db.Integer, autoincrement=True, primary_key=True)

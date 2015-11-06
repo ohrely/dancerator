@@ -5,104 +5,137 @@ import doctest
 
 
 # seed types to Types
-def add_types():
+def add_types(type_data):
     """Seed types from _____ to database"""
 
     print("Types")
 
     Type_.query.delete()
 
-    # for row in open("seed_data/types.txt"):
-    #     row = row.rstrip()
-    #     row = row.split(",")
-    #     type_code = row[0]
-    #     min_repeats = row[1]
-    #     max_repeats = row[2]
-    #     print(type_code, min_repeats, max_repeats)
+    for row in open(type_data):
+        row = row.rstrip()
+        row = row.split(",")
+        type_code = row[0]
+        min_repeats = row[1]
+        max_repeats = row[2]
 
-    #     type_ = Type_(type_code=type_code,
-    #                   min_repeats=min_repeats,
-    #                   max_repeats=max_repeats)
+        type_ = Type_(type_code=type_code,
+                      min_repeats=min_repeats,
+                      max_repeats=max_repeats)
 
-    #     db.session.add(type_)
+        db.session.add(type_)
 
-    # db.session.commit()
+    db.session.commit()
 
 
-# # seed moves to Moves
-def add_moves():
+# seed moves to Moves
+def add_moves(move_data):
     """Seed moves from _____ to database"""
 
     print("Moves")
 
     Move.query.delete()
 
+    for row in open(move_data):
+        row = row.rstrip()
+        row = row.split(",")
+        move_code = row[0]
+        type_code = row[1]
+        move_name = row[2]
+        beats = row[3]
 
-# # PSEUDOCODE FOR SEEDING PROGRESSIONS AND CHAINS
-# def parse_csv(dance_data):
-#     """
-#     >>> parse_csv("seed_data/dances.txt")[-1]
-#     ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3*']
-#     """
-#     dance_list = []
-#     # TODO consider addressing * at end of some dances
-#     for dance in (open(dance_data)):
-#         dance = dance.split(",")
-#         dance = dance[2]
-#         dance = dance.replace("|", "")
-#         dance = dance.rstrip()
-#         dance = dance.split()
-#         dance_list.append(dance)
+        move = Move(move_code=move_code,
+                    type_code=type_code,
+                    move_name=move_name,
+                    beats=beats)
 
-#     return dance_list
+        db.session.add(move)
 
-# dances = parse_csv("seed_data/dances.txt")
-
-# def seed_prog(dance):
-#     """Takes dance as a list of moves and seeds Progressions table.
-
-#     """
-#     last = dance[-1]
-#     first = dance[0]
-
-#     # if last, first in Progressions:
-#     #     pass
-#     # else:
-#     #     add last, first to Progressions
-
-# def seed_chains(dance):
-#     """Takes dance as a list of moves and seeds Chains table.
-
-#     """
-#     last = dance[-1]
-#     first = dance[0]
-
-#     i = 0
-#     while i < (len(dance)-1):
-#         key = dance[i]
-#         value = dance[i+1]
-#         # if key, value in Chains:
-#         #     pass
-#         # else:
-#         #     add key, value to Chains
-#         i += 1
-
-# def seed_dances(dances):
-#     """Seed data from dances into Progressions and Chains tables.
-
-#     Ensures that both processes are seeded when data is passed in.
-
-#     TODO add tests!
-#     """
-#     for dance in dances:
-#         seed_prog(dance)
-#         seed_chains(dance)
+    db.session.commit()
 
 
-# seed_dances(dances)
+# parse csv from Google Sheets
+def parse_csv(dance_data):
+    """
+    >>> parse_csv("seed_data/dances.txt")[-1]
+    ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3*']
+    """
+    dance_list = []
+
+    # TODO consider addressing * at end of some dances
+    for row in (open(dance_data)):
+        row = row.split(",")
+        dance = row[2]
+        dance = dance.replace("|", "")
+        dance = dance.rstrip()
+        dance = dance.split()
+        dance_list.append(dance)
+
+    return dance_list
+
+
+def seed_prog(dance):
+    """Takes dance as a list of moves and seeds Progressions table.
+
+    """
+    print("Progressions")
+
+    last = dance[-1]
+    first = dance[0]
+
+    try:
+        db.session.query(Progression).filter_by(last=last, first=first).one()
+    except:
+        progression = Progression(last=last, first=first)
+
+        db.session.add(progression)
+        db.session.commit()
+
+
+def seed_chains(dance):
+    """Takes dance as a list of moves and seeds Chains table.
+
+    """
+    print("Chains")
+
+    i = 0
+    while i < (len(dance)-1):
+        key = dance[i]
+        value = dance[i+1]
+
+        try:
+            db.session.query(Chain).filter_by(key=key, value=value).one()
+        except:
+            chain = Chain(key=key, value=value)
+
+            db.session.add(chain)
+            db.session.commit()
+
+        i += 1
+
+
+def seed_dances(dance_file):
+    """Seed data from dances into Progressions and Chains tables.
+
+    Ensures that both processes are seeded when data is passed in.
+
+    TODO add tests!
+    """
+    Progression.query.delete()
+    Chain.query.delete()
+
+    dances = parse_csv(dance_file)
+
+    for dance in dances:
+        seed_prog(dance)
+        seed_chains(dance)
 
 
 if __name__ == "__main__":
+    connect_to_db(app)
+
     doctest.testmod(verbose=True)
 
-    add_types()
+    add_types("seed_data/types.txt")
+    add_moves("seed_data/moves.txt")
+    seed_dances("seed_data/dances.txt")
