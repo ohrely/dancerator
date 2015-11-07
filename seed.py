@@ -4,9 +4,8 @@ from server import app
 import doctest
 
 
-# seed types to Types
 def add_types(type_data):
-    """Seed types from _____ to database"""
+    """Seed types from csv to database"""
 
     print("Types")
 
@@ -28,9 +27,8 @@ def add_types(type_data):
     db.session.commit()
 
 
-# seed moves to Moves
 def add_moves(move_data):
-    """Seed moves from _____ to database"""
+    """Seed moves from csv to database"""
 
     print("Moves")
 
@@ -54,9 +52,9 @@ def add_moves(move_data):
     db.session.commit()
 
 
-# parse csv from Google Sheets
 def parse_csv(dance_data):
-    """
+    """Parse csv (from Google Sheets).
+
     >>> parse_csv("seed_data/dances.txt")[-1]
     ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3*']
     """
