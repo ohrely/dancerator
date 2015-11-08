@@ -9,32 +9,17 @@ import doctest
 
 DANCE_LENGTH = 64
 
-# class Move(object):
-#     def __init__(self, key=None, values=None, length=None):
-#         self.key = key
-#         self.values = values
-#         self.length = length
-
 
 def pick_progression():
     """Randomly choose a first and last move from the database.
 
-    >>> pick_progression()
-    ["yassss"]
-
+    >>> type(pick_progression())
+    <type 'tuple'>
     """
     prog_list = db.session.query(Progression.last, Progression.first).all()
     last_move, first_move = choice(prog_list)
 
     return (last_move, first_move)
-
-
-dance = []
-
-# TODO Nest inside a function that gets called under 'if __name__ = "__main__":'
-# progression = pick_progression()
-# last_move = progression[0]
-# first_move = progression[1]
 
 
 def len_left_init(last_move):
@@ -48,75 +33,89 @@ def len_left_init(last_move):
     return minus_last
 
 
-def len_left(len_left, move):
+def len_left(old_len_left, move):
     """Given the addition of a move to a partially-written dance, find remaining beats to be filled.
 
     >>> len_left(32, u'hhey')
     24
     """
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == move).one()
-    len_left -= move_beats[0]
+    # TODO: unicode errors like woah.
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == u'move').one()
+    beats_left = old_len_left - move_beats[0]
 
-    return len_left
-
-
-# def find_curr_values(key):
-#     """Given a move, return a randomly sorted list of possible next moves.
-
-#     Query database and randomly sort list of what comes back.
-
-#     >>> find_curr_values(u'llfb')
-#     [u'fchn', u'fal6', u'nswg', u'fdp6', u'lal6']
-#     """
-#     value_list = []
-
-#     # SQL queries are faster than SQLAlchemy queries - change if it's slow
-#     value_tups = db.session.query(Chain.value).filter(Chain.key == key).all()
-
-#     for value in value_tups:
-#         value_list.append(value[0])
-
-#     return value_list
+    return beats_left
 
 
-# # For testing - not real data
-# llfb = Move(llfb, pswg, 4)
-# pswg = Move(pswg, fchn, 8)
+def find_curr_values(key):
+    """Given a move, return a randomly sorted list of possible next moves.
 
-# def build_dance(curr_key, len_left, dance):
-#     """Build 'legal' dance using recursion to ensure constraint satisfaction
+    Query database and randomly sort list of what comes back.
 
-#     >>>build_dance(llfb, 8, [what, yass])
-#     [what, yass, llfb, pswg]
+    >>> find_curr_values(u'llfb')
+    [u'fchn', u'fal6', u'nswg', u'fdp6', u'lal6']
+    """
+    value_list = []
 
-#     """
+    # SQL queries are faster than SQLAlchemy queries - change if it's slow
+    value_tups = db.session.query(Chain.value).filter(Chain.key == key).all()
 
-#     # find out time left if current move were added to dance
-#     len_left = len_left - curr_key.length
-#     curr_values = find_curr_values(curr_key)
+    for value in value_tups:
+        value_list.append(value[0])
 
-#     # fail condition
-#     if len_left < 0:
-#         print "too long"
-#         return
-
-#     # base case - move out to own function for testing ease
-#     if len_left == 0:
-#         dance.append(curr_key)
-#         dance.append(last_move)
-#         return dance
-#         # TODO - ensure that this stops the function
-
-#     # recursive call
-#     if len_left > 0:
-#         dance.append(curr_key)
-#         for next_key in curr_values:
-#             build_dance(next_key, len_left, dance)
-
-#     return dance
+    return value_list
 
 
-# print build_dance(first_move, len_left, dance)
+# # TODO: for use when checking end-of-dance base cases
+# def try_leaf(curr_key, beats_left, dance, last_move):
+
+
+def build_dance(curr_key, beats_left, dance, last_move):
+    """Build 'legal' dance using recursion to ensure constraint satisfaction
+    """
+
+    beats_left = len_left(beats_left, curr_key)
+    curr_values = find_curr_values(curr_key)
+    works = False
+    last_move = last_move
+
+    while not works:
+
+        # Fail condition
+        if beats_left < 0:
+            print "too long"
+
+        # Base case
+        # TODO: move out to own function for testing ease
+        if beats_left == 0:
+            dance.append(curr_key)
+            dance.append(last_move)
+            works = True
+
+        # Recursive call
+        if beats_left > 0:
+            dance.append(curr_key)
+            for next_key in curr_values:
+                build_dance(next_key, beats_left, dance, last_move)
+        else:
+            print("Something is wrong.")
+
+    print "works = ", works
+    return dance
+
+
+def all_together_now():
+    dance = []
+
+    progression = pick_progression()
+    last_move = progression[0]
+    first_move = progression[1]
+    # beats_left = len_left_init(last_move)
+    # print beats_left
+
+    # entire_dance = build_dance(first_move, beats_left, dance, last_move)
+
+    # return entire_dance
+
 
 if __name__ == "__main__":
 
@@ -124,3 +123,5 @@ if __name__ == "__main__":
     print "Connected to DB."
 
     doctest.testmod(verbose=True)
+
+    all_together_now()
