@@ -2,25 +2,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+# Everything here works, but when runnins seed.py, receive following error:
 
-class Move(db.Model):
-    """Individual moves and their unique characteristics.
-
-    Additional fields can be added over time to help satisfy additional constraints.
-    """
-    __tablename__ = "Moves"
-
-    move_code = db.Column(db.String(12), primary_key=True)
-    type_code = db.Column(db.String(24), db.ForeignKey('Types.type_code'))
-    move_name = db.Column(db.String(64), nullable=False)
-    beats = db.Column(db.Integer, nullable=False)
-
-    # TODO not totally solid on this line
-    type_ = db.relationship('Type_', backref=db.backref('dances'))
-
-    def __repr__(self):
-
-        return "<Move move_code={} move_name={}>".format(self.move_code, self.move_name)
+# File "/home/Ely/contra/env/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 2060, in _determine_joins
+#     "specify a 'primaryjoin' expression." % self.prop)
+# sqlalchemy.exc.NoForeignKeysError: Could not determine join condition between parent/child tables on relationship Move.type_ - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
 
 
 class Type_(db.Model):
@@ -28,7 +14,7 @@ class Type_(db.Model):
 
     Additional fields can be added over time to help satisfy additional constraints.
     """
-    __tablename__ = "Types"
+    __tablename__ = "types"
 
     type_code = db.Column(db.String(24), primary_key=True)
     min_repeats = db.Column(db.Integer)
@@ -39,6 +25,25 @@ class Type_(db.Model):
         return "<Type_ type_code={}>".format(self.type_code)
 
 
+class Move(db.Model):
+    """Individual moves and their unique characteristics.
+
+    Additional fields can be added over time to help satisfy additional constraints.
+    """
+    __tablename__ = "moves"
+
+    move_code = db.Column(db.String(12), primary_key=True)
+    type_code = db.Column(db.String(24), db.ForeignKey('Types.type_code'))
+    move_name = db.Column(db.String(64), nullable=False)
+    beats = db.Column(db.Integer, nullable=False)
+
+    type_ = db.relationship('Type_', backref=db.backref('moves'))
+
+    def __repr__(self):
+
+        return "<Move move_code={} move_name={}>".format(self.move_code, self.move_name)
+
+
 class Chain(db.Model):
     """Key-value pairs of moves.
 
@@ -46,16 +51,16 @@ class Chain(db.Model):
     the Moves table.  One move can be a key for many moves and also be a value 
     for many moves.
 
-    Data will be seeded ___________(what intermediate steps will I use?) from 
-    pre-existing dance choreography.
+    Data is seeded from pre-existing dance choreography.
     """
-    __tablename__ = "Chains"
+    __tablename__ = "chains"
 
     chain_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    # NOTE SQLite is putting "key" in quotes - seems okay, but if something breaks, check it out
     key = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
     value = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
 
-    # TODO db.relationship() with Moves
+    move_rel = db.relationship('Move', backref=db.backref('chains'))
 
     def __repr__(self):
 
@@ -65,11 +70,10 @@ class Chain(db.Model):
 class Progression(db.Model):
     """Key-value pairs of moves that happen at the beginning/end of a dance.
 
-    This is an association table.  The associations are all between data from 
+    This is an association table.  The associations are all between moves from
     the Moves table.
 
-    Data will be seeded ___________(what intermediate steps will I use?) from 
-    pre-existing dance choreography.
+    Data is seeded from pre-existing dance choreography.
     """
     __tablename__ = "Progressions"
 
