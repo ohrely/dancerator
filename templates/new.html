@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
   <div id="choreo">
-    This will be the new choreography.
+    <h1>Funky new dance:</h1>
+    {% for move in dance %}
+        <li>
+            {{ move }}
+        </li>
+    {% endfor %}
   </div>
 
   <div id="visual">
-    This will be the visualizer, whatever that means.
+    <h2>Visualize this!<h2>
   </div>
 {% endblock %}

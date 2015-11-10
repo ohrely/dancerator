@@ -2,7 +2,8 @@ from jinja2 import StrictUndefined
 
 from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
-from model import connect_to_db, db
+from model import connect_to_db, db, Move, Progression
+import algorithm
 
 app = Flask(__name__)
 
@@ -23,9 +24,10 @@ def index():
 def generate():
     """Create dance, return page with results"""
 
-    # TODO call function to create dance
+    dance = algorithm.all_together_now()
+    print dance
 
-    return render_template("new.html")
+    return render_template("new.html", dance=dance)
 
 
 if __name__ == "__main__":
