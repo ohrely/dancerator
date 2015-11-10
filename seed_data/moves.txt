@@ -3,6 +3,7 @@ far6,allemande,follow allemande right 1 1/2,8,Null,1,2,0,Null
 lal6,allemande,lead allemande left 1 1/2,8,Null,0,0,2,Null
 lar6,allemande,lead allemande right 1 1/2,8,Null,0,0,2,Null
 nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,0
+nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,0
 pal6,allemande,partner allemande left 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,1
 cbal,bal,circle balance,4,0,Null,0,0,Null
 nbal,bal,neighbor balance,4,0,Null,0,0,0
@@ -35,7 +36,7 @@ lstr,star,left hand star 1 place,2,Null,Null,3,3,Null
 rstr,star,right hand star 1 place,2,Null,Null,1,1,Null
 nswg,swing,neighbor swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,0
 pswg,swing,partner swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,1
-nrlt,thru,"right/left thru, neighbor then partner",8,1,Null,2,2,1
-prlt,thru,"right/left thru, partner then neighbor",8,1,Null,2,2,0
+nrlt,thru,right/left thru neighbor then partner,8,1,Null,2,2,1
+prlt,thru,right/left thru partner then neighbor,8,1,Null,2,2,0
 pcal,twirl,partner callifornia twirl,4,1,Null,2,2,0
 petr,twirl,petronella,4,Null,Null,3,3,Null

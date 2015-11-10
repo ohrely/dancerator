@@ -34,7 +34,7 @@ def len_left_init(last_move):
     return minus_last
 
 
-def len_left(old_len_left, move):
+def len_left(old_len_left, curr_move):
     """Given the addition of a move to a partially-written dance, find remaining beats to be filled.
 
     >>> len_left(32, u'hhey')
@@ -42,8 +42,8 @@ def len_left(old_len_left, move):
     24
     """
     # TODO: unicode errors like woah.
-    print move
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == move).one()
+    print "trying move:", curr_move
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_move).one()
     beats_left = old_len_left - move_beats[0]
 
     return beats_left
@@ -74,6 +74,7 @@ def try_leaf(curr_key, last_move):
     if last_move in curr_values:
         works = True
     else:
+        print "DIDN'T FLOW"
         works = False
     return works
 
@@ -89,34 +90,29 @@ def build_dance(curr_key, beats_left, dance, last_move):
 
     # BASE CASE = Fail condition
     if beats_left < 0:
-        print "too long"
-
+        print "TOO LONG: ", dance
     # Base case
     # TODO: move out to own function for testing ease
-    if beats_left == 0:
+    elif beats_left == 0:
         if try_leaf(curr_key, last_move) is True:
             dance.append(curr_key)
             dance.append(last_move)
             works = True
             return dance, works
-
     # Recursive call
-    if beats_left > 0:
+    elif beats_left > 0:
         dance.append(curr_key)
         for next_key in curr_values:
-            print "recursive call, beats:", beats_left
+            print "RECURSIVE CALL, BEATS:", beats_left
             dance, works = build_dance(next_key, beats_left, dance, last_move)
-            print "returned dance:", dance
-            print "works:", works
+            # print "returned dance:", dance
+            print curr_key, "works:", works
             if works is True:
                 break
-    # else:
-    #     print("Something is wrong.")
-    #     pass
+    else:
+        print("---------Something is wrong.-----------")
+        pass
 
-        # return dance, works
-
-    # print "works = ", works
     return dance, works
 
 
