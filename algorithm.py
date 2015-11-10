@@ -28,21 +28,10 @@ def len_left_init(last_move):
     >>> len_left_init(u'hhey')
     56
     """
-    minus_last = len_left(DANCE_LENGTH, last_move)
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == last_move).one()
+    minus_last = DANCE_LENGTH - move_beats[0]
 
     return minus_last
-
-
-def len_left(old_len_left, curr_move):
-    """Given the addition of a move to a partially-written dance, find remaining beats to be filled.
-
-    >>> len_left(32, u'hhey')
-    24
-    """
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_move).one()
-    beats_left = old_len_left - move_beats[0]
-
-    return beats_left
 
 
 def find_curr_values(key_):
@@ -104,7 +93,7 @@ def try_leaf(curr_key, last_move):
 def build_dance(curr_key, beats_left, dance, last_move):
     """Build 'legal' dance using recursion to ensure constraint satisfaction
     """
-    # beats_left = len_left(beats_left, curr_key)
+
     move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_key).one()
     beats_left = len_left_init(last_move) - (count_dance(dance) + move_beats[0])
     curr_values = find_curr_values(curr_key)
@@ -169,6 +158,10 @@ def all_together_now():
     print "DANCE CREATED: ", entire_dance
     total_time = count_dance(entire_dance)
     print "TOTAL TIME: ", total_time
+    if total_time != 64:
+        all_together_now()
+    else:
+        pass
 
     return entire_dance
 
