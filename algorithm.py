@@ -105,13 +105,29 @@ def build_dance(curr_key, dance, last_move):
     """Build 'legal' dance using recursion to ensure constraint satisfaction
     """
 
-    beats_left = len_left_init(last_move) - (count_dance(dance) + move_len(curr_key))
+    len_before = count_dance(dance)
+    curr_len = len_before + move_len(curr_key)
+    beats_left = len_left_init(last_move) - curr_len
     works = False
 
     # Fail condition
     if beats_left < 0:
-        print "TOO LONG: ", dance
-        return dance[:-1], False
+        print "TOO LONG"
+        # return dance[:-1], False
+        return dance, False
+    elif count_dance(dance) < 16 < curr_len:
+        print "CROSSES 16"
+        # return dance[:-1], False
+        return dance, False
+    elif count_dance(dance) < 32 < curr_len:
+        print "CROSSES 32"
+        # return dance[:-1], False
+        return dance, False
+    elif count_dance(dance) < 48 < curr_len:
+        print "CROSSES 48"
+        # return dance[:-1], False
+        return dance, False
+    # 16, 32, 48 in range(curr_len - count_dance(dance))
     # Base case
     elif beats_left == 0:
         if try_leaf(curr_key, last_move) is True:
@@ -124,8 +140,11 @@ def build_dance(curr_key, dance, last_move):
         dance.append(curr_key)
         curr_values = find_curr_values(curr_key)
         for next_key in curr_values:
-            print "DANCE: ", dance, "TRYING:", next_key, "BEATS:", beats_left
             print "............................................................."
+            print "DANCE: ", dance
+            print "BEATS TO FILL: ", beats_left
+            print "TRYING: ", next_key, "(", move_len(next_key), ") beats"
+            print "BEATS FILLED: ", count_dance(dance)
             dance, works = build_dance(next_key, dance, last_move)
             if works is True:
                 break
@@ -159,7 +178,7 @@ def all_together_now():
 
     last_move, first_move = pick_progression()
     beats_left = len_left_init(last_move)
-    print beats_left
+    print "BEATS TO FILL: ", beats_left
 
     entire_dance, works = build_dance(first_move, dance, last_move)
     print "DANCE CREATED: ", entire_dance
@@ -168,6 +187,11 @@ def all_together_now():
 
     # If something goes wrong, scrap it and try again.
     if total_time != 64:
+        print ". . . . . . . . . . . . . . . . . . ."
+        print ". . . . . . . . . . . . . . . . . . ."
+        print ". . . . . . . . . . . . . . . . . . ."
+        print ". . . . . . . . . . . . . . . . . . ."
+        print ". . . . . . . . . . . . . . . . . . ."
         all_together_now()
     else:
         pass
