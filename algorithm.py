@@ -26,6 +26,7 @@ def len_left_init(last_move):
     """Initial determination of remaining beats to be filled by tree recursion.
 
     >>> len_left_init(u'hhey')
+    hhey
     56
     """
     minus_last = len_left(DANCE_LENGTH, last_move)
@@ -37,16 +38,18 @@ def len_left(old_len_left, move):
     """Given the addition of a move to a partially-written dance, find remaining beats to be filled.
 
     >>> len_left(32, u'hhey')
+    hhey
     24
     """
     # TODO: unicode errors like woah.
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == u'move').one()
+    print move
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == move).one()
     beats_left = old_len_left - move_beats[0]
 
     return beats_left
 
 
-def find_curr_values(key):
+def find_curr_values(key_):
     """Given a move, return a randomly sorted list of possible next moves.
 
     Query database and randomly sort list of what comes back.
@@ -57,7 +60,7 @@ def find_curr_values(key):
     value_list = []
 
     # SQL queries are faster than SQLAlchemy queries - change if it's slow
-    value_tups = db.session.query(Chain.value).filter(Chain.key == key).all()
+    value_tups = db.session.query(Chain.value).filter(Chain.key_ == key_).all()
 
     for value in value_tups:
         value_list.append(value[0])
@@ -66,7 +69,13 @@ def find_curr_values(key):
 
 
 # # TODO: for use when checking end-of-dance base cases
-# def try_leaf(curr_key, beats_left, dance, last_move):
+def try_leaf(curr_key, last_move):
+    curr_values = find_curr_values(curr_key)
+    if last_move in curr_values:
+        works = True
+    else:
+        works = False
+    return works
 
 
 def build_dance(curr_key, beats_left, dance, last_move):
@@ -78,29 +87,37 @@ def build_dance(curr_key, beats_left, dance, last_move):
     works = False
     last_move = last_move
 
-    while not works:
+    # BASE CASE = Fail condition
+    if beats_left < 0:
+        print "too long"
 
-        # Fail condition
-        if beats_left < 0:
-            print "too long"
-
-        # Base case
-        # TODO: move out to own function for testing ease
-        if beats_left == 0:
+    # Base case
+    # TODO: move out to own function for testing ease
+    if beats_left == 0:
+        if try_leaf(curr_key, last_move) is True:
             dance.append(curr_key)
             dance.append(last_move)
             works = True
+            return dance, works
 
-        # Recursive call
-        if beats_left > 0:
-            dance.append(curr_key)
-            for next_key in curr_values:
-                build_dance(next_key, beats_left, dance, last_move)
-        else:
-            print("Something is wrong.")
+    # Recursive call
+    if beats_left > 0:
+        dance.append(curr_key)
+        for next_key in curr_values:
+            print "recursive call, beats:", beats_left
+            dance, works = build_dance(next_key, beats_left, dance, last_move)
+            print "returned dance:", dance
+            print "works:", works
+            if works is True:
+                break
+    # else:
+    #     print("Something is wrong.")
+    #     pass
 
-    print "works = ", works
-    return dance
+        # return dance, works
+
+    # print "works = ", works
+    return dance, works
 
 
 def all_together_now():
@@ -109,12 +126,12 @@ def all_together_now():
     progression = pick_progression()
     last_move = progression[0]
     first_move = progression[1]
-    # beats_left = len_left_init(last_move)
-    # print beats_left
+    beats_left = len_left_init(last_move)
+    print beats_left
 
-    # entire_dance = build_dance(first_move, beats_left, dance, last_move)
-
-    # return entire_dance
+    entire_dance, works = build_dance(first_move, beats_left, dance, last_move)
+    print entire_dance
+    return entire_dance
 
 
 if __name__ == "__main__":

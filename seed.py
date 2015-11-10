@@ -56,11 +56,10 @@ def parse_csv(dance_data):
     """Parse csv (from Google Sheets).
 
     >>> parse_csv("seed_data/dances.txt")[-1]
-    ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3*']
+    ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3']
     """
     dance_list = []
 
-    # TODO consider addressing * at end of some dances
     for row in (open(dance_data)):
         row = row.split(",")
         dance = row[2]
@@ -98,13 +97,13 @@ def seed_chains(dance):
 
     i = 0
     while i < (len(dance)-1):
-        key = dance[i]
+        key_ = dance[i]
         value = dance[i+1]
 
         try:
-            db.session.query(Chain).filter_by(key=key, value=value).one()
+            db.session.query(Chain).filter_by(key_=key_, value=value).one()
         except:
-            chain = Chain(key=key, value=value)
+            chain = Chain(key_=key_, value=value)
 
             db.session.add(chain)
             db.session.commit()

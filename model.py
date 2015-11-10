@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-# Everything here works, but when runnins seed.py, receive following error:
+# Everything here works, but when running seed.py, receive following error:
 
 # File "/home/Ely/contra/env/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 2060, in _determine_joins
 #     "specify a 'primaryjoin' expression." % self.prop)
@@ -33,7 +33,7 @@ class Move(db.Model):
     __tablename__ = "moves"
 
     move_code = db.Column(db.String(12), primary_key=True)
-    type_code = db.Column(db.String(24), db.ForeignKey('Types.type_code'))
+    type_code = db.Column(db.String(24), db.ForeignKey('types.type_code'))
     move_name = db.Column(db.String(64), nullable=False)
     beats = db.Column(db.Integer, nullable=False)
 
@@ -47,8 +47,8 @@ class Move(db.Model):
 class Chain(db.Model):
     """Key-value pairs of moves.
 
-    This is an association table.  The associations are all between data from 
-    the Moves table.  One move can be a key for many moves and also be a value 
+    This is an association table.  The associations are all between data from
+    the Moves table.  One move can be a key for many moves and also be a value
     for many moves.
 
     Data is seeded from pre-existing dance choreography.
@@ -56,15 +56,15 @@ class Chain(db.Model):
     __tablename__ = "chains"
 
     chain_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    # NOTE SQLite is putting "key" in quotes - seems okay, but if something breaks, check it out
-    key = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
-    value = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
+    key_ = db.Column(db.String(12), db.ForeignKey('moves.move_code'))
+    value = db.Column(db.String(12), db.ForeignKey('moves.move_code'))
 
-    move_rel = db.relationship('Move', backref=db.backref('chains'))
+    key_rel = db.relationship('Move', foreign_keys='Chain.key_')
+    value_rel = db.relationship('Move', foreign_keys='Chain.value')
 
     def __repr__(self):
 
-        return "<Chain id={} key={} value={}>".format(self.chain_id, self.key, self.value)
+        return "<Chain id={} key={} value={}>".format(self.chain_id, self.key_, self.value)
 
 
 class Progression(db.Model):
@@ -75,13 +75,14 @@ class Progression(db.Model):
 
     Data is seeded from pre-existing dance choreography.
     """
-    __tablename__ = "Progressions"
+    __tablename__ = "progressions"
 
     prog_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    last = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
-    first = db.Column(db.String(12), db.ForeignKey('Moves.move_code'))
+    last = db.Column(db.String(12), db.ForeignKey('moves.move_code'))
+    first = db.Column(db.String(12), db.ForeignKey('moves.move_code'))
 
-    # TODO db.relationship() with Moves
+    last_rel = db.relationship('Move', foreign_keys='Progression.last')
+    first_rel = db.relationship('Move', foreign_keys='Progression.first')
 
     def __repr__(self):
 
