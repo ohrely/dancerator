@@ -34,6 +34,17 @@ def len_left_init(last_move):
     return minus_last
 
 
+def move_len(latest_move):
+    """Query db for move length.
+
+    May be replaced by dictionary if queries are too slow.
+    """
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == latest_move).one()
+    move_beats = move_beats[0]
+
+    return move_beats
+
+
 def find_curr_values(key_):
     """Given a move, return a shuffled list of possible next moves (from chains query).
 
@@ -90,15 +101,12 @@ def try_leaf(curr_key, last_move):
         return False
 
 
-def build_dance(curr_key, beats_left, dance, last_move):
+def build_dance(curr_key, dance, last_move):
     """Build 'legal' dance using recursion to ensure constraint satisfaction
     """
 
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_key).one()
-    beats_left = len_left_init(last_move) - (count_dance(dance) + move_beats[0])
-    curr_values = find_curr_values(curr_key)
+    beats_left = len_left_init(last_move) - (count_dance(dance) + move_len(curr_key))
     works = False
-    last_move = last_move
 
     # Fail condition
     if beats_left < 0:
@@ -114,10 +122,11 @@ def build_dance(curr_key, beats_left, dance, last_move):
     # Recursive call
     elif beats_left > 0:
         dance.append(curr_key)
+        curr_values = find_curr_values(curr_key)
         for next_key in curr_values:
             print "DANCE: ", dance, "TRYING:", next_key, "BEATS:", beats_left
             print "............................................................."
-            dance, works = build_dance(next_key, beats_left, dance, last_move)
+            dance, works = build_dance(next_key, dance, last_move)
             if works is True:
                 break
     else:
@@ -134,9 +143,9 @@ def count_dance(dance):
     64
     """
     count = 0
-    for mv in dance:
-        mv_time = db.session.query(Move.beats).filter(Move.move_code == mv).one()
-        count += mv_time[0]
+    for each_move in dance:
+        move_time = move_len(each_move)
+        count += move_time
 
     return count
 
@@ -148,16 +157,16 @@ def all_together_now():
     """
     dance = []
 
-    progression = pick_progression()
-    last_move = progression[0]
-    first_move = progression[1]
+    last_move, first_move = pick_progression()
     beats_left = len_left_init(last_move)
     print beats_left
 
-    entire_dance, works = build_dance(first_move, beats_left, dance, last_move)
+    entire_dance, works = build_dance(first_move, dance, last_move)
     print "DANCE CREATED: ", entire_dance
     total_time = count_dance(entire_dance)
     print "TOTAL TIME: ", total_time
+
+    # If something goes wrong, scrap it and try again.
     if total_time != 64:
         all_together_now()
     else:
