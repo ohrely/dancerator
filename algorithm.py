@@ -39,8 +39,6 @@ def len_left(old_len_left, curr_move):
     >>> len_left(32, u'hhey')
     24
     """
-
-    # print "trying move:", curr_move
     move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_move).one()
     beats_left = old_len_left - move_beats[0]
 
@@ -48,12 +46,10 @@ def len_left(old_len_left, curr_move):
 
 
 def find_curr_values(key_):
-    """Given a move, return a randomly sorted list of possible next moves.
+    """Given a move, return a shuffled list of possible next moves (from chains query).
 
-    Query database and randomly sort list of what comes back.
-
-    >>> find_curr_values(u'llfb')
-    [u'fchn', u'fal6', u'nswg', u'fdp6', u'lal6']
+    >>> len(find_curr_values(u'llfb'))
+    5
     """
     value_list = []
 
@@ -64,15 +60,21 @@ def find_curr_values(key_):
         value_list.append(value[0])
 
     shuffle(value_list)
-    print key_, value_list
+    # print key_, value_list
 
     return value_list
 
 
 def try_last_flow(curr_key, last_move):
     """Check that potential penultimate move flows into final move.
-    """
 
+    >>> try_last_flow("pbal", "pcal")
+    True
+
+    >>> try_last_flow("pbal", "nswg")
+    DIDN'T FLOW
+    False
+    """
     curr_values = find_curr_values(curr_key)
     if last_move in curr_values:
         works = True
@@ -82,11 +84,17 @@ def try_last_flow(curr_key, last_move):
     return works
 
 
-# # TODO: for use when checking end-of-dance base cases
+# TODO: for use when checking end-of-dance base cases
 def try_leaf(curr_key, last_move):
     """Check end-of-dance base cases.
-    """
 
+    >>> try_leaf("pbal", "pcal")
+    True
+
+    >>> try_leaf("pbal", "nswg")
+    DIDN'T FLOW
+    False
+    """
     if try_last_flow(curr_key, last_move) is True:
         return True
     else:
@@ -96,8 +104,9 @@ def try_leaf(curr_key, last_move):
 def build_dance(curr_key, beats_left, dance, last_move):
     """Build 'legal' dance using recursion to ensure constraint satisfaction
     """
-
-    beats_left = len_left(beats_left, curr_key)
+    # beats_left = len_left(beats_left, curr_key)
+    move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_key).one()
+    beats_left = len_left_init(last_move) - (count_dance(dance) + move_beats[0])
     curr_values = find_curr_values(curr_key)
     works = False
     last_move = last_move
@@ -105,6 +114,7 @@ def build_dance(curr_key, beats_left, dance, last_move):
     # Fail condition
     if beats_left < 0:
         print "TOO LONG: ", dance
+        return dance[:-1], False
     # Base case
     elif beats_left == 0:
         if try_leaf(curr_key, last_move) is True:
@@ -116,10 +126,9 @@ def build_dance(curr_key, beats_left, dance, last_move):
     elif beats_left > 0:
         dance.append(curr_key)
         for next_key in curr_values:
-            print "TRYING:", next_key, "BEATS:", beats_left
+            print "DANCE: ", dance, "TRYING:", next_key, "BEATS:", beats_left
+            print "............................................................."
             dance, works = build_dance(next_key, beats_left, dance, last_move)
-            # print "returned dance:", dance
-            print curr_key, "works:", works
             if works is True:
                 break
     else:
@@ -129,7 +138,25 @@ def build_dance(curr_key, beats_left, dance, last_move):
     return dance, works
 
 
+def count_dance(dance):
+    """Count dance from build_dance; should be 64 beats.
+
+    >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
+    64
+    """
+    count = 0
+    for mv in dance:
+        mv_time = db.session.query(Move.beats).filter(Move.move_code == mv).one()
+        count += mv_time[0]
+
+    return count
+
+
 def all_together_now():
+    """Run helper functions and build_dance.
+
+    May become a class later.
+    """
     dance = []
 
     progression = pick_progression()
@@ -139,7 +166,10 @@ def all_together_now():
     print beats_left
 
     entire_dance, works = build_dance(first_move, beats_left, dance, last_move)
-    print entire_dance
+    print "DANCE CREATED: ", entire_dance
+    total_time = count_dance(entire_dance)
+    print "TOTAL TIME: ", total_time
+
     return entire_dance
 
 
