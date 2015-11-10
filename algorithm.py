@@ -1,7 +1,7 @@
 from model import Move, Type_, Chain, Progression
 from model import connect_to_db, db
 from server import app
-from random import choice
+from random import choice, shuffle
 import doctest
 
 # base case: total dance is 64 counts
@@ -26,7 +26,6 @@ def len_left_init(last_move):
     """Initial determination of remaining beats to be filled by tree recursion.
 
     >>> len_left_init(u'hhey')
-    hhey
     56
     """
     minus_last = len_left(DANCE_LENGTH, last_move)
@@ -38,11 +37,10 @@ def len_left(old_len_left, curr_move):
     """Given the addition of a move to a partially-written dance, find remaining beats to be filled.
 
     >>> len_left(32, u'hhey')
-    hhey
     24
     """
-    # TODO: unicode errors like woah.
-    print "trying move:", curr_move
+
+    # print "trying move:", curr_move
     move_beats = db.session.query(Move.beats).filter(Move.move_code == curr_move).one()
     beats_left = old_len_left - move_beats[0]
 
@@ -65,11 +63,16 @@ def find_curr_values(key_):
     for value in value_tups:
         value_list.append(value[0])
 
+    shuffle(value_list)
+    print key_, value_list
+
     return value_list
 
 
-# # TODO: for use when checking end-of-dance base cases
-def try_leaf(curr_key, last_move):
+def try_last_flow(curr_key, last_move):
+    """Check that potential penultimate move flows into final move.
+    """
+
     curr_values = find_curr_values(curr_key)
     if last_move in curr_values:
         works = True
@@ -77,6 +80,17 @@ def try_leaf(curr_key, last_move):
         print "DIDN'T FLOW"
         works = False
     return works
+
+
+# # TODO: for use when checking end-of-dance base cases
+def try_leaf(curr_key, last_move):
+    """Check end-of-dance base cases.
+    """
+
+    if try_last_flow(curr_key, last_move) is True:
+        return True
+    else:
+        return False
 
 
 def build_dance(curr_key, beats_left, dance, last_move):
@@ -88,11 +102,10 @@ def build_dance(curr_key, beats_left, dance, last_move):
     works = False
     last_move = last_move
 
-    # BASE CASE = Fail condition
+    # Fail condition
     if beats_left < 0:
         print "TOO LONG: ", dance
     # Base case
-    # TODO: move out to own function for testing ease
     elif beats_left == 0:
         if try_leaf(curr_key, last_move) is True:
             dance.append(curr_key)
@@ -103,14 +116,14 @@ def build_dance(curr_key, beats_left, dance, last_move):
     elif beats_left > 0:
         dance.append(curr_key)
         for next_key in curr_values:
-            print "RECURSIVE CALL, BEATS:", beats_left
+            print "TRYING:", next_key, "BEATS:", beats_left
             dance, works = build_dance(next_key, beats_left, dance, last_move)
             # print "returned dance:", dance
             print curr_key, "works:", works
             if works is True:
                 break
     else:
-        print("---------Something is wrong.-----------")
+        print "---------Something is wrong.---------"
         pass
 
     return dance, works
