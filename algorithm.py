@@ -4,8 +4,6 @@ from server import app
 from random import choice, shuffle
 import doctest
 
-# base case: total dance is 64 counts
-# later base case: penultimate move flows into final move
 
 DANCE_LENGTH = 64
 
@@ -65,6 +63,41 @@ def find_curr_values(key_):
     return value_list
 
 
+def type_move(move):
+    """Query database for a move's type_code.
+    """
+    type_ = db.session.query(Move.type_code).filter(Move.move_code == move).one()
+    type_ = type_[0]
+    return type_
+
+
+def too_many(move, dance):
+    """Check that the addition of a move does not violate the max_repeats rules for type.
+    """
+    type_ = type_move(move)
+    max_repeats = db.session.query(Type_.max_repeats).filter(Type_.type_code == type_).first()[0]
+    print "TYPE: ", type_, "MAX REPEATS:", max_repeats
+
+    if type_move(dance[-1]) != type_:
+        return False
+    elif max_repeats == 0:
+        return True
+    else:
+        danger_zone = dance[-(max_repeats):]
+        print "DANGER ZONE: ", danger_zone
+
+        repeats = 0
+        for old_move in danger_zone:
+            if type_move(old_move) == type_:
+                repeats += 1
+        print "REPEATS: ", repeats
+
+        if repeats == max_repeats:
+            return True
+        else:
+            return False
+
+
 def try_last_flow(curr_key, last_move):
     """Check that potential penultimate move flows into final move.
 
@@ -86,7 +119,7 @@ def try_last_flow(curr_key, last_move):
 
 
 # TODO: for use when checking end-of-dance base cases
-def try_leaf(curr_key, last_move):
+def try_leaf(curr_key, last_move, dance):
     """Check end-of-dance base cases.
 
     >>> try_leaf("pbal", "pcal")
@@ -97,7 +130,10 @@ def try_leaf(curr_key, last_move):
     False
     """
     if try_last_flow(curr_key, last_move) is True:
-        return True
+        if too_many(last_move, dance) is False:
+            return True
+        else:
+            return False
     else:
         return False
 
@@ -142,10 +178,9 @@ def build_dance(curr_key, dance, last_move):
         print "CROSSES 48"
         # return dance[:-1], False
         return dance, False
-    # 16, 32, 48 in range(curr_len - count_dance(dance))
     # Base case
     elif beats_left == 0:
-        if try_leaf(curr_key, last_move) is True:
+        if try_leaf(curr_key, last_move, dance) is True:
             dance.append(curr_key)
             dance.append(last_move)
             works = True
@@ -155,14 +190,19 @@ def build_dance(curr_key, dance, last_move):
         dance.append(curr_key)
         curr_values = find_curr_values(curr_key)
         for next_key in curr_values:
-            print "............................................................."
-            print "DANCE: ", dance
-            print "BEATS TO FILL: ", beats_left
-            print "TRYING: ", next_key, "(", move_len(next_key), ") beats"
-            print "BEATS FILLED: ", count_dance(dance)
-            dance, works = build_dance(next_key, dance, last_move)
-            if works is True:
-                break
+            if too_many(next_key, dance) is False:
+                print "............................................................."
+                print "DANCE: ", dance
+                print "BEATS TO FILL: ", beats_left
+                print "TRYING: ", next_key, "(", move_len(next_key), ") beats"
+                print "BEATS FILLED: ", count_dance(dance)
+                dance, works = build_dance(next_key, dance, last_move)
+                if works is True:
+                    break
+            else:
+                print "............................................................."
+                print "TOO MANY", type_move(next_key), "NOT ADDING MORE"
+                return dance, False
     else:
         print "---------Something is wrong.---------"
         pass
@@ -178,7 +218,7 @@ def all_together_now():
     dance = []
 
     last_move, first_move = pick_progression()
-    last_position = db.session.query(Progression.start).filter(Progression.last == last_move).first()
+    # last_position = db.session.query(Progression.start).filter(Progression.last == last_move).first()
     beats_left = len_left_init(last_move)
     print "BEATS TO FILL: ", beats_left
 
