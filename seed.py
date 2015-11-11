@@ -62,11 +62,12 @@ def parse_csv(dance_data):
 
     for row in (open(dance_data)):
         row = row.split(",")
-        dance = row[2]
+        start = row[2]
+        dance = row[3]
         dance = dance.replace("|", "")
         dance = dance.rstrip()
         dance = dance.split()
-        dance_list.append(dance)
+        dance_list.append((start, dance))
 
     return dance_list
 
@@ -77,13 +78,15 @@ def seed_prog(dance):
     """
     print("Progressions")
 
-    last = dance[-1]
-    first = dance[0]
+    start = dance[0]
+
+    last = dance[1][-1]
+    first = dance[1][0]
 
     try:
         db.session.query(Progression).filter_by(last=last, first=first).one()
     except:
-        progression = Progression(last=last, first=first)
+        progression = Progression(last=last, first=first, start=start)
 
         db.session.add(progression)
         db.session.commit()
@@ -94,6 +97,9 @@ def seed_chains(dance):
 
     """
     print("Chains")
+
+    dance = dance[1]
+    print dance
 
     i = 0
     while i < (len(dance)-1):

@@ -3,7 +3,7 @@ from jinja2 import StrictUndefined
 from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db, Move, Progression
-import algorithm
+# import algorithm
 
 app = Flask(__name__)
 

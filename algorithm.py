@@ -76,8 +76,9 @@ def try_last_flow(curr_key, last_move):
     False
     """
     curr_values = find_curr_values(curr_key)
+    # if last_move in curr_values && curr_position = last_position:
     if last_move in curr_values:
-        works = True
+            works = True
     else:
         print "DIDN'T FLOW"
         works = False
@@ -99,6 +100,20 @@ def try_leaf(curr_key, last_move):
         return True
     else:
         return False
+
+
+def count_dance(dance):
+    """Count dance from build_dance; should be 64 beats.
+
+    >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
+    64
+    """
+    count = 0
+    for each_move in dance:
+        move_time = move_len(each_move)
+        count += move_time
+
+    return count
 
 
 def build_dance(curr_key, dance, last_move):
@@ -155,20 +170,6 @@ def build_dance(curr_key, dance, last_move):
     return dance, works
 
 
-def count_dance(dance):
-    """Count dance from build_dance; should be 64 beats.
-
-    >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
-    64
-    """
-    count = 0
-    for each_move in dance:
-        move_time = move_len(each_move)
-        count += move_time
-
-    return count
-
-
 def all_together_now():
     """Run helper functions and build_dance.
 
@@ -177,6 +178,7 @@ def all_together_now():
     dance = []
 
     last_move, first_move = pick_progression()
+    last_position = db.session.query(Progression.start).filter(Progression.last == last_move).first()
     beats_left = len_left_init(last_move)
     print "BEATS TO FILL: ", beats_left
 
