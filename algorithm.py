@@ -58,13 +58,15 @@ def find_curr_values(key_):
         value_list.append(value[0])
 
     shuffle(value_list)
-    # print key_, value_list
 
     return value_list
 
 
 def type_move(move):
     """Query database for a move's type_code.
+
+    >>> type_move(u'nbal')
+    u'bal'
     """
     type_ = db.session.query(Move.type_code).filter(Move.move_code == move).one()
     type_ = type_[0]
@@ -74,13 +76,24 @@ def type_move(move):
 def too_many(move, dance):
     """Check that the addition of a move does not violate the max_repeats rules for type.
 
-    >>> too_many(nswg, [nbal, nswg, nswg, llfb])
+    >>> too_many(u'nswg', [u'nbal', u'nswg', u'nswg', u'llfb'])
+    TYPE:  swing MAX REPEATS: 3
     False
-    >>> too_many(llfb, [nbal, nswg, nswg, llfb])
+
+    >>> too_many(u'llfb', [u'nbal', u'nswg', u'nswg', u'llfb'])
+    TYPE:  lines MAX REPEATS: 0
     True
-    >>> too_many(nswg, [nbal, nswg, nswg, nswg])
+
+    >>> too_many(u'nswg', [u'nbal', u'nswg', u'nswg', u'nswg', u'nswg'])
+    TYPE:  swing MAX REPEATS: 3
+    DANGER ZONE:  [u'nswg', u'nswg', u'nswg', u'nswg']
+    REPEATS:  4
     True
-    >>> too_many(nswg, [nbal, nswg, nswg])
+
+    >>> too_many(u'nswg', [u'nswg', u'nswg', u'nswg'])
+    TYPE:  swing MAX REPEATS: 3
+    DANGER ZONE:  [u'nswg', u'nswg', u'nswg']
+    REPEATS:  3
     False
     """
     type_ = type_move(move)
@@ -92,7 +105,7 @@ def too_many(move, dance):
     elif max_repeats == 0:
         return True
     else:
-        danger_zone = dance[-(max_repeats):]
+        danger_zone = dance[-(max_repeats + 1):]
         print "DANGER ZONE: ", danger_zone
 
         repeats = 0
@@ -101,23 +114,10 @@ def too_many(move, dance):
                 repeats += 1
         print "REPEATS: ", repeats
 
-        if repeats == max_repeats:
+        if repeats == (max_repeats + 1):
             return True
         else:
             return False
-
-
-# def too_few(next_move, dance):
-#     """Check dance to avoid orphan moves that need repeats.
-#     """
-#     dance.append(next_move)
-#     for move in dance:
-        # TODO do as property instead
-#         if type_move(move) in [u'star', u'swing', u'circle']:
-#             print "TOO FEW BEING TESTED!!!!"
-#             return False
-#     else:
-#         return False
 
 
 def try_last_flow(curr_key, last_move):
@@ -143,15 +143,27 @@ def try_last_flow(curr_key, last_move):
 def try_leaf(curr_key, last_move, dance):
     """Check end-of-dance base cases.
 
-    >>> try_leaf("pbal", "pcal")
-    True
-
-    >>> try_leaf("pbal", "nswg")
+    >>> try_leaf(u'pbal', u'lal6', [u'nswg', u'nswg', u'hhey'])
     DIDN'T FLOW
     False
+
+    >>> try_leaf(u'nswg', u'nswg', [u'nbal', u'nswg', u'nswg', u'nswg'])
+    TYPE:  swing MAX REPEATS: 3
+    DANGER ZONE:  [u'nswg', u'nswg', u'nswg', u'nswg']
+    REPEATS:  4
+    False
+
+    >>> try_leaf(u'nswg', u'nswg', [u'nbal', u'nswg', u'nswg'])
+    TYPE:  swing MAX REPEATS: 3
+    DANGER ZONE:  [u'nbal', u'nswg', u'nswg', u'nswg']
+    REPEATS:  3
+    True
     """
+    potential_whole = [move for move in dance]
+    potential_whole.append(curr_key)
+
     if try_last_flow(curr_key, last_move) is True:
-        if too_many(last_move, dance) is False:
+        if too_many(last_move, potential_whole) is False:
             return True
         else:
             return False
@@ -204,21 +216,24 @@ def build_dance(curr_key, dance, last_move):
             return dance, works
     # Recursive call
     elif beats_left > 0:
-        dance.append(curr_key)
-        if curr_key.orphanable is False or curr_key.orphaned == "safe":
-            curr_values = find_curr_values(curr_key)
-        elif curr_key.orphaned == "bad":
-            return dance[:-1], False
-        elif curr_key.orphaned == "danger":
-            curr_values = [curr_key]
+        # if curr_key.orphanable is False or curr_key.orphaned == "safe":
+        curr_values = find_curr_values(curr_key)
+        # elif curr_key.orphaned == "bad":
+        #     return dance[:-1], False
+        # elif curr_key.orphaned == "danger":
+            # curr_values = [curr_key]
+
+        new_dance = list(dance)
+        new_dance.append(curr_key)
+
         for next_key in curr_values:
-            if too_many(next_key, dance) is False:
+            if too_many(next_key, new_dance) is False:
                 print "............................................................."
-                print "DANCE: ", dance
+                print "DANCE: ", new_dance
                 print "BEATS TO FILL: ", beats_left
                 print "TRYING: ", next_key, "(", move_len(next_key), ") beats"
-                print "BEATS FILLED: ", count_dance(dance)
-                dance, works = build_dance(next_key, dance, last_move)
+                print "BEATS FILLED: ", count_dance(new_dance)
+                dance, works = build_dance(next_key, new_dance, last_move)
                 if works is True:
                     break
             else:

@@ -2,12 +2,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-# Everything here works, but when running seed.py, receive following error:
-
-# File "/home/Ely/contra/env/lib/python2.7/site-packages/sqlalchemy/orm/relationships.py", line 2060, in _determine_joins
-#     "specify a 'primaryjoin' expression." % self.prop)
-# sqlalchemy.exc.NoForeignKeysError: Could not determine join condition between parent/child tables on relationship Move.type_ - there are no foreign keys linking these tables.  Ensure that referencing columns are associated with a ForeignKey or ForeignKeyConstraint, or specify a 'primaryjoin' expression.
-
 
 class Type_(db.Model):
     """Data common to similar kinds of moves.
