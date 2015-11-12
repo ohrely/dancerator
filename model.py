@@ -30,6 +30,9 @@ class Move(db.Model):
     type_code = db.Column(db.String(24), db.ForeignKey('types.type_code'))
     move_name = db.Column(db.String(64), nullable=False)
     beats = db.Column(db.Integer, nullable=False)
+    follows_move = db.Column(db.Integer, nullable=False)
+    leads_move = db.Column(db.Integer, nullable=False)
+    same_side = db.Column(db.Boolean, nullable=True)
 
     type_ = db.relationship('Type_', backref=db.backref('moves'))
 
