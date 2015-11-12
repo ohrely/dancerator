@@ -44,8 +44,28 @@ class MoveObj(object):
         return "<MoveObj move_code={}>".format(self.move_code)
 
 
-# class Dance(object):
-#     def __init__(self):
+class Dance(object):
+    def __init__(self):
+        self.dance_moves = all_together_now():
+
+    def pick_progression():
+        """Randomly choose a first and last move from the database.
+
+        >>> type(pick_progression())
+        <type 'tuple'>
+        """
+        prog_list = db.session.query(Progression.last, Progression.first, Progression.start).all()
+        last_move, first_move, start_position = choice(prog_list)
+
+        return (last_move, first_move, start_position)
+
+    def build_dance():
+
+    def all_together_now():
+        last_move, first_move, start_position = pick_progression()
+
+    def create_display_string(dance_moves):
+
 
 
 def pull_move_codes():
