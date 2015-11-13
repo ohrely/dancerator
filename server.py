@@ -2,8 +2,8 @@ from jinja2 import StrictUndefined
 
 from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
-from model import connect_to_db, db, Move, Progression
-# import algorithm
+from model import connect_to_db, db
+import code_to_choreo
 
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def index():
 def generate():
     """Create dance, return page with results"""
 
-    dance = algorithm.all_together_now()
+    dance = code_to_choreo.simple_trans()
     print dance
 
     return render_template("new.html", dance=dance)
