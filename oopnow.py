@@ -128,7 +128,9 @@ class DanceObj(object):
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
-        curr_values = shuffle(self.move_dict[curr_key].values)
+        curr_values = self.move_dict[curr_key].values
+        shuffle(curr_values)
+
         works = False
 
         # Fail condition
@@ -160,7 +162,7 @@ class DanceObj(object):
                 print "DANCE: ", new_dance
                 print "BEATS TO FILL: ", beats_left
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
-                print "BEATS FILLED: ", self.curr_len
+                print "BEATS FILLED: ", curr_len
                 dance, works = self.build_dance(next_key, new_dance, last_move)
                 if works is True:
                     break
@@ -180,7 +182,7 @@ class DanceObj(object):
         entire_dance, works = self.build_dance(self.first_move, empty_dance, self.last_move)
         print "DANCE CREATED: ", entire_dance
 
-        total_time = self.count_dance(entire_dance, self.move_dict)
+        total_time = self.count_dance(entire_dance)
         print "TOTAL TIME: ", total_time
 
         # If something goes wrong, scrap it and try again.
@@ -227,7 +229,7 @@ def do_it_all():
     # print da_dict
 
     new_dance = DanceObj(da_dict)
-    print new_dance
+    print new_dance.dance_moves
 
 
 if __name__ == "__main__":
