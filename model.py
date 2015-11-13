@@ -75,6 +75,7 @@ class Progression(db.Model):
     __tablename__ = "progressions"
 
     prog_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    # Position follows start last move from
     start = db.Column(db.Integer)
     last = db.Column(db.String(12), db.ForeignKey('moves.move_code'))
     first = db.Column(db.String(12), db.ForeignKey('moves.move_code'))

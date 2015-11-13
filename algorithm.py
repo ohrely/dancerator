@@ -32,15 +32,15 @@ def len_left_init(last_move):
     return minus_last
 
 
-def move_len(latest_move):
-    """Query db for move length.
+# def move_len(latest_move):
+#     """Query db for move length.
 
-    May be replaced by dictionary if queries are too slow.
-    """
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == latest_move).one()
-    move_beats = move_beats[0]
+#     May be replaced by dictionary if queries are too slow.
+#     """
+#     move_beats = db.session.query(Move.beats).filter(Move.move_code == latest_move).one()
+#     move_beats = move_beats[0]
 
-    return move_beats
+#     return move_beats
 
 
 def find_curr_values(key_):
@@ -62,15 +62,15 @@ def find_curr_values(key_):
     return value_list
 
 
-def type_move(move):
-    """Query database for a move's type_code.
+# def type_move(move):
+#     """Query database for a move's type_code.
 
-    >>> type_move(u'nbal')
-    u'bal'
-    """
-    type_ = db.session.query(Move.type_code).filter(Move.move_code == move).one()
-    type_ = type_[0]
-    return type_
+#     >>> type_move(u'nbal')
+#     u'bal'
+#     """
+#     type_ = db.session.query(Move.type_code).filter(Move.move_code == move).one()
+#     type_ = type_[0]
+#     return type_
 
 
 def too_many(move, dance):
@@ -264,7 +264,7 @@ def all_together_now():
     total_time = count_dance(entire_dance)
     print "TOTAL TIME: ", total_time
 
-    # If something goes wrong, scrap it and try again.
+
     if total_time != 64:
         print ". . . . . . . . . . . . . . . . . . ."
         print ". . . . . . . . . . . . . . . . . . ."

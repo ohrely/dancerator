@@ -5,6 +5,9 @@ from random import choice, shuffle
 import doctest
 
 
+DANCE_LENGTH = 64
+
+
 class MoveObj(object):
     def __init__(self, move_code):
         self.move_code = move_code
@@ -46,7 +49,7 @@ class MoveObj(object):
 
 class Dance(object):
     def __init__(self):
-        self.dance_moves = all_together_now():
+        self.dance_moves = all_together_now()
 
     def pick_progression():
         """Randomly choose a first and last move from the database.
@@ -59,10 +62,56 @@ class Dance(object):
 
         return (last_move, first_move, start_position)
 
+    def len_left_init(last_move):
+
+        move_beats = move_dict[last_move].beats
+        minus_last = DANCE_LENGTH - move_beats
+
+        return minus_last
+
+    def count_dance(dance):
+        """Count dance from build_dance; should be 64 beats.
+
+        >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
+        64
+        """
+        count = 0
+        for each_move in dance:
+            move_time = move_dict[move].beats
+            count += move_time
+
+        return count
+
     def build_dance():
+        return dance, works
 
     def all_together_now():
+        """Run helper methods and build_dance.
+
+        """
+        dance = []
+
         last_move, first_move, start_position = pick_progression()
+        beats_left = len_left_init(last_move)
+        print "BEATS TO FILL: ", beats_left
+
+        entire_dance, works = build_dance(first_move, dance, last_move)
+        print "DANCE CREATED: ", entire_dance
+
+        total_time = count_dance(entire_dance)
+        print "TOTAL TIME: ", total_time
+        # If something goes wrong, scrap it and try again.
+        if total_time != 64:
+            print ". . . . . . . . . . . . . . . . . . ."
+            print ". . . . . . . . . . . . . . . . . . ."
+            print ". . . . . . . . . . . . . . . . . . ."
+            print ". . . . . . . . . . . . . . . . . . ."
+            print ". . . . . . . . . . . . . . . . . . ."
+            all_together_now()
+        else:
+            pass
+
+        return entire_dance
 
     def create_display_string(dance_moves):
 
