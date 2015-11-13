@@ -212,9 +212,11 @@ def pull_move_codes():
     return all_codes
 
 
-def make_moves(all_moves):
+def make_moves():
     """Creates dictionary of all MoveObj objects.
     """
+    all_moves = pull_move_codes()
+
     move_dict = {}
     for code in all_moves:
         move_code = code[0]
@@ -223,13 +225,9 @@ def make_moves(all_moves):
 
 
 def do_it_all():
-    all_moves = pull_move_codes()
-
-    da_dict = make_moves(all_moves)
-    # print da_dict
-
+    da_dict = make_moves()
     new_dance = DanceObj(da_dict)
-    print new_dance.dance_moves
+    return new_dance.dance_moves, da_dict
 
 
 if __name__ == "__main__":
