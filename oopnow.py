@@ -49,6 +49,10 @@ class MoveObj(object):
 class DanceObj(object):
     def __init__(self, move_dict):
         self.move_dict = move_dict
+        self.last_move = self.pick_progression()[0]
+        self.first_move = self.pick_progression()[1]
+        self.start_position = self.pick_progression()[2]
+        self.beats_to_fill = self.len_left_init(self.last_move)
         self.dance_moves = self.all_together_now()
 
     def pick_progression(self):
@@ -63,7 +67,11 @@ class DanceObj(object):
         return (last_move, first_move, start_position)
 
     def len_left_init(self, last_move):
+        """Initial determination of remaining beats to be filled by tree recursion.
 
+        >>> self.len_left_init(u'hhey')
+        56
+        """
         move_beats = self.move_dict[last_move].beats
         minus_last = DANCE_LENGTH - move_beats
 
@@ -82,7 +90,7 @@ class DanceObj(object):
 
         return count
 
-    def try_last_flow(self, curr_key, last_move):
+    def try_last_flow(self, curr_key, curr_values, last_move):
         """Check that potential penultimate move flows into final move.
 
         >>> try_last_flow("pbal", "pcal")
@@ -92,7 +100,6 @@ class DanceObj(object):
         DIDN'T FLOW
         False
         """
-        curr_values = self.move_dict[curr_key].values
         # if last_move in curr_values && curr_position = last_position:
         if last_move in curr_values:
             works = True
@@ -101,35 +108,79 @@ class DanceObj(object):
             works = False
         return works
 
-    def try_leaf(self, curr_key, last_move, dance):
+    def try_leaf(self, curr_key, curr_values, last_move, dance):
+        """Check all end-of-dance base cases.
+        """
         potential_whole = list(dance)
         potential_whole.append(curr_key)
 
-        if self.try_last_flow(curr_key, last_move) is True:
+        if self.try_last_flow(curr_key, curr_values, last_move) is True:
             return True
         else:
             return False
 
-    def build_dance(self):
+    def build_dance(self, curr_key, dance, last_move):
         """
         """
+        new_dance = list(dance)
+        new_dance.append(curr_key)
+        curr_len = self.count_dance(new_dance)
+        beats_left = self.beats_to_fill - curr_len
+        curr_values = self.move_dict[curr_key].values
+        works = False
+
+        # Fail condition
+        if beats_left < 0:
+            print "TOO LONG"
+            return dance, False
+        elif self.count_dance(dance) < 16 < curr_len:
+            print "CROSSES 16"
+            return dance, False
+        elif self.count_dance(dance) < 32 < curr_len:
+            print "CROSSES 32"
+            return dance, False
+        elif self.count_dance(dance) < 48 < curr_len:
+            print "CROSSES 48"
+            return dance, False
+        # Base case
+        elif beats_left == 0:
+            if self.try_leaf(curr_key, curr_values, last_move, dance) is True:
+                dance.append(curr_key)
+                dance.append(last_move)
+                works = True
+            else:
+                works = False
+            return dance, works
+        # Recursive call
+        elif beats_left > 0:
+            for next_key in curr_values:
+                print "............................................................."
+                print "DANCE: ", new_dance
+                print "BEATS TO FILL: ", beats_left
+                print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
+                print "BEATS FILLED: ", self.curr_len
+                dance, works = self.build_dance(next_key, new_dance, last_move)
+                if works is True:
+                    break
+        else:
+            print "----------Something is wrong.----------"
+            pass
+
         return dance, works
 
     def all_together_now(self):
         """Run helper methods and build_dance.
 
         """
-        dance = []
+        empty_dance = []
+        print "BEATS TO FILL: ", self.beats_to_fill
 
-        last_move, first_move, start_position = self.pick_progression()
-        beats_left = self.len_left_init(last_move)
-        print "BEATS TO FILL: ", beats_left
-
-        entire_dance, works = self.build_dance(first_move, dance, last_move)
+        entire_dance, works = self.build_dance(self.first_move, empty_dance, self.last_move)
         print "DANCE CREATED: ", entire_dance
 
         total_time = self.count_dance(entire_dance, self.move_dict)
         print "TOTAL TIME: ", total_time
+
         # If something goes wrong, scrap it and try again.
         if total_time != 64:
             print ". . . . . . . . . . . . . . . . . . ."

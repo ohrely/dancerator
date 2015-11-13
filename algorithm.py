@@ -120,24 +120,24 @@ def too_many(move, dance):
             return False
 
 
-def try_last_flow(curr_key, last_move):
-    """Check that potential penultimate move flows into final move.
+# def try_last_flow(curr_key, last_move):
+#     """Check that potential penultimate move flows into final move.
 
-    >>> try_last_flow("pbal", "pcal")
-    True
+#     >>> try_last_flow("pbal", "pcal")
+#     True
 
-    >>> try_last_flow("pbal", "nswg")
-    DIDN'T FLOW
-    False
-    """
-    curr_values = find_curr_values(curr_key)
-    # if last_move in curr_values && curr_position = last_position:
-    if last_move in curr_values:
-            works = True
-    else:
-        print "DIDN'T FLOW"
-        works = False
-    return works
+#     >>> try_last_flow("pbal", "nswg")
+#     DIDN'T FLOW
+#     False
+#     """
+#     curr_values = find_curr_values(curr_key)
+#     # if last_move in curr_values && curr_position = last_position:
+#     if last_move in curr_values:
+#             works = True
+#     else:
+#         print "DIDN'T FLOW"
+#         works = False
+#     return works
 
 
 def try_leaf(curr_key, last_move, dance):
@@ -159,30 +159,30 @@ def try_leaf(curr_key, last_move, dance):
     REPEATS:  3
     True
     """
-    potential_whole = [move for move in dance]
-    potential_whole.append(curr_key)
+    # potential_whole = [move for move in dance]
+    # potential_whole.append(curr_key)
 
-    if try_last_flow(curr_key, last_move) is True:
+    # if try_last_flow(curr_key, last_move) is True:
         if too_many(last_move, potential_whole) is False:
             return True
         else:
             return False
-    else:
-        return False
+    # else:
+    #     return False
 
 
-def count_dance(dance):
-    """Count dance from build_dance; should be 64 beats.
+# def count_dance(dance):
+#     """Count dance from build_dance; should be 64 beats.
 
-    >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
-    64
-    """
-    count = 0
-    for each_move in dance:
-        move_time = move_len(each_move)
-        count += move_time
+#     >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
+#     64
+#     """
+#     count = 0
+#     for each_move in dance:
+#         move_time = move_len(each_move)
+#         count += move_time
 
-    return count
+#     return count
 
 
 def build_dance(curr_key, dance, last_move):
