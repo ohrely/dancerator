@@ -5,31 +5,31 @@ from random import choice, shuffle
 import doctest
 
 
-DANCE_LENGTH = 64
+# DANCE_LENGTH = 64
 
 
-def pick_progression():
-    """Randomly choose a first and last move from the database.
+# def pick_progression():
+#     """Randomly choose a first and last move from the database.
 
-    >>> type(pick_progression())
-    <type 'tuple'>
-    """
-    prog_list = db.session.query(Progression.last, Progression.first).all()
-    last_move, first_move = choice(prog_list)
+#     >>> type(pick_progression())
+#     <type 'tuple'>
+#     """
+#     prog_list = db.session.query(Progression.last, Progression.first).all()
+#     last_move, first_move = choice(prog_list)
 
-    return (last_move, first_move)
+#     return (last_move, first_move)
 
 
-def len_left_init(last_move):
-    """Initial determination of remaining beats to be filled by tree recursion.
+# def len_left_init(last_move):
+#     """Initial determination of remaining beats to be filled by tree recursion.
 
-    >>> len_left_init(u'hhey')
-    56
-    """
-    move_beats = db.session.query(Move.beats).filter(Move.move_code == last_move).one()
-    minus_last = DANCE_LENGTH - move_beats[0]
+#     >>> len_left_init(u'hhey')
+#     56
+#     """
+#     move_beats = db.session.query(Move.beats).filter(Move.move_code == last_move).one()
+#     minus_last = DANCE_LENGTH - move_beats[0]
 
-    return minus_last
+#     return minus_last
 
 
 # def move_len(latest_move):
@@ -252,37 +252,37 @@ def all_together_now():
 
     May become a class later.
     """
-    dance = []
+    # dance = []
 
-    last_move, first_move = pick_progression()
-    # last_position = db.session.query(Progression.start).filter(Progression.last == last_move).first()
-    beats_left = len_left_init(last_move)
-    print "BEATS TO FILL: ", beats_left
+    # last_move, first_move = pick_progression()
+    # # last_position = db.session.query(Progression.start).filter(Progression.last == last_move).first()
+    # beats_left = len_left_init(last_move)
+    # print "BEATS TO FILL: ", beats_left
 
-    entire_dance, works = build_dance(first_move, dance, last_move)
-    print "DANCE CREATED: ", entire_dance
-    total_time = count_dance(entire_dance)
-    print "TOTAL TIME: ", total_time
-
-
-    if total_time != 64:
-        print ". . . . . . . . . . . . . . . . . . ."
-        print ". . . . . . . . . . . . . . . . . . ."
-        print ". . . . . . . . . . . . . . . . . . ."
-        print ". . . . . . . . . . . . . . . . . . ."
-        print ". . . . . . . . . . . . . . . . . . ."
-        all_together_now()
-    else:
-        pass
-
-    return entire_dance
+    # entire_dance, works = build_dance(first_move, dance, last_move)
+    # print "DANCE CREATED: ", entire_dance
+    # total_time = count_dance(entire_dance)
+    # print "TOTAL TIME: ", total_time
 
 
-if __name__ == "__main__":
+    # if total_time != 64:
+    #     print ". . . . . . . . . . . . . . . . . . ."
+    #     print ". . . . . . . . . . . . . . . . . . ."
+    #     print ". . . . . . . . . . . . . . . . . . ."
+    #     print ". . . . . . . . . . . . . . . . . . ."
+    #     print ". . . . . . . . . . . . . . . . . . ."
+    #     all_together_now()
+    # else:
+    #     pass
 
-    connect_to_db(app)
-    print "Connected to DB."
+    # return entire_dance
 
-    doctest.testmod(verbose=True)
 
-    all_together_now()
+# if __name__ == "__main__":
+
+#     connect_to_db(app)
+#     print "Connected to DB."
+
+#     doctest.testmod(verbose=True)
+
+#     all_together_now()
