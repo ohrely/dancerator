@@ -43,23 +43,23 @@ import doctest
 #     return move_beats
 
 
-def find_curr_values(key_):
-    """Given a move, return a shuffled list of possible next moves (from chains query).
+# def find_curr_values(key_):
+#     """Given a move, return a shuffled list of possible next moves (from chains query).
 
-    >>> len(find_curr_values(u'llfb'))
-    5
-    """
-    value_list = []
+#     >>> len(find_curr_values(u'llfb'))
+#     5
+#     """
+#     value_list = []
 
-    # SQL queries are faster than SQLAlchemy queries - change if it's slow
-    value_tups = db.session.query(Chain.value).filter(Chain.key_ == key_).all()
+#     # SQL queries are faster than SQLAlchemy queries - change if it's slow
+#     value_tups = db.session.query(Chain.value).filter(Chain.key_ == key_).all()
 
-    for value in value_tups:
-        value_list.append(value[0])
+#     for value in value_tups:
+#         value_list.append(value[0])
 
-    shuffle(value_list)
+#     shuffle(value_list)
 
-    return value_list
+#     return value_list
 
 
 # def type_move(move):

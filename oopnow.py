@@ -39,7 +39,7 @@ class MoveObj(object):
         values = db.session.query(Chain.value).filter(Chain.key_ == self.move_code).all()
         values_list = []
         for value in values:
-            values_list.append(value)
+            values_list.append(value[0])
         return values_list
 
     def __repr__(self):
@@ -49,17 +49,19 @@ class MoveObj(object):
 class DanceObj(object):
     def __init__(self, move_dict):
         self.move_dict = move_dict
+        print "MOVE DICT: ", self.move_dict
         self.last_move = self.pick_progression()[0]
         self.first_move = self.pick_progression()[1]
         self.start_position = self.pick_progression()[2]
+        print "PROGRESSION:", self.pick_progression()
         self.beats_to_fill = self.len_left_init(self.last_move)
         self.dance_moves = self.all_together_now()
 
     def pick_progression(self):
         """Randomly choose a first and last move from the database.
 
-        >>> type(self.pick_progression())
-        <type 'tuple'>
+        # >>> type(pick_progression())
+        # <type 'tuple'>
         """
         prog_list = db.session.query(Progression.last, Progression.first, Progression.start).all()
         last_move, first_move, start_position = choice(prog_list)
@@ -126,7 +128,7 @@ class DanceObj(object):
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
-        curr_values = self.move_dict[curr_key].values
+        curr_values = shuffle(self.move_dict[curr_key].values)
         works = False
 
         # Fail condition
@@ -222,7 +224,7 @@ def do_it_all():
     all_moves = pull_move_codes()
 
     da_dict = make_moves(all_moves)
-    print da_dict
+    # print da_dict
 
     new_dance = DanceObj(da_dict)
     print new_dance
