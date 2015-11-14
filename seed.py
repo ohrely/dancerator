@@ -1,6 +1,6 @@
 from model import Move, Type_, Chain, Progression
 from model import connect_to_db, db
-from server import app
+from app import app
 import doctest
 
 

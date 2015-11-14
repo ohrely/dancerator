@@ -1,5 +1,5 @@
 from model import connect_to_db, db
-from server import app
+from app import app
 import oopnow
 import doctest
 
@@ -18,27 +18,27 @@ def simple_trans():
     beats = 0
 
     while i < len(dance):
-        if da_dict[dance[i]].type == da_dict[dance[i - 1]].type:
-            if da_dict[dance[i]].type == "swing":
+        if da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
+            if da_dict[dance[i]].type_code == "swing":
                 move_name = ""
-            elif da_dict[dance[i]].type == "star":
-                if da_dict[dance[i + 1]].type == "star":
+            elif da_dict[dance[i]].type_code == "star":
+                if da_dict[dance[i + 1]].type_code == "star":
                     move_name = ""
                 else:
                     total_moved = 0
                     k = i - 1
                     while k > 0:
-                        if da_dict[dance[k]].type == "star":
+                        if da_dict[dance[k]].type_code == "star":
                             total_moved += 1
                         else:
                             k = 0
                     move_name = "{} places".format(total_moved)
-            elif da_dict[dance[i]].type == "thru":
+            elif da_dict[dance[i]].type_code == "thru":
                 move_name = da_dict[dance[i]].name + " again"
         else:
             move_name = da_dict[dance[i]].name
         translation.append(move_name)
-        beats = beats + da_dict[dance[i]].length
+        beats = beats + da_dict[dance[i]].beats
 
     print translation
     return translation

@@ -3,11 +3,8 @@ from jinja2 import StrictUndefined
 from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
-import code_to_choreo
-
-app = Flask(__name__)
-
-app.secret_key = "contra"
+from code_to_choreo import simple_trans
+from app import app
 
 # Jinja, please tell me if you intend to fail
 app.jinja_env.undefined = StrictUndefined
@@ -24,7 +21,7 @@ def index():
 def generate():
     """Create dance, return page with results"""
 
-    dance = code_to_choreo.simple_trans()
+    dance = simple_trans()
     print dance
 
     return render_template("new.html", dance=dance)
@@ -32,10 +29,6 @@ def generate():
 
 if __name__ == "__main__":
 
-    app.debug = True
-
     connect_to_db(app)
 
-    DebugToolbarExtension(app)
-
-    app.run()
+    doctest.testmod(verbose=True)
