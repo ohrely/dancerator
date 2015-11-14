@@ -9,7 +9,26 @@ def make_dance():
     return dance_moves, da_dict
 
 
+def count_star(dance, da_dict, i):
+    total_moved = 1
+    k = i - 1
+
+    while k > 0:
+        if da_dict[dance[k]].type_code == "star":
+            total_moved += 1
+            k -= 1
+        else:
+            print "YAAASSSSSS"
+            k = 0
+
+    star_count = "{} places".format(total_moved)
+
+    return star_count
+
+
 def simple_trans():
+    """Translate dance code into readable choreography.
+    """
     dance, da_dict = make_dance()
     # translation = [[], [], [], []]
     translation = []
@@ -18,27 +37,28 @@ def simple_trans():
     beats = 0
 
     while i < len(dance):
+        print da_dict[dance[i]].type_code
         if da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
             if da_dict[dance[i]].type_code == "swing":
                 move_name = ""
             elif da_dict[dance[i]].type_code == "star":
-                if da_dict[dance[i + 1]].type_code == "star":
-                    move_name = ""
-                else:
-                    total_moved = 0
-                    k = i - 1
-                    while k > 0:
-                        if da_dict[dance[k]].type_code == "star":
-                            total_moved += 1
-                        else:
-                            k = 0
-                    move_name = "{} places".format(total_moved)
-            elif da_dict[dance[i]].type_code == "thru":
-                move_name = da_dict[dance[i]].name + " again"
+                try:
+                    if da_dict[dance[i + 1]].type_code == "star":
+                        move_name = ""
+                    else:
+                        move_name = count_star(dance, da_dict, i)
+                except IndexError:
+                    move_name = count_star(dance, da_dict, i)
+        #     elif da_dict[dance[i]].type_code == "thru":
+        #         move_name = da_dict[dance[i]].name + " again"
+        #         return move_name
         else:
             move_name = da_dict[dance[i]].name
+            # return move_name
         translation.append(move_name)
+        print translation
         beats = beats + da_dict[dance[i]].beats
+        i += 1
 
     print translation
     return translation
