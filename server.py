@@ -5,6 +5,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
 from code_to_choreo import simple_trans
 from app import app
+import doctest
 
 # Jinja, please tell me if you intend to fail
 app.jinja_env.undefined = StrictUndefined
