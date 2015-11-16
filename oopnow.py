@@ -156,6 +156,7 @@ class DanceObj(object):
         else:
             return False
 
+    # def build_dance(self, curr_key, dance, follow_pos, last_move):
     def build_dance(self, curr_key, dance, last_move):
         """
         """
@@ -163,6 +164,9 @@ class DanceObj(object):
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
+
+        # follows_to = (follow_pos + self.move_dict[curr_key].move_follow) % 4
+        # print "FOLLOW 1 IS AT: ", follows_to
 
         works = False
 
@@ -230,8 +234,11 @@ class DanceObj(object):
 
         """
         empty_dance = []
+        # follow_start = 0
+
         print "BEATS TO FILL: ", self.beats_to_fill
 
+        # entire_dance, works = self.build_dance(self.first_move, empty_dance, follow_start, self.last_move)
         entire_dance, works = self.build_dance(self.first_move, empty_dance, self.last_move)
         print "DANCE CREATED: ", entire_dance
 

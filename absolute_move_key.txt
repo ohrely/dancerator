@@ -1,3 +1,7 @@
 absolute_move_key
 
 2113: start from even: 1 / start from odd: 3
+
+2310: start from even: 3 / start from odd: 0
+
+2011: start from even: 0 / start from odd: 1

@@ -1,10 +1,11 @@
+move-code*,type,name,beats,(move difficulty),(balance of roles),follows move,leads move,partners start same side?
 fal6,allemande,follow allemande left 1 1/2,8,Null,1,2,0,Null
 far6,allemande,follow allemande right 1 1/2,8,Null,1,2,0,Null
 lal6,allemande,lead allemande left 1 1/2,8,Null,0,0,2,Null
 lar6,allemande,lead allemande right 1 1/2,8,Null,0,0,2,Null
-nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,0
-nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,0
-pal6,allemande,partner allemande left 1 1/2,8,Null,Null,start from even: 1 / start from odd: 3,start from even: 1 / start from odd: 3,1
+nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,2113,2113,0
+nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,2113,2113,0
+pal6,allemande,partner allemande left 1 1/2,8,Null,Null,2113,2113,1
 cbal,bal,circle balance,4,0,Null,0,0,Null
 nbal,bal,neighbor balance,4,0,Null,0,0,0
 pbal,bal,partner balance,4,0,Null,0,0,1
@@ -16,26 +17,26 @@ fdn6,dosido,follow do si do to neighbor 1 1/2,8,1,1,2,0,1
 fdp6,dosido,follow do si do to partner 1 1/2,8,1,1,2,0,0
 ndo4,dosido,neighbor do si do,8,0,Null,0,0,0
 pdo4,dosido,partner do si do,8,0,Null,0,0,1
-fgl6,gypsy,follow gypsy left 1 1/2,8,1,1,2,0,Null
-fgr6,gypsy,follow gypsy right 1 1/2,8,1,1,2,0,Null
-lgl6,gypsy,lead gypsy left 1 1/2,8,1,0,0,2,Null
-lgr6,gypsy,lead gypsy right 1 1/2,8,1,0,0,2,Null
-ngr4,gypsy,neighbor gypsy right 1,8,1,Null,0,0,0
-ngrm,gypsy,neghbor gypsy right melt (into swing),8,1,Null,0,0,0
-pgr4,gypsy,partner gypsy right 1,8,1,Null,0,0,1
-pgrm,gypsy,partner gypsy right melt (into swing),8,1,Null,0,0,1
+fml6,magnetize,follow gypsy left 1 1/2,8,1,1,2,0,Null
+fmr6,magnetize,follow gypsy right 1 1/2,8,1,1,2,0,Null
+lml6,magnetize,lead gypsy left 1 1/2,8,1,0,0,2,Null
+lmr6,magnetize,lead gypsy right 1 1/2,8,1,0,0,2,Null
+nmr4,magnetize,neighbor gypsy right 1,8,1,Null,0,0,0
+nmrm,magnetize,neghbor gypsy right melt (into swing),8,1,Null,0,0,0
+pmr4,magnetize,partner gypsy right 1,8,1,Null,0,0,1
+pmrm,magnetize,partner gypsy right melt (into swing),8,1,Null,0,0,1
 hhey,hey,half hey,8,1,Null,2,2,Null
-nbox,gnat,neighbor box the gnat,4,1,Null,,,
-pbox,gnat,partner box the gnat,4,1,Null,,,
+nbox,gnat,neighbor box the gnat,4,1,Null,2113,2113,
+pbox,gnat,partner box the gnat,4,1,Null,2113,2113,
 llfb,lines,long lines forward and back,8,0,Null,0,0,Null
-arch,passthru,twos arch ones dive to next couple,4,1,Null,Null,Null,0
-pass,passthru,pass through circle to new neighbors,4,Null,Null,Null,Null,0
+arch,passthru,twos arch ones dive to next couple,4,1,Null,0,0,0
+pass,passthru,pass through circle to new neighbors,4,Null,Null,0,0,0
 nprm,promenade,neighbor promenade across the set,8,Null,Null,2,2,0
 pprm,promenade,partner promenade across the set,8,Null,Null,2,2,1
 lstr,star,left hand star,2,Null,Null,3,3,Null
 rstr,star,right hand star,2,Null,Null,1,1,Null
-nswg,swing,neighbor swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,0
-pswg,swing,partner swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,1
+nswg,swing,neighbor swing,4,Null,Null,2310,2011,0
+pswg,swing,partner swing,4,Null,Null,2310,2011,1
 nrlt,thru,right/left thru neighbor then partner,8,1,Null,2,2,1
 prlt,thru,right/left thru partner then neighbor,8,1,Null,2,2,0
 pcal,twirl,partner callifornia twirl,4,1,Null,2,2,0
