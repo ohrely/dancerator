@@ -1,5 +1,4 @@
 from model import connect_to_db, db
-from app import app
 import oopnow
 import doctest
 
@@ -73,7 +72,7 @@ def simple_trans():
 
 
 if __name__ == "__main__":
-
+    from server import app
     connect_to_db(app)
     print "Connected to DB."
 

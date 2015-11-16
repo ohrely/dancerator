@@ -1,6 +1,5 @@
 from model import Move, Type_, Chain, Progression
 from model import connect_to_db, db
-from app import app
 from random import choice, shuffle
 import doctest
 
@@ -292,6 +291,7 @@ def do_it_all():
 
 if __name__ == "__main__":
 
+    from server import app
     connect_to_db(app)
     print "Connected to DB."
 

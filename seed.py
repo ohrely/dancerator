@@ -1,6 +1,5 @@
 from model import Move, Type_, Chain, Progression
 from model import connect_to_db, db
-from app import app
 import doctest
 
 
@@ -142,6 +141,8 @@ def seed_dances(dance_file):
 
 
 if __name__ == "__main__":
+
+    from server import app
     connect_to_db(app)
 
     doctest.testmod(verbose=True)
