@@ -32,8 +32,8 @@ arch,passthru,twos arch ones dive to next couple,4,1,Null,Null,Null,0
 pass,passthru,pass through circle to new neighbors,4,Null,Null,Null,Null,0
 nprm,promenade,neighbor promenade across the set,8,Null,Null,2,2,0
 pprm,promenade,partner promenade across the set,8,Null,Null,2,2,1
-lstr,star,left hand star 1 place,2,Null,Null,3,3,Null
-rstr,star,right hand star 1 place,2,Null,Null,1,1,Null
+lstr,star,left hand star,2,Null,Null,3,3,Null
+rstr,star,right hand star,2,Null,Null,1,1,Null
 nswg,swing,neighbor swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,0
 pswg,swing,partner swing,4,Null,Null,start from even: 3 / start from odd: 0,start from even: 0 / start from odd: 1,1
 nrlt,thru,right/left thru neighbor then partner,8,1,Null,2,2,1

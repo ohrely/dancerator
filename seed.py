@@ -43,15 +43,16 @@ def add_moves(move_data):
         beats = row[3]
         follows_move = row[6]
         leads_move = row[7]
-        same_side = row[8]
+        # same_side = row[8]
 
         move = Move(move_code=move_code,
                     type_code=type_code,
                     move_name=move_name,
                     beats=beats,
                     follows_move=follows_move,
-                    leads_move=leads_move,
-                    same_side=same_side)
+                    leads_move=leads_move
+                    # same_side=same_side
+                    )
 
         db.session.add(move)
 
