@@ -100,6 +100,33 @@ class DanceObj(object):
 
         return count
 
+    def too_many(self, test_key, new_dance):
+        """Check that the addition of a move does not violate the max_repeats rules for type.
+        """
+
+        test_type = self.move_dict[test_key].type_code
+        max_repeats = self.move_dict[test_key].max
+        print "TYPE: ", test_type, "MAX REPEATS:", max_repeats
+
+        if self.move_dict[new_dance[-1]].type_code != test_type:
+            return False
+        elif max_repeats == 0:
+            return True
+        else:
+            danger_zone = new_dance[-(max_repeats + 1):]
+            print "DANGER ZONE: ", danger_zone
+
+            repeats = 0
+            for old_move in danger_zone:
+                if self.move_dict[old_move].type_code == test_type:
+                    repeats += 1
+            print "REPEATS: ", repeats
+
+            if repeats == (max_repeats + 1):
+                return True
+            else:
+                return False
+
     def try_last_flow(self, curr_key, curr_values, last_move):
         """Check that potential penultimate move flows into final move.
 
@@ -179,14 +206,19 @@ class DanceObj(object):
         # Recursive call
         elif beats_left > 0:
             for next_key in curr_values:
-                print "............................................................."
-                print "DANCE: ", new_dance
-                print "BEATS TO FILL: ", beats_left
-                print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
-                # print "BEATS FILLED: ", curr_len
-                dance, works = self.build_dance(next_key, new_dance, last_move)
-                if works is True:
-                    break
+                if self.too_many(next_key, new_dance) is False:
+                    print "............................................................."
+                    print "DANCE: ", new_dance
+                    print "BEATS TO FILL: ", beats_left
+                    print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
+                    # print "BEATS FILLED: ", curr_len
+                    dance, works = self.build_dance(next_key, new_dance, last_move)
+                    if works is True:
+                        break
+                else:
+                    print "............................................................."
+                    print "TOO MANY", self.move_dict[next_key].type_code, "NOT ADDING MORE"
+                    return dance, False
         else:
             print "----------Something is wrong.----------"
             pass
