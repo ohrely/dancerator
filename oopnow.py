@@ -29,6 +29,8 @@ class MoveObj(object):
         max_query = db.session.query(Type_.max_repeats).filter(Type_.type_code == self.type_code).one()
         self.max = max_query[0]
 
+        self.orphanable = self.orphanable()
+
         # self.move_lead = db.session.query(Move.move_lead).filter(Move.move_code == self.move_code).one()
         # self.move_follow = db.session.query(Move.move_follow).filter(Move.move_code == self.move_code).one()
         # self.same_side = db.session.query(Move.same_side).filter(Move.move_code == self.move_code).one()
@@ -42,6 +44,12 @@ class MoveObj(object):
             values_list.append(value[0])
         return values_list
 
+    def orphanable(self):
+        if self.min == 0:
+            return False
+        else:
+            return True
+
     def __repr__(self):
         return "<MoveObj move_code={}>".format(self.move_code)
 
@@ -49,7 +57,7 @@ class MoveObj(object):
 class DanceObj(object):
     def __init__(self, move_dict):
         self.move_dict = move_dict
-        print "MOVE DICT: ", self.move_dict
+        # print "MOVE DICT: ", self.move_dict
         self.last_move = self.pick_progression()[0]
         self.first_move = self.pick_progression()[1]
         self.start_position = self.pick_progression()[2]
@@ -128,24 +136,37 @@ class DanceObj(object):
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
-        curr_values = self.move_dict[curr_key].values
-        shuffle(curr_values)
 
         works = False
+
+        # Prevent orphans
+        if self.move_dict[curr_key].orphanable is False:
+            curr_values = self.move_dict[curr_key].values
+            shuffle(curr_values)
+        elif self.move_dict[curr_key].orphanable is True:
+            if self.move_dict[curr_key].type_code != self.move_dict[dance[-1]].type_code:
+                curr_values = [curr_key]
+                print "TO PREVENT ORPHANS, ", curr_values, "IS THE ONLY CURRENT VALUE"
+            elif self.move_dict[curr_key].type_code == self.move_dict[dance[-1]].type_code:
+                curr_values = self.move_dict[curr_key].values
+                shuffle(curr_values)
+            else:
+                print "THE ORPHANS ARE MAKING TROUBLE"
+                return dance, works
 
         # Fail condition
         if beats_left < 0:
             print "TOO LONG"
-            return dance, False
+            return dance, works
         elif self.count_dance(dance) < 16 < curr_len:
             print "CROSSES 16"
-            return dance, False
+            return dance, works
         elif self.count_dance(dance) < 32 < curr_len:
             print "CROSSES 32"
-            return dance, False
+            return dance, works
         elif self.count_dance(dance) < 48 < curr_len:
             print "CROSSES 48"
-            return dance, False
+            return dance, works
         # Base case
         elif beats_left == 0:
             if self.try_leaf(curr_key, curr_values, last_move, dance) is True:
@@ -162,7 +183,7 @@ class DanceObj(object):
                 print "DANCE: ", new_dance
                 print "BEATS TO FILL: ", beats_left
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
-                print "BEATS FILLED: ", curr_len
+                # print "BEATS FILLED: ", curr_len
                 dance, works = self.build_dance(next_key, new_dance, last_move)
                 if works is True:
                     break

@@ -18,7 +18,6 @@ def count_star(dance, da_dict, i):
             total_moved += 1
             k -= 1
         else:
-            print "YAAASSSSSS"
             k = 0
 
     star_count = "{} places".format(total_moved)
