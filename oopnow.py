@@ -156,9 +156,12 @@ class DanceObj(object):
             return False
 
     # def build_dance(self, curr_key, dance, follow_pos, last_move):
-    def build_dance(self, curr_key, dance, last_move):
+    def build_dance(self, curr_key, last_move, dance=None):
         """
         """
+        if not dance:
+            dance = []
+
         new_dance = list(dance)
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
@@ -215,7 +218,7 @@ class DanceObj(object):
                     print "BEATS TO FILL: ", beats_left
                     print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
                     # print "BEATS FILLED: ", curr_len
-                    dance, works = self.build_dance(next_key, new_dance, last_move)
+                    dance, works = self.build_dance(next_key, last_move, new_dance)
                     if works is True:
                         break
                 else:
@@ -232,13 +235,12 @@ class DanceObj(object):
         """Run helper methods and build_dance.
 
         """
-        empty_dance = []
         # follow_start = 0
 
         print "BEATS TO FILL: ", self.beats_to_fill
 
         # entire_dance, works = self.build_dance(self.first_move, empty_dance, follow_start, self.last_move)
-        entire_dance, works = self.build_dance(self.first_move, empty_dance, self.last_move)
+        entire_dance, works = self.build_dance(curr_key=self.first_move, last_move=self.last_move)
         print "DANCE CREATED: ", entire_dance
 
         total_time = self.count_dance(entire_dance)
@@ -256,12 +258,6 @@ class DanceObj(object):
             pass
 
         return entire_dance
-
-    def create_display_string(self, dance_moves):
-        """Convert dance codes into choreography.
-
-        """
-        return dance_moves
 
 
 def pull_move_codes():
