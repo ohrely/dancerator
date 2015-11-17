@@ -172,17 +172,25 @@ class DanceObj(object):
 
         works = False
 
-        # Prevent orphans
+        # Prevent orphans, ensure that swings fill buckets
         if self.move_dict[curr_key].orphanable is False:
             curr_values = self.move_dict[curr_key].values
             shuffle(curr_values)
         elif self.move_dict[curr_key].orphanable is True:
             if self.move_dict[curr_key].type_code != self.move_dict[dance[-1]].type_code:
-                curr_values = [curr_key]
-                print "TO PREVENT ORPHANS, ", curr_values, "IS THE ONLY CURRENT VALUE"
+                if curr_len in [16, 32, 48]:
+                    print curr_key, " NEEDS MORE TIME"
+                    return dance, works
+                else:
+                    curr_values = [curr_key]
+                    print "TO PREVENT ORPHANS, ", curr_values, "IS THE ONLY CURRENT VALUE"
             elif self.move_dict[curr_key].type_code == self.move_dict[dance[-1]].type_code:
-                curr_values = self.move_dict[curr_key].values
-                shuffle(curr_values)
+                if self.move_dict[curr_key].type_code == 'swing' and curr_len not in [16, 32, 48]:
+                    curr_values = [curr_key]
+                    print "TO FILL THE BUCKET, ", curr_values, " IS THE ONLY CURRENT VALUE"
+                else:
+                    curr_values = self.move_dict[curr_key].values
+                    shuffle(curr_values)
             else:
                 print "THE ORPHANS ARE MAKING TROUBLE"
                 return dance, works
@@ -212,17 +220,16 @@ class DanceObj(object):
         # Recursive call
         elif beats_left > 0:
             for next_key in curr_values:
+                print "............................................................."
+                print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
                 if self.too_many(next_key, new_dance) is False:
-                    print "............................................................."
                     print "DANCE: ", new_dance
                     print "BEATS TO FILL: ", beats_left
-                    print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
                     # print "BEATS FILLED: ", curr_len
                     dance, works = self.build_dance(next_key, last_move, new_dance)
                     if works is True:
                         break
                 else:
-                    print "............................................................."
                     print "TOO MANY", self.move_dict[next_key].type_code, "NOT ADDING MORE"
                     return dance, False
         else:
