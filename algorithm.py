@@ -103,7 +103,7 @@ class DanceObj(object):
         return count
 
     def find_follows(self, dance):
-        """
+        """Given a partially-built dance, find the follows.
         """
         count = 0
         for each_move in dance:
