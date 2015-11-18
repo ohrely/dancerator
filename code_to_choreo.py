@@ -1,10 +1,10 @@
 from model import connect_to_db, db
-import oopnow
+import algorithm
 import doctest
 
 
 def make_dance():
-    dance_moves, da_dict = oopnow.do_it_all()
+    dance_moves, da_dict = algorithm.do_it_all()
     return dance_moves, da_dict
 
 

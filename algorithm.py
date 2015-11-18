@@ -30,8 +30,11 @@ class MoveObj(object):
 
         self.orphanable = self.orphanable()
 
-        # self.move_lead = db.session.query(Move.move_lead).filter(Move.move_code == self.move_code).one()
-        # self.move_follow = db.session.query(Move.move_follow).filter(Move.move_code == self.move_code).one()
+        # self.move_lead = db.session.query(Move.leads_move).filter(Move.move_code == self.move_code).one()
+
+        follow_query = db.session.query(Move.follows_move).filter(Move.move_code == self.move_code).one()
+        self.move_follow = follow_query[0]
+
         # self.same_side = db.session.query(Move.same_side).filter(Move.move_code == self.move_code).one()
 
         self.values = self.get_values()
@@ -96,6 +99,17 @@ class DanceObj(object):
         for each_move in dance:
             move_time = self.move_dict[each_move].beats
             count += move_time
+
+        return count
+
+    def find_follows(self, dance):
+        """
+        """
+        count = 0
+        for each_move in dance:
+            follows_move = self.move_dict[each_move].move_follow
+            count += follows_move
+            count = count % 4
 
         return count
 
@@ -167,8 +181,10 @@ class DanceObj(object):
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
 
-        # follows_to = (follow_pos + self.move_dict[curr_key].move_follow) % 4
-        # print "FOLLOW 1 IS AT: ", follows_to
+        follows_at = self.find_follows(new_dance)
+        follows_move = self.move_dict[curr_key].move_follow
+        follows_to = (follows_at + follows_move) % 4
+        print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
 
         works = False
 
@@ -221,11 +237,10 @@ class DanceObj(object):
         elif beats_left > 0:
             for next_key in curr_values:
                 print "............................................................."
+                print "BEATS TO FILL: ", beats_left
+                print "DANCE: ", new_dance
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
                 if self.too_many(next_key, new_dance) is False:
-                    print "DANCE: ", new_dance
-                    print "BEATS TO FILL: ", beats_left
-                    # print "BEATS FILLED: ", curr_len
                     dance, works = self.build_dance(next_key, last_move, new_dance)
                     if works is True:
                         break
