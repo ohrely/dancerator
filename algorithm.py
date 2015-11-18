@@ -62,7 +62,7 @@ class DanceObj(object):
         # print "MOVE DICT: ", self.move_dict
         self.last_move = self.pick_progression()[0]
         self.first_move = self.pick_progression()[1]
-        self.start_position = self.pick_progression()[2]
+        self.start = self.pick_progression()[2]
         print "PROGRESSION:", self.pick_progression()
         self.beats_to_fill = self.len_left_init(self.last_move)
         self.dance_moves = self.all_together_now()
@@ -141,36 +141,41 @@ class DanceObj(object):
                 return False
 
     def try_last_flow(self, curr_key, curr_values, last_move):
-        """Check that potential penultimate move flows into final move.
-
-        >>> try_last_flow("pbal", "pcal")
-        True
-
-        >>> try_last_flow("pbal", "nswg")
-        DIDN'T FLOW
-        False
+        """Check that final move is in values for potential penultimate move.
         """
         # if last_move in curr_values && curr_position = last_position:
         if last_move in curr_values:
             works = True
         else:
-            print "DIDN'T FLOW"
+            print "DIDN'T FLOW - VALUES"
             works = False
+
         return works
 
-    def try_leaf(self, curr_key, curr_values, last_move, dance):
+    def try_last_position(self, start, dance):
+        """Check that potential penultimate move leaves dancers in correct position for final move.
+        """
+        if self.find_follows(dance) == start:
+            works = True
+        else:
+            print "DIDN'T FLOW - POSITIONS"
+            works = False
+
+        return works
+
+    def try_leaf(self, curr_key, curr_values, last_move, start, dance):
         """Check all end-of-dance base cases.
         """
         potential_whole = list(dance)
         potential_whole.append(curr_key)
 
-        if self.try_last_flow(curr_key, curr_values, last_move) is True:
+        if self.try_last_flow(curr_key, curr_values, last_move) is True and self.try_last_position(start, dance) is True:
             return True
         else:
             return False
 
     # def build_dance(self, curr_key, dance, follow_pos, last_move):
-    def build_dance(self, curr_key, last_move, dance=None):
+    def build_dance(self, curr_key, last_move, start, dance=None):
         """
         """
         if not dance:
@@ -180,11 +185,6 @@ class DanceObj(object):
         new_dance.append(curr_key)
         curr_len = self.count_dance(new_dance)
         beats_left = self.beats_to_fill - curr_len
-
-        follows_at = self.find_follows(new_dance)
-        follows_move = self.move_dict[curr_key].move_follow
-        follows_to = (follows_at + follows_move) % 4
-        print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
 
         works = False
 
@@ -226,7 +226,7 @@ class DanceObj(object):
             return dance, works
         # Base case
         elif beats_left == 0:
-            if self.try_leaf(curr_key, curr_values, last_move, dance) is True:
+            if self.try_leaf(curr_key, curr_values, last_move, start, dance) is True:
                 dance.append(curr_key)
                 dance.append(last_move)
                 works = True
@@ -240,8 +240,14 @@ class DanceObj(object):
                 print "BEATS TO FILL: ", beats_left
                 print "DANCE: ", new_dance
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
+
+                follows_at = self.find_follows(new_dance)
+                follows_move = self.move_dict[next_key].move_follow
+                follows_to = (follows_at + follows_move) % 4
+                print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
+
                 if self.too_many(next_key, new_dance) is False:
-                    dance, works = self.build_dance(next_key, last_move, new_dance)
+                    dance, works = self.build_dance(next_key, last_move, start, new_dance)
                     if works is True:
                         break
                 else:
@@ -262,7 +268,7 @@ class DanceObj(object):
         print "BEATS TO FILL: ", self.beats_to_fill
 
         # entire_dance, works = self.build_dance(self.first_move, empty_dance, follow_start, self.last_move)
-        entire_dance, works = self.build_dance(curr_key=self.first_move, last_move=self.last_move)
+        entire_dance, works = self.build_dance(curr_key=self.first_move, last_move=self.last_move, start=self.start)
         print "DANCE CREATED: ", entire_dance
 
         total_time = self.count_dance(entire_dance)
