@@ -62,7 +62,7 @@ def parse_csv(dance_data):
     """Parse csv (from Google Sheets).
 
     >>> parse_csv("seed_data/dances.txt")[-1]
-    ('0', ['ngrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3'])
+    ('0', ['nmrm', 'nswg', 'nswg', 'llfb', 'lal6', 'pbal', 'pswg', 'pswg', 'pswg', 'pprm', 'crl3'])
     """
     dance_list = []
 

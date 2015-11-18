@@ -2,14 +2,29 @@
 {% block content %}
   <div id="choreo">
     <h1>Funky new dance:</h1>
-    {% for move in dance %}
+    {% for phrase in dance %}
         <li>
-            {{ move }}
+          {% for move in phrase %}
+            {% if move|length == 2 %}
+              <span class="visual_move" data={{ move }}>
+              <!-- <span class="visual_move" data={{ move[1] }}> -->
+                {{ move }}
+              </span>
+            {% else %}
+              {{ move }}
+            {% endif %}
+          </span>
+          {% endfor %}
         </li>
     {% endfor %}
   </div>
 
-  <div id="visual">
+  <div id="clips">
     <h2>Visualize this!<h2>
+
+    <div width="500px" id="example">
+      <img src="../static/something.gif"></img>
+      <video src="../static/cbal_petr.mp4" autoplay></video>
+    </div>
   </div>
 {% endblock %}

@@ -32,7 +32,7 @@ class Move(db.Model):
     beats = db.Column(db.Integer, nullable=False)
     follows_move = db.Column(db.Integer, nullable=False)
     leads_move = db.Column(db.Integer, nullable=False)
-    same_side = db.Column(db.Boolean, nullable=True)
+    same_side = db.Column(db.Integer, nullable=True)
 
     type_ = db.relationship('Type_', backref=db.backref('moves'))
 

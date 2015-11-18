@@ -13,32 +13,12 @@ class MoveObj(object):
         self.get_attributes()
 
     def get_attributes(self):
-        type_query = db.session.query(Move.type_code).filter(Move.move_code == self.move_code).one()
-        self.type_code = type_query[0]
+        self.type_code, self.beats, self.name = db.session.query(Move.type_code, Move.beats, Move.move_name).filter(Move.move_code == self.move_code).one()
+        self.move_lead, self.move_follow, self.same_side = db.session.query(Move.leads_move, Move.follows_move, Move.same_side).filter(Move.move_code == self.move_code).one()
 
-        beats_query = db.session.query(Move.beats).filter(Move.move_code == self.move_code).one()
-        self.beats = beats_query[0]
-
-        name_query = db.session.query(Move.move_name).filter(Move.move_code == self.move_code).one()
-        self.name = name_query[0]
-
-        min_query = db.session.query(Type_.min_repeats).filter(Type_.type_code == self.type_code).one()
-        self.min = min_query[0]
-
-        max_query = db.session.query(Type_.max_repeats).filter(Type_.type_code == self.type_code).one()
-        self.max = max_query[0]
+        self.min, self.max = db.session.query(Type_.min_repeats, Type_.max_repeats).filter(Type_.type_code == self.type_code).one()
 
         self.orphanable = self.orphanable()
-
-        lead_query = db.session.query(Move.leads_move).filter(Move.move_code == self.move_code).one()
-        self.move_lead = lead_query[0]
-
-        follow_query = db.session.query(Move.follows_move).filter(Move.move_code == self.move_code).one()
-        self.move_follow = follow_query[0]
-
-        relative_query = db.session.query(Move.same_side).filter(Move.move_code == self.move_code).one()
-        self.same_side = relative_query[0]
-
         self.values = self.get_values()
 
     def get_values(self):
@@ -53,23 +33,22 @@ class MoveObj(object):
     def orphanable(self):
         """Determine whether move needs special treatment to avoid orphaning.
         """
-        if self.min == 0:
-            return False
-        else:
-            return True
+        return self.min == 0
 
     def __repr__(self):
         return "<MoveObj move_code={}>".format(self.move_code)
 
+# def defaultLogger(stuff):
+#     print stuff
+
+# def noopLogger(stuff):
+
 
 class DanceObj(object):
+    # def __init__(self, move_dict, logger=defaultLogger):
     def __init__(self, move_dict):
         self.move_dict = move_dict
-        # print "MOVE DICT: ", self.move_dict
-        self.last_move = self.pick_progression()[0]
-        self.first_move = self.pick_progression()[1]
-        self.start = self.pick_progression()[2]
-        print "PROGRESSION:", self.pick_progression()
+        self.last_move, self.first_move, self.start = self.pick_progression()
         self.beats_to_fill = self.len_left_init(self.last_move)
         self.dance_moves = self.all_together_now()
 
@@ -135,23 +114,25 @@ class DanceObj(object):
         print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
 
         start_same = self.move_dict[test_value].same_side
+        print "START SAME: ", start_same
 
         # do set math to check that follow/lead positions are or are not on same side
-        if not start_same:
-            return True
-        else:
-            if start_same is True:
-                if 1 == 1:
-                # if (set math):
-                    return True
-                else:
-                    return False
-            elif start_same is False:
-                if 1 == 1:
-                # if (set math):
-                    return True
-                else:
-                    return False
+        # if not start_same:
+        #     return True
+        # else:
+        #     if start_same is True:
+        #         if 1 == 1:
+        #         # if (set math):
+        #             return True
+        #         else:
+        #             return False
+        #     elif start_same is False:
+        #         if 1 == 1:
+        #         # if (set math):
+        #             return True
+        #         else:
+        #             return False
+        return True
 
     def too_many(self, test_value, new_dance):
         """Check that the addition of a move does not violate the max_repeats rules for type.
@@ -178,6 +159,33 @@ class DanceObj(object):
                 return True
             else:
                 return False
+
+    def orphan_wrangling(self, curr_key, dance, curr_len):
+        """
+        """
+        if self.move_dict[curr_key].orphanable is False:
+            curr_values = self.move_dict[curr_key].values
+            shuffle(curr_values)
+        elif self.move_dict[curr_key].orphanable is True:
+            if self.move_dict[curr_key].type_code != self.move_dict[dance[-1]].type_code:
+                if curr_len in [16, 32, 48]:
+                    print curr_key, " NEEDS MORE TIME"
+                    return None
+                else:
+                    curr_values = [curr_key]
+                    print "TO PREVENT ORPHANS, ", curr_values, "IS THE ONLY CURRENT VALUE"
+            elif self.move_dict[curr_key].type_code == self.move_dict[dance[-1]].type_code:
+                if self.move_dict[curr_key].type_code == 'swing' and curr_len not in [16, 32, 48]:
+                    curr_values = [curr_key]
+                    print "TO FILL THE BUCKET, ", curr_values, " IS THE ONLY CURRENT VALUE"
+                else:
+                    curr_values = self.move_dict[curr_key].values
+                    shuffle(curr_values)
+            else:
+                print "THE ORPHANS ARE MAKING TROUBLE"
+                return None
+
+        return curr_values
 
     def try_last_flow(self, curr_key, curr_values, last_move):
         """Check that final move is in values for potential penultimate move.
@@ -227,27 +235,9 @@ class DanceObj(object):
         works = False
 
         # Prevent orphans, ensure that swings fill buckets
-        if self.move_dict[curr_key].orphanable is False:
-            curr_values = self.move_dict[curr_key].values
-            shuffle(curr_values)
-        elif self.move_dict[curr_key].orphanable is True:
-            if self.move_dict[curr_key].type_code != self.move_dict[dance[-1]].type_code:
-                if curr_len in [16, 32, 48]:
-                    print curr_key, " NEEDS MORE TIME"
-                    return dance, works
-                else:
-                    curr_values = [curr_key]
-                    print "TO PREVENT ORPHANS, ", curr_values, "IS THE ONLY CURRENT VALUE"
-            elif self.move_dict[curr_key].type_code == self.move_dict[dance[-1]].type_code:
-                if self.move_dict[curr_key].type_code == 'swing' and curr_len not in [16, 32, 48]:
-                    curr_values = [curr_key]
-                    print "TO FILL THE BUCKET, ", curr_values, " IS THE ONLY CURRENT VALUE"
-                else:
-                    curr_values = self.move_dict[curr_key].values
-                    shuffle(curr_values)
-            else:
-                print "THE ORPHANS ARE MAKING TROUBLE"
-                return dance, works
+        curr_values = self.orphan_wrangling(curr_key, new_dance, curr_len)
+        if not curr_values:
+            return dance, works
 
         # Fail condition
         if beats_left < 0:
@@ -296,11 +286,9 @@ class DanceObj(object):
         return dance, works
 
     def all_together_now(self):
-        """Run helper methods and build_dance.
-
+        """Run build_dance and check outcomes.
         """
-        # follow_start = 0
-
+        print "PROGRESSION: ", self.last_move, self.first_move, self.start
         print "BEATS TO FILL: ", self.beats_to_fill
 
         # entire_dance, works = self.build_dance(self.first_move, empty_dance, follow_start, self.last_move)
@@ -355,6 +343,6 @@ if __name__ == "__main__":
     connect_to_db(app)
     print "Connected to DB."
 
-    doctest.testmod(verbose=True)
+    # doctest.testmod(verbose=True)
 
     do_it_all()
