@@ -30,16 +30,20 @@ class MoveObj(object):
 
         self.orphanable = self.orphanable()
 
-        # self.move_lead = db.session.query(Move.leads_move).filter(Move.move_code == self.move_code).one()
+        lead_query = db.session.query(Move.leads_move).filter(Move.move_code == self.move_code).one()
+        self.move_lead = lead_query[0]
 
         follow_query = db.session.query(Move.follows_move).filter(Move.move_code == self.move_code).one()
         self.move_follow = follow_query[0]
 
-        # self.same_side = db.session.query(Move.same_side).filter(Move.move_code == self.move_code).one()
+        relative_query = db.session.query(Move.same_side).filter(Move.move_code == self.move_code).one()
+        self.same_side = relative_query[0]
 
         self.values = self.get_values()
 
     def get_values(self):
+        """Query chains table for moves that may follow this one.
+        """
         values = db.session.query(Chain.value).filter(Chain.key_ == self.move_code).all()
         values_list = []
         for value in values:
@@ -47,6 +51,8 @@ class MoveObj(object):
         return values_list
 
     def orphanable(self):
+        """Determine whether move needs special treatment to avoid orphaning.
+        """
         if self.min == 0:
             return False
         else:
@@ -69,9 +75,6 @@ class DanceObj(object):
 
     def pick_progression(self):
         """Randomly choose a first and last move from the database.
-
-        # >>> type(pick_progression())
-        # <type 'tuple'>
         """
         prog_list = db.session.query(Progression.last, Progression.first, Progression.start).all()
         last_move, first_move, start_position = choice(prog_list)
@@ -80,9 +83,6 @@ class DanceObj(object):
 
     def len_left_init(self, last_move):
         """Initial determination of remaining beats to be filled by tree recursion.
-
-        >>> self.len_left_init(u'hhey')
-        56
         """
         move_beats = self.move_dict[last_move].beats
         minus_last = DANCE_LENGTH - move_beats
@@ -91,9 +91,6 @@ class DanceObj(object):
 
     def count_dance(self, dance):
         """Count dance from build_dance; should be 64 beats.
-
-        >>> count_dance([u'ngrm', u'nswg', u'llfb', u'nswg', u'lal6', u'pswg', u'pswg', u'nrlt', u'fchn', u'crl3'])
-        64
         """
         count = 0
         for each_move in dance:
@@ -113,17 +110,52 @@ class DanceObj(object):
 
         return count
 
+    def find_leads(self, dance):
+        """Given a partially-built dance, find the follows.
+        """
+        count = 0
+        for each_move in dance:
+            leads_move = self.move_dict[each_move].move_lead
+            count += leads_move
+            count = count % 4
+
+        return count
+
     def try_positions(self, test_value, dance):
+        """Check that dancers are in appropriate position to flow into test_value.
+        """
         follows_at = self.find_follows(dance)
         follows_move = self.move_dict[test_value].move_follow
         follows_to = (follows_at + follows_move) % 4
         print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
-        return True
+
+        leads_at = self.find_leads(dance)
+        leads_move = self.move_dict[test_value].move_lead
+        leads_to = (leads_at + leads_move) % 4
+        print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
+
+        start_same = self.move_dict[test_value].same_side
+
+        # do set math to check that follow/lead positions are or are not on same side
+        if not start_same:
+            return True
+        else:
+            if start_same is True:
+                if 1 == 1:
+                # if (set math):
+                    return True
+                else:
+                    return False
+            elif start_same is False:
+                if 1 == 1:
+                # if (set math):
+                    return True
+                else:
+                    return False
 
     def too_many(self, test_value, new_dance):
         """Check that the addition of a move does not violate the max_repeats rules for type.
         """
-
         test_type = self.move_dict[test_value].type_code
         max_repeats = self.move_dict[test_value].max
         print "TYPE: ", test_type, "MAX REPEATS:", max_repeats
