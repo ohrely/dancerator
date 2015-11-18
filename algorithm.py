@@ -113,12 +113,19 @@ class DanceObj(object):
 
         return count
 
-    def too_many(self, test_key, new_dance):
+    def try_positions(self, test_value, dance):
+        follows_at = self.find_follows(dance)
+        follows_move = self.move_dict[test_value].move_follow
+        follows_to = (follows_at + follows_move) % 4
+        print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
+        return True
+
+    def too_many(self, test_value, new_dance):
         """Check that the addition of a move does not violate the max_repeats rules for type.
         """
 
-        test_type = self.move_dict[test_key].type_code
-        max_repeats = self.move_dict[test_key].max
+        test_type = self.move_dict[test_value].type_code
+        max_repeats = self.move_dict[test_value].max
         print "TYPE: ", test_type, "MAX REPEATS:", max_repeats
 
         if self.move_dict[new_dance[-1]].type_code != test_type:
@@ -143,7 +150,6 @@ class DanceObj(object):
     def try_last_flow(self, curr_key, curr_values, last_move):
         """Check that final move is in values for potential penultimate move.
         """
-        # if last_move in curr_values && curr_position = last_position:
         if last_move in curr_values:
             works = True
         else:
@@ -240,19 +246,17 @@ class DanceObj(object):
                 print "BEATS TO FILL: ", beats_left
                 print "DANCE: ", new_dance
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
-
-                follows_at = self.find_follows(new_dance)
-                follows_move = self.move_dict[next_key].move_follow
-                follows_to = (follows_at + follows_move) % 4
-                print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
-
                 if self.too_many(next_key, new_dance) is False:
-                    dance, works = self.build_dance(next_key, last_move, start, new_dance)
-                    if works is True:
-                        break
+                    if self.try_positions(next_key, new_dance) is True:
+                        dance, works = self.build_dance(next_key, last_move, start, new_dance)
+                        if works is True:
+                            break
+                    else:
+                        print "POSITIONS DON'T WORK"
+                        return dance, works
                 else:
                     print "TOO MANY", self.move_dict[next_key].type_code, "NOT ADDING MORE"
-                    return dance, False
+                    return dance, works
         else:
             print "----------Something is wrong.----------"
             pass
