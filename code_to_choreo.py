@@ -35,6 +35,7 @@ def simple_trans():
 
     while i < len(dance):
         print da_dict[dance[i]].type_code
+        print da_dict[dance[i]].name
         if da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
             if da_dict[dance[i]].type_code == "swing":
                 move_name = ""
@@ -48,7 +49,8 @@ def simple_trans():
                     move_name = count_star(dance, da_dict, i)
             elif da_dict[dance[i]].type_code == "thru":
                 move_name = da_dict[dance[i]].name + " again"
-                return move_name
+            else:
+                move_name = da_dict[dance[i]].name
         else:
             move_name = da_dict[dance[i]].name
 
