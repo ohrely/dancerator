@@ -33,7 +33,7 @@ class MoveObj(object):
     def orphanable(self):
         """Determine whether move needs special treatment to avoid orphaning.
         """
-        return self.min == 0
+        return self.min != 0
 
     def __repr__(self):
         return "<MoveObj move_code={}>".format(self.move_code)
@@ -117,8 +117,13 @@ class DanceObj(object):
         print "START SAME: ", start_same
 
         # do set math to check that follow/lead positions are or are not on same side
-        # if not start_same:
-        #     return True
+        if start_same == 2:
+            return True
+        # elif start_same < 10:
+        #     positions = set(leads_at, follows_at)
+        #     if start_same == 1:
+        #         if positions
+            # set math
         # else:
         #     if start_same is True:
         #         if 1 == 1:
@@ -235,7 +240,7 @@ class DanceObj(object):
         works = False
 
         # Prevent orphans, ensure that swings fill buckets
-        curr_values = self.orphan_wrangling(curr_key, new_dance, curr_len)
+        curr_values = self.orphan_wrangling(curr_key, dance, curr_len)
 
         if not curr_values:
             return dance, works
