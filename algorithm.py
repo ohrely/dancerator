@@ -236,6 +236,7 @@ class DanceObj(object):
 
         # Prevent orphans, ensure that swings fill buckets
         curr_values = self.orphan_wrangling(curr_key, new_dance, curr_len)
+
         if not curr_values:
             return dance, works
 
