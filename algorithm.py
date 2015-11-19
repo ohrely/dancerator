@@ -1,7 +1,7 @@
 from model import Move, Type_, Chain, Progression
 from model import connect_to_db, db
 from random import choice, shuffle
-import doctest
+# import doctest
 
 
 DANCE_LENGTH = 64
@@ -47,11 +47,6 @@ class MoveObj(object):
     def __repr__(self):
         return "<MoveObj move_code={}>".format(self.move_code)
 
-# def defaultLogger(stuff):
-#     print stuff
-
-# def noopLogger(stuff):
-
 
 class DanceObj(object):
     # def __init__(self, move_dict, logger=defaultLogger):
@@ -90,32 +85,32 @@ class DanceObj(object):
     def find_follows(self, dance):
         """Given a partially-built dance, find the follows.
         """
-        count = 0
+        follow_count = 0
         for each_move in dance:
             follows_code = self.move_dict[each_move].move_follow
             if follows_code < 10:
                 follows_move = follows_code
             else:
-                follows_move = FUNKY_MOVES[follows_code][count]
-            count += follows_move
-            count = count % 4
+                follows_move = FUNKY_MOVES[follows_code][follow_count]
+            follow_count += follows_move
+            follow_count = follow_count % 4
 
-        return count
+        return follow_count
 
     def find_leads(self, dance):
         """Given a partially-built dance, find the follows.
         """
-        count = 1
+        lead_count = 1
         for each_move in dance:
             leads_code = self.move_dict[each_move].move_lead
             if leads_code < 10:
                 leads_move = leads_code
             else:
-                leads_move = FUNKY_MOVES[leads_code][count]
-            count += leads_move
-            count = count % 4
+                leads_move = FUNKY_MOVES[leads_code][lead_count]
+            lead_count += leads_move
+            lead_count = lead_count % 4
 
-        return count
+        return lead_count
 
     def try_positions(self, test_value, dance):
         """Check that dancers are in appropriate position to flow into test_value.
@@ -138,16 +133,16 @@ class DanceObj(object):
         leads_to = (leads_at + leads_move) % 4
         print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
 
-        positions = set([follows_to, leads_to])
+        positions = set([follows_at, leads_at])
         print "POSITIONS: ", positions
         if positions == set([0, 2]) or positions == set([1, 3]):
             print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
-            return True
+            return False
 
         start_same = self.move_dict[test_value].same_side
         print "START SAME: ", start_same
 
-        # do set math to check that follow/lead positions are or are not on same side
+        # Do set math to check that follow/lead positions are or are not on same side
         if start_same == 2:
             return True
         elif start_same == 1:
@@ -171,7 +166,7 @@ class DanceObj(object):
         """
         test_type = self.move_dict[test_value].type_code
         max_repeats = self.move_dict[test_value].max
-        print "TYPE: ", test_type, "MAX REPEATS:", max_repeats
+        # print "TYPE: ", test_type, "MAX REPEATS:", max_repeats
 
         if self.move_dict[new_dance[-1]].type_code != test_type:
             return False
@@ -179,13 +174,13 @@ class DanceObj(object):
             return True
         else:
             danger_zone = new_dance[-(max_repeats + 1):]
-            print "DANGER ZONE: ", danger_zone
+            # print "DANGER ZONE: ", danger_zone
 
             repeats = 0
             for old_move in danger_zone:
                 if self.move_dict[old_move].type_code == test_type:
                     repeats += 1
-            print "REPEATS: ", repeats
+            # print "REPEATS: ", repeats
 
             if repeats == (max_repeats + 1):
                 return True
@@ -230,10 +225,12 @@ class DanceObj(object):
 
         return works
 
-    def try_last_position(self, start, dance):
+    def try_last_position(self, start, last_move, dance):
         """Check that potential penultimate move leaves dancers in correct position for final move.
+
+        TODO: doesn't seem perfect, maybe want to have a leads start to check, refactor try_positions so this can use that code.
         """
-        if self.find_follows(dance) == start:
+        if self.find_follows(dance) == start and self.try_positions(last_move, dance):
             works = True
         else:
             print "DIDN'T FLOW - POSITIONS"
@@ -247,12 +244,11 @@ class DanceObj(object):
         potential_whole = list(dance)
         potential_whole.append(curr_key)
 
-        if self.try_last_flow(curr_key, curr_values, last_move) is True and self.try_last_position(start, dance) is True:
+        if self.try_last_flow(curr_key, curr_values, last_move) is True and self.try_last_position(start, last_move, dance) is True:
             return True
         else:
             return False
 
-    # def build_dance(self, curr_key, dance, follow_pos, last_move):
     def build_dance(self, curr_key, last_move, start, dance=None):
         """
         """
@@ -298,7 +294,7 @@ class DanceObj(object):
         elif beats_left > 0:
             for next_key in curr_values:
                 print "............................................................."
-                print "BEATS TO FILL: ", beats_left
+                # print "BEATS TO FILL: ", beats_left
                 print "DANCE: ", new_dance
                 print "TRYING: ", next_key, "(", self.move_dict[next_key].beats, ") beats"
                 if self.too_many(next_key, new_dance) is False:

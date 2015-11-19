@@ -38,11 +38,11 @@ def simple_trans():
         print da_dict[dance[i]].name
         if da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
             if da_dict[dance[i]].type_code == "swing":
-                move_name = ""
+                move_name = None
             elif da_dict[dance[i]].type_code == "star":
                 try:
                     if da_dict[dance[i + 1]].type_code == "star":
-                        move_name = ""
+                        move_name = None
                     else:
                         move_name = count_star(dance, da_dict, i)
                 except IndexError:
@@ -54,18 +54,21 @@ def simple_trans():
         else:
             move_name = da_dict[dance[i]].name
 
-        if beats < 16:
-            translation[0].append(move_name)
-        elif beats < 32:
-            translation[1].append(move_name)
-        elif beats < 48:
-            translation[2].append(move_name)
-        elif beats < 64:
-            translation[3].append(move_name)
-        else:
-            print "SOMETHING IS WRONG"
+        if move_name is not None:
+            if beats < 16:
+                translation[0].append(move_name)
+            elif beats < 32:
+                translation[1].append(move_name)
+            elif beats < 48:
+                translation[2].append(move_name)
+            elif beats < 64:
+                translation[3].append(move_name)
+            else:
+                print "SOMETHING IS WRONG"
 
-        # print translation
+        # for phrase in translation:
+        #     if translation == []
+
         beats = beats + da_dict[dance[i]].beats
         i += 1
 
