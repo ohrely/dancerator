@@ -113,31 +113,33 @@ class DanceObj(object):
         leads_to = (leads_at + leads_move) % 4
         print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
 
+        positions = set([follows_to, leads_to])
+        print "POSITIONS: ", positions
+        # if positions == set([0, 2]) or set([1, 3]):
+        #     print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
+        #     return False
+
         start_same = self.move_dict[test_value].same_side
         print "START SAME: ", start_same
 
         # do set math to check that follow/lead positions are or are not on same side
         if start_same == 2:
             return True
-        # elif start_same < 10:
-        #     positions = set(leads_at, follows_at)
-        #     if start_same == 1:
-        #         if positions
-            # set math
-        # else:
-        #     if start_same is True:
-        #         if 1 == 1:
-        #         # if (set math):
-        #             return True
-        #         else:
-        #             return False
-        #     elif start_same is False:
-        #         if 1 == 1:
-        #         # if (set math):
-        #             return True
-        #         else:
-        #             return False
-        return True
+        elif start_same == 1:
+            if positions == set([0, 3]) or positions == set([1, 2]):
+                print "SHOULD WORK"
+                return True
+            else:
+                return True
+        elif start_same == 0:
+            if positions == set([0, 1]) or positions == set([2, 3]):
+                print "SHOULD WORK"
+                return True
+            else:
+                return True
+        else:
+            print "DID NOT CHECK POSITIONS"
+            return True
 
     def too_many(self, test_value, new_dance):
         """Check that the addition of a move does not violate the max_repeats rules for type.
