@@ -6,6 +6,15 @@ import doctest
 
 DANCE_LENGTH = 64
 
+FUNKY_MOVES = {
+    # "start from even: 1 / start from odd: 3"
+    2113: {0: 1, 1: 3, 2: 1, 3: 3},
+    # "start from even: 3 / start from odd: 0"
+    2310: {0: 3, 1: 0, 2: 3, 3: 0},
+    # "start from even: 0 / start from odd: 1"
+    2011: {0: 0, 1: 1, 2: 0, 3: 1}
+}
+
 
 class MoveObj(object):
     def __init__(self, move_code):
@@ -104,12 +113,20 @@ class DanceObj(object):
         """Check that dancers are in appropriate position to flow into test_value.
         """
         follows_at = self.find_follows(dance)
-        follows_move = self.move_dict[test_value].move_follow
+        follows_code = self.move_dict[test_value].move_follow
+        if follows_code < 10:
+            follows_move = follows_code
+        else:
+            follows_move = FUNKY_MOVES[follows_code][follows_at]
         follows_to = (follows_at + follows_move) % 4
         print "FOLLOWS MOVE ", follows_move, "FROM ", follows_at, "TO ", follows_to
 
         leads_at = self.find_leads(dance)
-        leads_move = self.move_dict[test_value].move_lead
+        leads_code = self.move_dict[test_value].move_lead
+        if leads_code < 10:
+            leads_move = leads_code
+        else:
+            leads_move = FUNKY_MOVES[leads_code][leads_at]
         leads_to = (leads_at + leads_move) % 4
         print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
 
