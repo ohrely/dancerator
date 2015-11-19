@@ -92,7 +92,11 @@ class DanceObj(object):
         """
         count = 0
         for each_move in dance:
-            follows_move = self.move_dict[each_move].move_follow
+            follows_code = self.move_dict[each_move].move_follow
+            if follows_code < 10:
+                follows_move = follows_code
+            else:
+                follows_move = FUNKY_MOVES[follows_code][count]
             count += follows_move
             count = count % 4
 
@@ -101,9 +105,13 @@ class DanceObj(object):
     def find_leads(self, dance):
         """Given a partially-built dance, find the follows.
         """
-        count = 0
+        count = 1
         for each_move in dance:
-            leads_move = self.move_dict[each_move].move_lead
+            leads_code = self.move_dict[each_move].move_lead
+            if leads_code < 10:
+                leads_move = leads_code
+            else:
+                leads_move = FUNKY_MOVES[leads_code][count]
             count += leads_move
             count = count % 4
 
@@ -132,9 +140,9 @@ class DanceObj(object):
 
         positions = set([follows_to, leads_to])
         print "POSITIONS: ", positions
-        # if positions == set([0, 2]) or set([1, 3]):
-        #     print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
-        #     return False
+        if positions == set([0, 2]) or positions == set([1, 3]):
+            print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
+            return True
 
         start_same = self.move_dict[test_value].same_side
         print "START SAME: ", start_same
@@ -147,13 +155,13 @@ class DanceObj(object):
                 print "SHOULD WORK"
                 return True
             else:
-                return True
+                return False
         elif start_same == 0:
             if positions == set([0, 1]) or positions == set([2, 3]):
                 print "SHOULD WORK"
                 return True
             else:
-                return True
+                return False
         else:
             print "DID NOT CHECK POSITIONS"
             return True
