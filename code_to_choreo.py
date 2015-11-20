@@ -75,7 +75,6 @@ def simple_trans():
 
         beats = beats + da_dict[dance[i]].beats
         i += 1
-        print "ADDED 1 TO i"
 
     print translation
     return translation

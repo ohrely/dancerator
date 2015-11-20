@@ -173,7 +173,7 @@ class DanceObj(object):
             return False
         elif max_repeats == 0:
             return True
-        elif test_type == "hhey":
+        elif test_type == "hey":
             if self.count_dance(new_dance) in set([16, 32, 48]):
                 return True
             else:

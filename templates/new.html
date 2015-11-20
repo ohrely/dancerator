@@ -6,9 +6,8 @@
         <li>
           {% for move in phrase %}
             {% if move|length == 2 %}
-              <span class="visual_move" data={{ move }}>
-              <!-- <span class="visual_move" data={{ move[1] }}> -->
-                {{ move }}
+              <span class="visual_move" data={{ move[1] }}>
+                {{ move[0] }}
               </span>
             {% else %}
               {{ move }}
@@ -22,9 +21,15 @@
   <div id="clips">
     <h2>Visualize this!<h2>
 
-    <div width="500px" id="example">
+    <div width="500px" id="clips">
       <img src="../static/something.gif"></img>
-      <!-- <video src="../static/cbal_petr.mp4" autoplay></video> -->
     </div>
+  <script>
+    $('.visual_move').on('click', function(){playMovie(data); });
+
+    function playMove(moveId){
+      $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>')
+    }
+  </script>
   </div>
 {% endblock %}
