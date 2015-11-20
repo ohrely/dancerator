@@ -79,7 +79,7 @@ def parse_csv(dance_data):
 
 
 def seed_prog(dance):
-    """Takes dance as a list of moves and seeds Progressions table.
+    """Takes dance as a list of moves and seeds progressions table.
 
     """
     print("Progressions")
@@ -99,7 +99,7 @@ def seed_prog(dance):
 
 
 def seed_chains(dance):
-    """Takes dance as a list of moves and seeds Chains table.
+    """Takes dance as a list of moves and seeds chains table.
 
     """
     print("Chains")
@@ -124,7 +124,7 @@ def seed_chains(dance):
 
 
 def seed_dances(dance_file):
-    """Seed data from dances into Progressions and Chains tables.
+    """Seed data from dances into progressions and chains tables.
 
     Ensures that both processes are seeded when data is passed in.
 
@@ -140,6 +140,18 @@ def seed_dances(dance_file):
         seed_chains(dance)
 
 
+def seed_titles(title_file):
+    """Seed words from dance titles into Title table."""
+    # Title.query.delete()
+
+    for row in open(title_file):
+        row = row.strip()
+        if row.endswith(">"):
+            row = row.replace("<", ">")
+            row = row.split(">")
+            print row[2]
+
+
 if __name__ == "__main__":
 
     from server import app
@@ -147,6 +159,7 @@ if __name__ == "__main__":
 
     doctest.testmod(verbose=True)
 
-    add_types("seed_data/types.txt")
-    add_moves("seed_data/moves.txt")
-    seed_dances("seed_data/dances.txt")
+    # add_types("seed_data/types.txt")
+    # add_moves("seed_data/moves.txt")
+    # seed_dances("seed_data/dances.txt")
+    seed_titles("seed_data/dance_names.html")

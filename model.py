@@ -88,6 +88,19 @@ class Progression(db.Model):
         return "<Progression id={} last={} first={}>".format(self.prog_id, self.last, self.first)
 
 
+class Title(db.Model):
+    """Collection of words that appear in human-written contra dance names.
+    """
+    __tablename__ = "titles"
+
+    word_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    word = db.Column(db.String(24))
+
+    def __repr__(self):
+
+        return "<Title word_id={} word={}>".format(self.word_id, self.word)
+
+
 def connect_to_db(app):
     """Connect the database to the Flask app"""
 
