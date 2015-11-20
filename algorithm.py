@@ -173,6 +173,11 @@ class DanceObj(object):
             return False
         elif max_repeats == 0:
             return True
+        elif test_type == "hhey":
+            if self.count_dance(new_dance) in set([16, 32, 48]):
+                return True
+            else:
+                return False
         else:
             danger_zone = new_dance[-(max_repeats + 1):]
             # print "DANGER ZONE: ", danger_zone

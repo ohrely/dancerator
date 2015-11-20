@@ -29,15 +29,19 @@ def simple_trans():
     """
     dance, da_dict = make_dance()
     translation = [[], [], [], []]
+    print "DANCE IS ", dance
 
     i = 0
     beats = 0
+    length = len(dance)
 
-    while i < len(dance):
-        print da_dict[dance[i]].type_code
+    while i < length:
+        i_type = da_dict[dance[i]].type_code
         print da_dict[dance[i]].name
-        if da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
-            if da_dict[dance[i]].type_code == "swing":
+        if i < length - 1 and i_type == "hey" and da_dict[dance[i + 1]].type_code == "hey":
+            move_name = "hey for four"
+        elif da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
+            if da_dict[dance[i]].type_code in set(["swing", "hey"]):
                 move_name = None
             elif da_dict[dance[i]].type_code == "star":
                 try:
@@ -71,6 +75,7 @@ def simple_trans():
 
         beats = beats + da_dict[dance[i]].beats
         i += 1
+        print "ADDED 1 TO i"
 
     print translation
     return translation
