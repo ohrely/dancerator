@@ -2,22 +2,21 @@ fal6,allemande,follow allemande left 1 1/2,8,Null,1,2,0,2
 far6,allemande,follow allemande right 1 1/2,8,Null,1,2,0,2
 lal6,allemande,lead allemande left 1 1/2,8,Null,0,0,2,2
 lar6,allemande,lead allemande right 1 1/2,8,Null,0,0,2,2
-nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,2113,2113,0
-nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,2113,2113,0
-pal6,allemande,partner allemande left 1 1/2,8,Null,Null,2113,2113,1
+nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,2311,2311,0
+nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,2311,2311,0
+pal6,allemande,partner allemande left 1 1/2,8,Null,Null,2311,2311,1
 cbal,bal,circle balance,4,0,Null,0,0,2
 nbal,bal,neighbor balance,4,0,Null,0,0,0
 pbal,bal,partner balance,4,0,Null,0,0,1
-fchn,chain,follow chain to neighbor,8,Null,1,2,0,1
-fchp,chain,follow chain to partner,8,Null,1,2,0,0
-crl3,circle,circle left 3/4,8,0,Null,3,3,2
-crl4,circle,circle left 4/4,8,0,Null,0,0,2
+fchn,chain,follow chain,8,Null,1,2,0,2
+crl3,circle,circle left 3 places,8,0,Null,3,3,2
+crl4,circle,circle left 4 places,8,0,Null,0,0,2
 fdn6,dosido,follow do si do to neighbor 1 1/2,8,1,1,2,0,1
 fdp6,dosido,follow do si do to partner 1 1/2,8,1,1,2,0,0
 ndo4,dosido,neighbor do si do,8,0,Null,0,0,0
 pdo4,dosido,partner do si do,8,0,Null,0,0,1
-nbox,gnat,neighbor box the gnat,4,1,Null,2113,2113,2
-pbox,gnat,partner box the gnat,4,1,Null,2113,2113,2
+nbox,gnat,neighbor box the gnat,4,1,Null,2311,2311,0
+pbox,gnat,partner box the gnat,4,1,Null,2311,2311,1
 hhey,hey,half hey,8,1,Null,2,2,2
 llfb,lines,long lines forward and back,8,0,Null,0,0,2
 fml6,magnetize,follow magnetize left 1 1/2,8,1,1,2,0,2
@@ -30,13 +29,11 @@ pmr4,magnetize,partner magnetize right 1,8,1,Null,0,0,1
 pmrm,magnetize,partner magnetize right melt,8,1,Null,0,0,1
 pass,passthru,pass through circle to new neighbors,4,Null,Null,0,0,0
 arch,passthru,twos arch ones dive to next couple,4,1,Null,0,0,0
-nprm,promenade,neighbor promenade across the set,8,Null,Null,2,2,0
-pprm,promenade,partner promenade across the set,8,Null,Null,2,2,1
+prom,promenade,promenade across the set,8,Null,Null,2,2,2
 lstr,star,left hand star,2,Null,Null,3,3,2
 rstr,star,right hand star,2,Null,Null,1,1,2
 nswg,swing,neighbor swing,4,Null,Null,2310,2011,0
 pswg,swing,partner swing,4,Null,Null,2310,2011,1
-nrlt,thru,right/left thru neighbor then partner,8,1,Null,2,2,1
-prlt,thru,right/left thru partner then neighbor,8,1,Null,2,2,0
-pcal,twirl,partner callifornia twirl,4,1,Null,2,2,0
+rlth,thru,right/left thru,8,1,Null,2,2,2
+pcal,twirl,partner callifornia twirl,4,1,Null,3,1,0
 petr,twirl,petronella,4,Null,Null,3,3,2

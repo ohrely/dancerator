@@ -7,8 +7,8 @@ from random import choice, shuffle
 DANCE_LENGTH = 64
 
 FUNKY_MOVES = {
-    # "start from even: 1 / start from odd: 3"
-    2113: {0: 1, 1: 3, 2: 1, 3: 3},
+    # "start from even: 3 / start from odd: 1"
+    2311: {0: 3, 1: 1, 2: 3, 3: 1},
     # "start from even: 3 / start from odd: 0"
     2310: {0: 3, 1: 0, 2: 3, 3: 0},
     # "start from even: 0 / start from odd: 1"
@@ -112,6 +112,20 @@ class DanceObj(object):
 
         return lead_count
 
+    def check_same(self, follows_at, leads_at):
+        """Determine if dancers are on the same side as their partners.
+        """
+        positions = set([follows_at, leads_at])
+        print "POSITIONS: ", positions
+
+        if positions == set([0, 1]) or positions == set([2, 3]):
+            return False
+        elif positions == set([0, 3]) or positions == set([1, 2]):
+            return True
+        else:
+            print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
+            return
+
     def try_positions(self, test_value, dance):
         """Check that dancers are in appropriate position to flow into test_value.
         """
@@ -133,33 +147,20 @@ class DanceObj(object):
         leads_to = (leads_at + leads_move) % 4
         print "LEADS MOVE ", leads_move, "FROM ", leads_at, "TO ", leads_to
 
-        positions = set([follows_at, leads_at])
-        print "POSITIONS: ", positions
-        if positions == set([0, 2]) or positions == set([1, 3]):
-            print "SOMETHING IS VERY WRONG WITH THESE POSITIONS"
-            return False
-
+        with_partners = self.check_same(follows_at, leads_at)
         start_same = self.move_dict[test_value].same_side
-        print "START SAME: ", start_same
+        print "START SAME: ", start_same, "WITH PARTNERS: ", with_partners
 
         # Do set math to check that follow/lead positions are or are not on same side
         if start_same == 2:
             return True
-        elif start_same == 1:
-            if positions == set([0, 3]) or positions == set([1, 2]):
-                print "SHOULD WORK"
-                return True
-            else:
-                return False
-        elif start_same == 0:
-            if positions == set([0, 1]) or positions == set([2, 3]):
-                print "SHOULD WORK"
-                return True
-            else:
-                return False
-        else:
-            print "DID NOT CHECK POSITIONS"
+        elif (start_same == 1 and with_partners) or (start_same == 0 and not with_partners):
             return True
+        elif (start_same == 1 and not with_partners) or (start_same == 0 and with_partners):
+            return False
+        else:
+            print "SOMETHING IS WRONG WITH POSITIONS"
+            return False
 
     def too_many(self, test_value, new_dance):
         """Check that the addition of a move does not violate the max_repeats rules for type.
