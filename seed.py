@@ -145,8 +145,6 @@ def seed_titles(title_file):
 
     Very slow with lots of data - only run with good reason."""
 
-    Title.query.delete()
-
     for row in open(title_file):
         row = row.strip()
         if row.endswith(">"):
@@ -175,4 +173,3 @@ if __name__ == "__main__":
     add_types("seed_data/types.txt")
     add_moves("seed_data/moves.txt")
     seed_dances("seed_data/dances.txt")
-    seed_titles("seed_data/dance_names.txt")
