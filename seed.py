@@ -1,4 +1,4 @@
-from model import Move, Type_, Chain, Progression
+from model import Move, Type_, Chain, Progression, Title
 from model import connect_to_db, db
 import doctest
 
@@ -141,15 +141,28 @@ def seed_dances(dance_file):
 
 
 def seed_titles(title_file):
-    """Seed words from dance titles into Title table."""
-    # Title.query.delete()
+    """Seed words from dance titles into Title table.
+
+    Very slow with lots of data - only run with good reason."""
+
+    Title.query.delete()
 
     for row in open(title_file):
         row = row.strip()
         if row.endswith(">"):
             row = row.replace("<", ">")
             row = row.split(">")
-            print row[2]
+            title = row[2]
+            title = title.split(" ")
+            for word in title:
+                try:
+                    db.session.query(Title).filter_by(word=word).one()
+                except:
+                    new_word = Title(word=word)
+                    print new_word
+
+                    db.session.add(new_word)
+                    db.session.commit()
 
 
 if __name__ == "__main__":
@@ -159,7 +172,7 @@ if __name__ == "__main__":
 
     doctest.testmod(verbose=True)
 
-    # add_types("seed_data/types.txt")
-    # add_moves("seed_data/moves.txt")
-    # seed_dances("seed_data/dances.txt")
-    seed_titles("seed_data/dance_names.html")
+    add_types("seed_data/types.txt")
+    add_moves("seed_data/moves.txt")
+    seed_dances("seed_data/dances.txt")
+    seed_titles("seed_data/dance_names.txt")

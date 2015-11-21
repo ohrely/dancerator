@@ -78,10 +78,10 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#chickaloon_reel">Chickaloon Reel</A>
 	<A HREF="by_title.html#chinese_breakdown">Chinese Breakdown</A>
 	<A HREF="by_title.html#chippenham_square">Chippenham Square</A>
-	<A HREF="by_title.html#circle_three_and_balance_four">Circle Three & Balance Four</A>
+	<A HREF="by_title.html#circle_three_and_balance_four">Circle Three and Balance Four</A>
 	<A HREF="by_title.html#circle_to_a_circle">Circle to a Circle</A>
 	<A HREF="by_title.html#circle_to_the_middle">Circle to the Middle</A>
-	<A HREF="by_title.html#circles_and_stars">Circles & Stars</A>
+	<A HREF="by_title.html#circles_and_stars">Circles and Stars</A>
 	<A HREF="by_title.html#city_stages_square">City Stages Square</A>
 	<A HREF="by_title.html#clarity_number_one">Clarity Number One</A>
 	<A HREF="by_title.html#class_iii_rapids">Class III Rapids</A>
@@ -177,7 +177,7 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#happy_endings">Happy Endings</A>
 	<A HREF="by_title.html#happy_hobo">Happy Hobo</A>
 	<A HREF="by_title.html#haw_river_express">Haw River Express</A>
-	<A HREF="by_title.html#head_men_and_side_ladies">Head Men & Side Ladies</A>
+	<A HREF="by_title.html#head_men_and_side_ladies">Head Men and Side Ladies</A>
 	<A HREF="by_title.html#headache_in_six_eight">Headache in Six-Eight</A>
 	<A HREF="by_title.html#heads_will_roll">Heads will Roll</A>
 	<A HREF="by_title.html#heartbreaker">The Heartbreaker</A>
@@ -202,7 +202,6 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#hot_time_in_the_old_town_tonight">Hot Time In the Old Town Tonight</A>
 	<A HREF="by_title.html#idiots_delight">Idiot's Delight</A>
 	<A HREF="by_title.html#if_you_knew_susie">If You Knew Susie</A>
-	<A HREF="by_title.html#innuendo_and_out_your_door">Innuendo (And Out Your Door)</A>
 	<A HREF="by_title.html#interchange_freeway">Interchange Freeway</A>
 	<A HREF="by_title.html#international_lancer_set">International Lancer Set</A>
 	<A HREF="by_title.html#inverted_express">Inverted Express</A>
@@ -221,7 +220,6 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#keep_your_own">Keep Your Own</A>
 	<A HREF="by_title.html#kerry_set">Kerry Set</A>
 	<A HREF="by_title.html#kimmswick_express">Kimmswick Express</A>
-	<A HREF="by_title.html#kitchen_junket_lancers">"Kitchen Junket" Lancers</A>
 	<A HREF="by_title.html#kitchen_lancers">Kitchen Lancers</A>
 	<A HREF="by_title.html#kitty_corner">Kitty Corner</A>
 	<A HREF="by_title.html#kudzu_castles">Kudzu Castles</A>
@@ -232,7 +230,6 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#ladies_switcheroo">Ladies Switcheroo</A>
 	<A HREF="by_title.html#ladies_whirligig">Ladies' Whirligig</A>
 	<A HREF="by_title.html#lancers">The Lancers</A>
-	<A HREF="by_title.html#lancers_oriental">The Lancers "Oriental"</A>
 	<A HREF="by_title.html#lancers_reel">The Lancer's Reel</A>
 	<A HREF="by_title.html#lavender_moon">Lavender Moon</A>
 	<A HREF="by_title.html#leading_ladies">Leading Ladies</A>
@@ -279,7 +276,6 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#new_dixie_reel">New Dixie Reel</A>
 	<A HREF="by_title.html#new_river_train">New River Train</A>
 	<A HREF="by_title.html#newport_quadrille_number_3">Newport Quadrille #3</A>
-	<A HREF="by_title.html#noch_ohne_titel">(noch) ohne titel</A>
 	<A HREF="by_title.html#northern_lights">Northern Lights</A>
 	<A HREF="by_title.html#not_too_far">Not Too Far</A>
 	<A HREF="by_title.html#november_breakdown">November Breakdown</A>
@@ -295,7 +291,6 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#pick_up_your_corner">Pick Up Your Corner</A>
 	<A HREF="by_title.html#pitter_patter">Pitter Patter</A>
 	<A HREF="by_title.html#plain_quadrille">Plain Quadrille</A>
-	<A HREF="by_title.html#plain_quadrille_figure_two">Plain Quadrille (Figure Two)</A>
 	<A HREF="by_title.html#plain_quadrille_number_1">Plain Quadrille #1</A>
 	<A HREF="by_title.html#plain_quadrille_number_2">Plain Quadrille #2</A>
 	<A HREF="by_title.html#plain_quadrille_number_3">Plain Quadrille #3</A>
@@ -315,7 +310,7 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#promenade_in_a_star">Promenade In A Star</A>
 	<A HREF="by_title.html#push_and_shove">Push and Shove</A>
 	<A HREF="by_title.html#quebec_quadrille">Quebec Quadrille</A>
-	<A HREF="by_title.html#quebecois_square">Québecois Square</A>
+	<A HREF="by_title.html#quebecois_square">Quebecois Square</A>
 	<A HREF="by_title.html#quick_step_94">Quick Step 94</A>
 	<A HREF="by_title.html#rainbow_stroll">Rainbow Stroll</A>
 	<A HREF="by_title.html#rang_tang_express">Rang Tang Express</A>
@@ -329,7 +324,7 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#rods_contra_square_number_1">Rod's Contra Square #1</A>
 	<A HREF="by_title.html#rods_quadrille">Rod's Quadrille</A>
 	<A HREF="by_title.html#rods_reel">Rod's Reel</A>
-	<A HREF="by_title.html#rods_right_and_left">Rod's Right & Left</A>
+	<A HREF="by_title.html#rods_right_and_left">Rod's Right and Left</A>
 	<A HREF="by_title.html#roll_back_one">Roll Back One</A>
 	<A HREF="by_title.html#rolling_break">Rolling Break</A>
 	<A HREF="by_title.html#rose_quadrille">The Rose Quadrille</A>
@@ -425,7 +420,7 @@ C 4x2 (square dance)
 	<A HREF="by_title.html#when_the_works_all_done_this_fall">When the Work's All Done this Fall</A>
 	<A HREF="by_title.html#when_youre_smiling">When You're Smiling</A>
 	<A HREF="by_title.html#where_when_and_why">Where when and why</A>
-	<A HREF="by_title.html#whirligig_and_cheat">Whirligig & Cheat</A>
+	<A HREF="by_title.html#whirligig_and_cheat">Whirligig and Cheat</A>
 	<A HREF="by_title.html#whirligig_and_cheat">Whirligig and Cheat</A>
 	<A HREF="by_title.html#white_coppice">White Coppice</A>
 	<A HREF="by_title.html#williss_route">Willis's Route</A>
@@ -500,7 +495,7 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#caulking_jig">Caulking Jig</A>
 	<A HREF="by_title.html#centers_roll_back">Centers Roll Back</A>
 	<A HREF="by_title.html#chain_all_eight">Chain All Eight</A>
-	<A HREF="by_title.html#chain_and_promenade">Chain & promenade</A>
+	<A HREF="by_title.html#chain_and_promenade">Chain and promenade</A>
 	<A HREF="by_title.html#chain_and_star">Chain and Star</A>
 	<A HREF="by_title.html#chain_on_both_corners">Chain on Both Corners</A>
 	<A HREF="by_title.html#chain_swinger">Chain Swinger</A>
@@ -543,14 +538,14 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#doctor_who">Doctor Who</A>
 	<A HREF="by_title.html#doing_the_dishes">Doing the Dishes</A>
 	<A HREF="by_title.html#dons_dance_number_1">Don's Dance #1</A>
-	<A HREF="by_title.html#dosado_and_face_the_sides_quadrille">DoSaDo & Face the Sides Quadrille</A>
+	<A HREF="by_title.html#dosado_and_face_the_sides_quadrille">DoSaDo and Face the Sides Quadrille</A>
 	<A HREF="by_title.html#double_braid">Double Braid</A>
 	<A HREF="by_title.html#double_crossing">Double Crossing</A>
 	<A HREF="by_title.html#double_star">Double Star</A>
 	<A HREF="by_title.html#double_star_through">Double Star Through</A>
 	<A HREF="by_title.html#down_on_the_corner">Down on the Corner</A>
 	<A HREF="by_title.html#down_the_ocean">Down The Ocean</A>
-	<A HREF="by_title.html#duck_through_and_swing">Duck Through & Swing</A>
+	<A HREF="by_title.html#duck_through_and_swing">Duck Through and Swing</A>
 	<A HREF="by_title.html#duck_through_and_swing">Duck Through and Swing</A>
 	<A HREF="by_title.html#duck_to_the_center">Duck to the Center</A>
 	<A HREF="by_title.html#dyslexics_nightmare">The Dyslexic's Nightmare</A>
@@ -670,7 +665,6 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#mad_quadrille">Mad Quadrille</A>
 	<A HREF="by_title.html#maelstrom">Maelstrom</A>
 	<A HREF="by_title.html#malden_square">Malden Square</A>
-	<A HREF="by_title.html#manana">Mañana</A>
 	<A HREF="by_title.html#maple_sugar_gal">Maple Sugar Gal</A>
 	<A HREF="by_title.html#margos_square">Margo's Square</A>
 	<A HREF="by_title.html#marianne">Marianne</A>
@@ -731,7 +725,7 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#partygoers">Partygoers</A>
 	<A HREF="by_title.html#pas_night_out">Pa's Night Out</A>
 	<A HREF="by_title.html#pass_through_and_do_si_do">Pass Through and Do-si-do</A>
-	<A HREF="by_title.html#pass_through_and_promenade">Pass through & promenade</A>
+	<A HREF="by_title.html#pass_through_and_promenade">Pass through and promenade</A>
 	<A HREF="by_title.html#pass_your_corner">Pass Your Corner</A>
 	<A HREF="by_title.html#passable_solution">A Passable Solution</A>
 	<A HREF="by_title.html#pats_pique">Pat's Pique</A>
@@ -823,7 +817,7 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#star_breakdown">Star Breakdown</A>
 	<A HREF="by_title.html#star_chase">Star Chase</A>
 	<A HREF="by_title.html#starline">Starline</A>
-	<A HREF="by_title.html#stars_and_stripes_quadrille">Stars & Stripes Quadrille</A>
+	<A HREF="by_title.html#stars_and_stripes_quadrille">Stars and Stripes Quadrille</A>
 	<A HREF="by_title.html#stars_and_stripes_quadrille">Stars and Stripes Quadrille</A>
 	<A HREF="by_title.html#stars_galore">Stars Galore</A>
 	<A HREF="by_title.html#staten_island_square">Staten Island Square</A>
@@ -847,7 +841,6 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#teds_presque_isle_eight">Ted's Presque Isle Eight</A>
 	<A HREF="by_title.html#teds_three_quarter_chain">Ted's Three-Quarter Chain</A>
 	<A HREF="by_title.html#texas_star">Texas Star</A>
-	<A HREF="by_title.html#thar_square">"Thar" Square</A>
 	<A HREF="by_title.html#that_old_dixie_daisy">That Old Dixie Daisy</A>
 	<A HREF="by_title.html#think_tank">Think Tank</A>
 	<A HREF="by_title.html#thinking_of_hilcote">Thinking of Hilcote</A>
@@ -888,7 +881,7 @@ C 4x2 mixer (square dance)
 	<A HREF="by_title.html#wildcat_square">Wildcat square</A>
 	<A HREF="by_title.html#william_and_marys_square">William and Mary's Square</A>
 	<A HREF="by_title.html#willis_route">Willis' Route</A>
-	<A HREF="by_title.html#with_right_and_left_through">With right & left Through</A>
+	<A HREF="by_title.html#with_right_and_left_through">With right and left Through</A>
 	<A HREF="by_title.html#wrong_side_of_town">The Wrong Side of Town</A>
 	<A HREF="by_title.html#xenotransplantation">Xenotransplantation</A>
 	<A HREF="by_title.html#you_call_everybody_darling">You Call Everybody Darling</A>
@@ -929,7 +922,6 @@ C 5x2 mixer (5 couples in a circle)
 	<A HREF="by_title.html#union_jack">Union Jack</A>
 
 C 6x2 (6 couples in a circle)
-	<A HREF="by_title.html#chaine_en_huit">Chaîne en Huit</A>
 	<A HREF="by_title.html#hexitation">Hexitation</A>
 	<A HREF="by_title.html#toms_sixer_number_two">Tom's Sixer Number Two</A>
 	<A HREF="by_title.html#untitled_hex_dance">Untitled Hex Dance</A>
@@ -950,7 +942,7 @@ C 8x2
 	<A HREF="by_title.html#philippes_double_quadrille_number_1">Philippe's Double Quadrille #1</A>
 	<A HREF="by_title.html#philippes_double_quadrille_number_1">Philippe's Double Quadrille No 1</A>
 	<A HREF="by_title.html#pinwheel_quadrille">Pinwheel Quadrille</A>
-	<A HREF="by_title.html#r_and_s_alliance">The R & S Alliance</A>
+	<A HREF="by_title.html#r_and_s_alliance">The R and S Alliance</A>
 	<A HREF="by_title.html#rods_quad_number_1">Rod's Quad #1</A>
 	<A HREF="by_title.html#rods_quad_number_2">Rod's Quad #2</A>
 	<A HREF="by_title.html#rods_quad_number_3">Rod's Quad #3</A>
@@ -1006,7 +998,7 @@ Cm 1x2 mixer (circle mixer)
 	<A HREF="by_title.html#bluejay">Bluejay</A>
 	<A HREF="by_title.html#bob_and_lauras_35th">Bob and Laura's 35th</A>
 	<A HREF="by_title.html#bobs_birthday">Bob's Birthday</A>
-	<A HREF="by_title.html#boris_and_ines_mixer">Boris & Ines Mixer</A>
+	<A HREF="by_title.html#boris_and_ines_mixer">Boris and Ines Mixer</A>
 	<A HREF="by_title.html#break_a_leg">Break a Leg</A>
 	<A HREF="by_title.html#bridal_circle">Bridal Circle</A>
 	<A HREF="by_title.html#bridges_over_montpelier">Bridges over Montpelier</A>
@@ -1020,8 +1012,8 @@ Cm 1x2 mixer (circle mixer)
 	<A HREF="by_title.html#celebration">Celebration</A>
 	<A HREF="by_title.html#chanctonbury_ring">Chanctonbury Ring</A>
 	<A HREF="by_title.html#cheeseburger">Cheeseburger</A>
-	<A HREF="by_title.html#chris_and_lisa_found_each_other">Chris & Lisa Found Each Other</A>
-	<A HREF="by_title.html#chris_and_lisa_found_each_other">Chris & Lisa found each other</A>
+	<A HREF="by_title.html#chris_and_lisa_found_each_other">Chris and Lisa Found Each Other</A>
+	<A HREF="by_title.html#chris_and_lisa_found_each_other">Chris and Lisa found each other</A>
 	<A HREF="by_title.html#christmas_mixer">Christmas Mixer</A>
 	<A HREF="by_title.html#cincinnati_reel">Cincinnati Reel</A>
 	<A HREF="by_title.html#circassian_circle">Circassian Circle</A>
@@ -1057,7 +1049,6 @@ Cm 1x2 mixer (circle mixer)
 	<A HREF="by_title.html#ez_mixer">EZ Mixer</A>
 	<A HREF="by_title.html#ezs_mixer">E.Z.'s Mixer</A>
 	<A HREF="by_title.html#facing_in_and_out">Facing In and Out</A>
-	<A HREF="by_title.html#familjewalsen_norwegian_family_waltz">Familjewalsen (Norwegian Family Waltz)</A>
 	<A HREF="by_title.html#family_waltz">Family Waltz</A>
 	<A HREF="by_title.html#farmers_gallop">Farmer's Gallop</A>
 	<A HREF="by_title.html#february_mixer">February Mixer</A>
@@ -1209,7 +1200,7 @@ Cm 1x2 mixer (circle mixer)
 	<A HREF="by_title.html#smiles">Smiles</A>
 	<A HREF="by_title.html#spinners_delight">Spinner's Delight</A>
 	<A HREF="by_title.html#star_thru_mixer">Star Thru Mixer</A>
-	<A HREF="by_title.html#stars_and_stripes_mixer">Stars & Stripes Mixer</A>
+	<A HREF="by_title.html#stars_and_stripes_mixer">Stars and Stripes Mixer</A>
 	<A HREF="by_title.html#stratton_mountain_mixer">Stratton Mountain Mixer</A>
 	<A HREF="by_title.html#suicide_square">Suicide Square</A>
 	<A HREF="by_title.html#sunday_on_the_green">Sunday on the Green</A>
@@ -1233,7 +1224,7 @@ Cm 1x2 mixer (circle mixer)
 	<A HREF="by_title.html#trip_to_tennessee">Trip to Tennessee</A>
 	<A HREF="by_title.html#trip_to_the_south">Trip to the South</A>
 	<A HREF="by_title.html#tryout">The Tryout</A>
-	<A HREF="by_title.html#two_and_four">Two & Four</A>
+	<A HREF="by_title.html#two_and_four">Two and Four</A>
 	<A HREF="by_title.html#two_eight_five_4673">Two Eight Five-4673</A>
 	<A HREF="by_title.html#two_knots_on_a_string">Two Knots on a String</A>
 	<A HREF="by_title.html#uptown">Uptown</A>
@@ -1277,11 +1268,11 @@ Cm 2x2
 Cm 2x2 becket (becket sicilian circle)
 	<A HREF="by_title.html#becket_circle">Becket Circle</A>
 	<A HREF="by_title.html#buffalo_stampede">Buffalo Stampede</A>
-	<A HREF="by_title.html#emma_and_kendall">Emma & Kendall</A>
+	<A HREF="by_title.html#emma_and_kendall">Emma and Kendall</A>
 	<A HREF="by_title.html#flk_mixer">FLK Mixer</A>
 	<A HREF="by_title.html#geometric_discretion">Geometric Discretion</A>
 	<A HREF="by_title.html#lizard_research_institute">The Lizard Research Institute</A>
-	<A HREF="by_title.html#m_and_ms_reel">M & M's Reel</A>
+	<A HREF="by_title.html#m_and_ms_reel">M and M's Reel</A>
 	<A HREF="by_title.html#marching_to_pretoria">Marching to Pretoria</A>
 	<A HREF="by_title.html#maverick_waltz">Maverick Waltz</A>
 	<A HREF="by_title.html#meade_county_reel">Meade County Reel</A>
@@ -1396,8 +1387,8 @@ Cm 2x2 ip (sicilian circle)
 	<A HREF="by_title.html#july_in_augusta">July in Augusta</A>
 	<A HREF="by_title.html#june_waltz">The June Waltz</A>
 	<A HREF="by_title.html#just_that_bit_extra">Just That Bit Extra</A>
-	<A HREF="by_title.html#k_and_e_circle">K & E Circle</A>
-	<A HREF="by_title.html#k_and_s_jig">K & S Jig</A>
+	<A HREF="by_title.html#k_and_e_circle">K and E Circle</A>
+	<A HREF="by_title.html#k_and_s_jig">K and S Jig</A>
 	<A HREF="by_title.html#katrinas_dance">Katrina's Dance</A>
 	<A HREF="by_title.html#kelsey_hartmans_footloose_and_fancy_free">Kelsey Hartman's <em>Footloose and Fancy Free</em></A>
 	<A HREF="by_title.html#kens_starter">Ken's Starter</A>
@@ -1454,7 +1445,6 @@ Cm 2x2 ip (sicilian circle)
 	<A HREF="by_title.html#pittsfield_circle">Pittsfield Circle</A>
 	<A HREF="by_title.html#portland">Portland</A>
 	<A HREF="by_title.html#portland_fancy">Portland Fancy</A>
-	<A HREF="by_title.html#prince_edward_island_big_square">Prince Edward Island "Big Square"</A>
 	<A HREF="by_title.html#promenade_around">Promenade Around</A>
 	<A HREF="by_title.html#puffer_train">Puffer Train</A>
 	<A HREF="by_title.html#puppydogs_dream">The Puppydog's Dream</A>
@@ -1471,7 +1461,7 @@ Cm 2x2 ip (sicilian circle)
 	<A HREF="by_title.html#sanita_hill_circle">Sanita Hill Circle</A>
 	<A HREF="by_title.html#sashay_round_the_ring">Sashay 'Round the Ring</A>
 	<A HREF="by_title.html#scamp">Scamp</A>
-	<A HREF="by_title.html#scones_and_tea">Scones & Tea</A>
+	<A HREF="by_title.html#scones_and_tea">Scones and Tea</A>
 	<A HREF="by_title.html#scotch_reel">Scotch Reel</A>
 	<A HREF="by_title.html#sea_waves">Sea Waves</A>
 	<A HREF="by_title.html#second_hand_reel">Second Hand Reel</A>
@@ -1530,8 +1520,6 @@ Cm 2x2 ip (sicilian circle)
 	<A HREF="by_title.html#us_80_east_and_west">U.S. 80 East And West</A>
 	<A HREF="by_title.html#vagns_dance">Vagn's Dance</A>
 	<A HREF="by_title.html#victoria_mixer">Victoria Mixer</A>
-	<A HREF="by_title.html#waltz_country_dance_version_1">Waltz Country Dance (version 1)</A>
-	<A HREF="by_title.html#waltz_country_dance_version_2">Waltz Country Dance (version 2)</A>
 	<A HREF="by_title.html#warm_up">Warm Up</A>
 	<A HREF="by_title.html#waterfall_waltz">Waterfall Waltz</A>
 	<A HREF="by_title.html#wave_your_weight">Wave Your Weight</A>
@@ -1603,7 +1591,6 @@ Cm 2x3 (circle of sets of 3 facing 3)
 	<A HREF="by_title.html#five_times_trio">Five Times Trio</A>
 	<A HREF="by_title.html#four_corners_trio_mixer">Four Corners Trio Mixer</A>
 	<A HREF="by_title.html#from_room_915">From Room 915</A>
-	<A HREF="by_title.html#funf_dosado">Fünf Dosado</A>
 	<A HREF="by_title.html#gingerbread">Gingerbread</A>
 	<A HREF="by_title.html#haste_to_the_divorce">Haste to the Divorce</A>
 	<A HREF="by_title.html#highland_reel">Highland Reel</A>
@@ -1616,7 +1603,6 @@ Cm 2x3 (circle of sets of 3 facing 3)
 	<A HREF="by_title.html#outnumbered">Outnumbered</A>
 	<A HREF="by_title.html#pinewoods_hurry_scurry_ii">Pinewoods Hurry Scurry II</A>
 	<A HREF="by_title.html#rattlesnake_trio">Rattlesnake Trio</A>
-	<A HREF="by_title.html#reel_a_neuf">Reel à Neuf</A>
 	<A HREF="by_title.html#reel_mixer">A Reel Mixer</A>
 	<A HREF="by_title.html#right_hand_up_left_hand_under">Right Hand Up Left Hand Under</A>
 	<A HREF="by_title.html#rustic_reel">Rustic Reel</A>
@@ -1659,7 +1645,6 @@ Cm 2x4 (circle of sets of 4 facing 4)
 	<A HREF="by_title.html#knoby_knave">Knoby Knave</A>
 	<A HREF="by_title.html#la_tempete">La Tempete</A>
 	<A HREF="by_title.html#new_portland_fancy">New Portland Fancy</A>
-	<A HREF="by_title.html#noch_ohne_titel">(noch) ohne titel</A>
 	<A HREF="by_title.html#portland_fancy">Portland Fancy</A>
 	<A HREF="by_title.html#rout">Rout</A>
 	<A HREF="by_title.html#sanfte_phantasie">Sanfte Phantasie</A>
@@ -1781,7 +1766,7 @@ L 3x2 ipp (triplet, 1s improper)
 	<A HREF="by_title.html#honor_to_becky_eastman">Honor To Becky Eastman</A>
 	<A HREF="by_title.html#housewarming">Housewarming</A>
 	<A HREF="by_title.html#huntsmans_chorus">Huntsman's Chorus</A>
-	<A HREF="by_title.html#j_and_t_special">The J & T Special</A>
+	<A HREF="by_title.html#j_and_t_special">The J and T Special</A>
 	<A HREF="by_title.html#jackis_favorite">Jacki's Favorite</A>
 	<A HREF="by_title.html#jamie_allen">Jamie Allen</A>
 	<A HREF="by_title.html#modern_algebra">Modern Algebra</A>
@@ -1847,7 +1832,7 @@ L 3x2 ppp (triplet, all proper)
 	<A HREF="by_title.html#begonia">Begonia</A>
 	<A HREF="by_title.html#beneficial_triplet">Beneficial Triplet</A>
 	<A HREF="by_title.html#beneficial_triplet">The Beneficial Triplet</A>
-	<A HREF="by_title.html#bill_and_fred_triplet">Bill & Fred Triplet</A>
+	<A HREF="by_title.html#bill_and_fred_triplet">Bill and Fred Triplet</A>
 	<A HREF="by_title.html#black_mountain_triplet">Black Mountain Triplet</A>
 	<A HREF="by_title.html#bluebonnet_waltz">Bluebonnet Waltz</A>
 	<A HREF="by_title.html#bobs_triplet_number_1">Bob's Triplet #1</A>
@@ -1909,7 +1894,6 @@ L 3x2 ppp (triplet, all proper)
 	<A HREF="by_title.html#jasmine">Jasmine</A>
 	<A HREF="by_title.html#jubilee_triplet">Jubilee Triplet</A>
 	<A HREF="by_title.html#just_as_good">Just as Good</A>
-	<A HREF="by_title.html#kalanchoe">Kalanchoë</A>
 	<A HREF="by_title.html#kelsterne_gardens">Kelsterne Gardens</A>
 	<A HREF="by_title.html#kraft">Kraft</A>
 	<A HREF="by_title.html#la_bastringue">La Bastringue</A>
@@ -2027,13 +2011,13 @@ L 4x2 becket (4 couple longways set)
 	<A HREF="by_title.html#waiting_on_the_corner">Waiting on the Corner</A>
 
 L 4x2 ipip (4 couple longways set, 1s and 3s improper)
-	<A HREF="by_title.html#al_and_marks_quadruplet">Al & Mark's Quadruplet</A>
+	<A HREF="by_title.html#al_and_marks_quadruplet">Al and Mark's Quadruplet</A>
 	<A HREF="by_title.html#als_quadruplet_number_1">Al's Quadruplet #1</A>
 	<A HREF="by_title.html#als_quadruplet_number_2">Al's Quadruplet #2</A>
 	<A HREF="by_title.html#contra_quad_number_1">Contra Quad No. 1</A>
 	<A HREF="by_title.html#florida_virgina_commuters_reel">Florida/Virgina Commuters Reel</A>
 	<A HREF="by_title.html#january_quad">January Quad</A>
-	<A HREF="by_title.html#k_and_e_for_eight">K & E for Eight</A>
+	<A HREF="by_title.html#k_and_e_for_eight">K and E for Eight</A>
 	<A HREF="by_title.html#marcus_march_contra_quad_no_iii">Marcus March, Contra Quad No. III</A>
 	<A HREF="by_title.html#mc2">M.C.2</A>
 	<A HREF="by_title.html#meltdown">Meltdown</A>
@@ -2172,7 +2156,7 @@ L 8x2 p (8 couple longways set, all proper)
 	<A HREF="by_title.html#willow_tree">Willow Tree</A>
 
 L Nx2
-	<A HREF="by_title.html#bow_and_swing">Bow & Swing</A>
+	<A HREF="by_title.html#bow_and_swing">Bow and Swing</A>
 	<A HREF="by_title.html#dipping_and_diving">Dipping and Diving</A>
 	<A HREF="by_title.html#ecd_dreaming">ECD Dreaming</A>
 	<A HREF="by_title.html#halloween_shuffle">Halloween Shuffle</A>
@@ -2229,7 +2213,6 @@ L Nx2 p
 	<A HREF="by_title.html#thady_u_gander">Thady U Gander</A>
 	<A HREF="by_title.html#twin_sisters">Twin Sisters</A>
 	<A HREF="by_title.html#virginia_reel">Virginia Reel</A>
-	<A HREF="by_title.html#virginia_reel_scottish_version">Virginia Reel (Scottish Version)</A>
 	<A HREF="by_title.html#white_cockade">White Cockade</A>
 	<A HREF="by_title.html#zodiac">Zodiac</A>
 
@@ -2253,7 +2236,7 @@ Lm 2x2
 Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#a_1_reel">A-1 Reel</A>
 	<A HREF="by_title.html#a_and_e_contradance">The A and E Contradance</A>
-	<A HREF="by_title.html#a_and_e_contradance">The A&E Contradance</A>
+	<A HREF="by_title.html#a_and_e_contradance">The AandE Contradance</A>
 	<A HREF="by_title.html#a_and_js_reel">A and J's Reel</A>
 	<A HREF="by_title.html#a1">A1</A>
 	<A HREF="by_title.html#abracadabra">Abracadabra</A>
@@ -2270,7 +2253,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#alex_is_where">Alex is Where?</A>
 	<A HREF="by_title.html#all_that_jazz">All That Jazz</A>
 	<A HREF="by_title.html#all_the_eights">All the Eights</A>
-	<A HREF="by_title.html#allan_and_ted">Allan & Ted</A>
+	<A HREF="by_title.html#allan_and_ted">Allan and Ted</A>
 	<A HREF="by_title.html#allegra_non_troppo">Allegra Non Troppo</A>
 	<A HREF="by_title.html#allen_orteps_first_contra">Allen Ortep's First Contra</A>
 	<A HREF="by_title.html#allynns_mountain_reel">Allynn's Mountain Reel</A>
@@ -2293,7 +2276,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#ann_arbor_three">Ann Arbor Three</A>
 	<A HREF="by_title.html#annas_reel">Anna's Reel</A>
 	<A HREF="by_title.html#anniversary_swing">Anniversary Swing</A>
-	<A HREF="by_title.html#another_art_and_nancys_fancy">Another Art & Nancy's Fancy</A>
+	<A HREF="by_title.html#another_art_and_nancys_fancy">Another Art and Nancy's Fancy</A>
 	<A HREF="by_title.html#another_chance_for_love">Another Chance for Love</A>
 	<A HREF="by_title.html#another_jig_will_do">Another Jig Will Do</A>
 	<A HREF="by_title.html#another_nice_slice">Another Nice Slice</A>
@@ -2328,7 +2311,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#back_row_sitter">Back Row Sitter</A>
 	<A HREF="by_title.html#backsliding">Backsliding</A>
 	<A HREF="by_title.html#badlands_contra">Badlands Contra</A>
-	<A HREF="by_title.html#balance_and_think">Balance & Think</A>
+	<A HREF="by_title.html#balance_and_think">Balance and Think</A>
 	<A HREF="by_title.html#balance_for_bubba">Balance for Bubba</A>
 	<A HREF="by_title.html#balance_to_my_lou">Balance to My Lou</A>
 	<A HREF="by_title.html#balance_to_my_lou">Balance to my Lou</A>
@@ -2375,7 +2358,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#beneficial_tradition">Beneficial Tradition</A>
 	<A HREF="by_title.html#berkeley_blather">Berkeley Blather</A>
 	<A HREF="by_title.html#bernadance">Bernadance</A>
-	<A HREF="by_title.html#bernadance_for_bernadene">Bernadance (for Bernadene)</A>
 	<A HREF="by_title.html#bevs_becket_a">Bev's Becket A</A>
 	<A HREF="by_title.html#bevs_becket_b">Bev's Becket B</A>
 	<A HREF="by_title.html#bi_coastal_marriage">Bi-Coastal Marriage</A>
@@ -2395,9 +2377,9 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#blue_moon_clover">Blue Moon Clover</A>
 	<A HREF="by_title.html#bluebirds_in_burlingame">Bluebirds in Burlingame</A>
 	<A HREF="by_title.html#blurring_the_lines">Blurring the Lines</A>
-	<A HREF="by_title.html#bob_and_marthas_excellent_adventure">Bob & Martha's Excellent Adventure</A>
+	<A HREF="by_title.html#bob_and_marthas_excellent_adventure">Bob and Martha's Excellent Adventure</A>
 	<A HREF="by_title.html#bobs_boogie">Bob's Boogie</A>
-	<A HREF="by_title.html#bobs_good_and_plenty">Bob's Good & Plenty</A>
+	<A HREF="by_title.html#bobs_good_and_plenty">Bob's Good and Plenty</A>
 	<A HREF="by_title.html#boogaloo_bugaboo">Boogaloo Bugaboo</A>
 	<A HREF="by_title.html#boomerang">Boomerang</A>
 	<A HREF="by_title.html#boomerang_effect">The Boomerang Effect</A>
@@ -2441,8 +2423,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#butterfly_fly_away">Butterfly Fly Away</A>
 	<A HREF="by_title.html#butterfly_rings">Butterfly Rings</A>
 	<A HREF="by_title.html#button_soup">Button Soup</A>
-	<A HREF="by_title.html#buzz_and_sally_begin">Buzz & Sally Begin</A>
-	<A HREF="by_title.html#cafe_au_lait">Café Au Lait</A>
+	<A HREF="by_title.html#buzz_and_sally_begin">Buzz and Sally Begin</A>
 	<A HREF="by_title.html#call_me">Call Me</A>
 	<A HREF="by_title.html#call_the_plumber">Call the Plumber</A>
 	<A HREF="by_title.html#calliope_contra">Calliope Contra</A>
@@ -2460,7 +2441,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#caspian_tern">Caspian Tern</A>
 	<A HREF="by_title.html#catch_and_release_and_catch">Catch and Release and Catch</A>
 	<A HREF="by_title.html#catch_the_contra_bug">Catch the Contra Bug</A>
-	<A HREF="by_title.html#cats_and_more_cats">Cats & More Cats</A>
+	<A HREF="by_title.html#cats_and_more_cats">Cats and More Cats</A>
 	<A HREF="by_title.html#cats_and_more_cats">Cats and More Cats</A>
 	<A HREF="by_title.html#caveman">Caveman</A>
 	<A HREF="by_title.html#cavewoman_number_8">Cavewoman #8</A>
@@ -2572,7 +2553,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#dancing_with_amy">Dancing with Amy</A>
 	<A HREF="by_title.html#danish_delights">Danish Delights</A>
 	<A HREF="by_title.html#dar_trek">Dar Trek</A>
-	<A HREF="by_title.html#dar_trek_for_darlene">Dar Trek (for Darlene)</A>
 	<A HREF="by_title.html#dar_trek_voyager">Dar Trek Voyager</A>
 	<A HREF="by_title.html#dave_found_the_missing_coffee_cup">Dave Found the Missing Coffee Cup</A>
 	<A HREF="by_title.html#david_ks_reel">David K's Reel</A>
@@ -2584,7 +2564,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#deck_the_halls">Deck The Halls</A>
 	<A HREF="by_title.html#denises_contra">Denise's Contra</A>
 	<A HREF="by_title.html#dennis_50_years_of_entrancement">Dennis' 50 Years of Entrancement</A>
-	<A HREF="by_title.html#der_unglaubige_thomas">Der Ungläubige Thomas</A>
 	<A HREF="by_title.html#dervish_girl">Dervish Girl</A>
 	<A HREF="by_title.html#devils_becket">The Devil's Becket</A>
 	<A HREF="by_title.html#devins_settlement">Devin's Settlement</A>
@@ -2640,7 +2619,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#ellens_yarns">Ellen's Yarns</A>
 	<A HREF="by_title.html#ellies_pumpkin_show">Ellie's Pumpkin Show</A>
 	<A HREF="by_title.html#embrace">Embrace</A>
-	<A HREF="by_title.html#emeric_and_maries_wedding">Emeric & Marie's Wedding</A>
+	<A HREF="by_title.html#emeric_and_maries_wedding">Emeric and Marie's Wedding</A>
 	<A HREF="by_title.html#emotional_balance">Emotional Balance</A>
 	<A HREF="by_title.html#enchanted">Enchanted</A>
 	<A HREF="by_title.html#enchanted_forrest">The Enchanted Forrest</A>
@@ -2783,7 +2762,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#grand_canyon_stomp">Grand Canyon Stomp</A>
 	<A HREF="by_title.html#grand_day_out">A Grand Day Out</A>
 	<A HREF="by_title.html#grannys_pearls">Granny's Pearls</A>
-	<A HREF="by_title.html#grants_give_and_take">Grant's Give & Take</A>
+	<A HREF="by_title.html#grants_give_and_take">Grant's Give and Take</A>
 	<A HREF="by_title.html#grapevine_jig">Grapevine Jig</A>
 	<A HREF="by_title.html#great_belt_bridge">The Great Belt Bridge</A>
 	<A HREF="by_title.html#great_meadows">Great Meadows</A>
@@ -2794,7 +2773,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#greenleaf_wave">Greenleaf Wave</A>
 	<A HREF="by_title.html#groundhog_daze">Groundhog Daze</A>
 	<A HREF="by_title.html#gypsy_eights">Gypsy Eights</A>
-	<A HREF="by_title.html#gypsy_for_chris_and_sara">Gypsy for Chris & Sara</A>
+	<A HREF="by_title.html#gypsy_for_chris_and_sara">Gypsy for Chris and Sara</A>
 	<A HREF="by_title.html#gypsy_in_the_hey">A Gypsy in the Hey</A>
 	<A HREF="by_title.html#gypsy_in_the_hey">Gypsy in the Hey</A>
 	<A HREF="by_title.html#gypsy_omore">Gypsy O'More</A>
@@ -2906,7 +2885,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#jans_reel">Jan's Reel</A>
 	<A HREF="by_title.html#january_petronella">January Petronella</A>
 	<A HREF="by_title.html#jeffros_tree">Jeffro's Tree</A>
-	<A HREF="by_title.html#jeffros_tree_easy_version">Jeffro's Tree (Easy Version)</A>
 	<A HREF="by_title.html#jelly_roll">Jelly Roll</A>
 	<A HREF="by_title.html#jerris_new_hall">Jerri's New Hall</A>
 	<A HREF="by_title.html#jerrys_swing_contra">Jerry's Swing Contra</A>
@@ -2974,7 +2952,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#let_sleeping_dogs_lie">Let Sleeping Dogs Lie</A>
 	<A HREF="by_title.html#lex_parsimoniae">Lex Parsimoniae</A>
 	<A HREF="by_title.html#lighthouse">The Lighthouse</A>
-	<A HREF="by_title.html#lights_and_shadows">Lights & Shadows</A>
+	<A HREF="by_title.html#lights_and_shadows">Lights and Shadows</A>
 	<A HREF="by_title.html#lights_at_dawn">Lights at Dawn</A>
 	<A HREF="by_title.html#lindas_delight">Linda's Delight</A>
 	<A HREF="by_title.html#lindas_flight">Linda's Flight</A>
@@ -3038,7 +3016,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#meandering_home">Meandering Home</A>
 	<A HREF="by_title.html#meet_for_a_swing">Meet for a Swing</A>
 	<A HREF="by_title.html#megadance">Megadance</A>
-	<A HREF="by_title.html#megadance_for_meg">Megadance (for Meg)</A>
 	<A HREF="by_title.html#megasessions">MegaSessions</A>
 	<A HREF="by_title.html#megs_golden_allstar_alcester">Meg's Golden Allstar (Alcester)</A>
 	<A HREF="by_title.html#melanies_tree">Melanie's Tree</A>
@@ -3116,7 +3093,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#night_sail">Night Sail</A>
 	<A HREF="by_title.html#no_approval">No Approval</A>
 	<A HREF="by_title.html#no_use_crying_over_spilled_milk">No Use Crying Over Spilled Milk</A>
-	<A HREF="by_title.html#noch_ohne_titel">(noch) ohne titel</A>
 	<A HREF="by_title.html#north_cascades">North Cascades</A>
 	<A HREF="by_title.html#not_a_trip_to_vegas">Not a Trip to Vegas</A>
 	<A HREF="by_title.html#not_all_earthquakes_are_andreas_fault">Not all Earthquakes are Andreas' Fault</A>
@@ -3219,7 +3195,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#plucking_daisy_petals">Plucking Daisy Petals</A>
 	<A HREF="by_title.html#pocket_change">Pocket Change</A>
 	<A HREF="by_title.html#polymer_reel">Polymer Reel</A>
-	<A HREF="by_title.html#portland_plain_and_fancy">Portland Plain & Fancy</A>
+	<A HREF="by_title.html#portland_plain_and_fancy">Portland Plain and Fancy</A>
 	<A HREF="by_title.html#possum_on_the_turnpike">Possum on the Turnpike</A>
 	<A HREF="by_title.html#power_surge">Power Surge</A>
 	<A HREF="by_title.html#practice_petronella">Practice Petronella</A>
@@ -3312,7 +3288,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#round_trip">The Round Trip</A>
 	<A HREF="by_title.html#rounding_third">Rounding Third</A>
 	<A HREF="by_title.html#royal_jelly">Royal Jelly</A>
-	<A HREF="by_title.html#rum_and_barley">Rum & Barley</A>
+	<A HREF="by_title.html#rum_and_barley">Rum and Barley</A>
 	<A HREF="by_title.html#run_around_susie">Run Around Susie</A>
 	<A HREF="by_title.html#run_rooster_run">Run Rooster Run</A>
 	<A HREF="by_title.html#rusty_frame">The Rusty Frame</A>
@@ -3349,7 +3325,7 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#september_resurection">September Resurection</A>
 	<A HREF="by_title.html#serenade">Serenade</A>
 	<A HREF="by_title.html#serendipity">Serendipity</A>
-	<A HREF="by_title.html#serenity_and_grace">Serenity & Grace</A>
+	<A HREF="by_title.html#serenity_and_grace">Serenity and Grace</A>
 	<A HREF="by_title.html#set_theory">Set Theory</A>
 	<A HREF="by_title.html#seven_fifty_six">Seven Fifty-six</A>
 	<A HREF="by_title.html#seven_twenty_four">7/24</A>
@@ -3383,7 +3359,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#skaters_delight">Skater's Delight</A>
 	<A HREF="by_title.html#slant_pretoria">Slant Pretoria</A>
 	<A HREF="by_title.html#slaunch_to_donegal">Slaunch to Donegal</A>
-	<A HREF="by_title.html#sledding_over_the_hill">Sledding "Over the Hill"</A>
 	<A HREF="by_title.html#sleeping_with_the_hounds">Sleeping with the Hounds</A>
 	<A HREF="by_title.html#sleepwalking">Sleepwalking</A>
 	<A HREF="by_title.html#slice_and_dice">Slice and Dice</A>
@@ -3505,8 +3480,6 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#thanksgiving_day_turkey_reheated">Thanksgiving Day Turkey Reheated</A>
 	<A HREF="by_title.html#thats_the_problem">That's the Problem</A>
 	<A HREF="by_title.html#there_goes_the_neighborhood">There Goes the Neighborhood</A>
-	<A HREF="by_title.html#there_is_no_way_to_peace_peace_is_the_way">"There is No Way to Peace; Peace is the Way"</A>
-	<A HREF="by_title.html#there_is_no_way_to_peace_peace_is_the_way">"There is no Way to Peace; Peace is the Way"</A>
 	<A HREF="by_title.html#there_is_no_way_to_peace_peace_is_the_way">There is No Way to Peace, Peace is the Way</A>
 	<A HREF="by_title.html#there_is_no_way_to_peace_peace_is_the_way">There is no way to peace, peace is the way</A>
 	<A HREF="by_title.html#theres_a_hole_in_the_becket">There's a Hole in the Becket</A>
@@ -3741,7 +3714,7 @@ Lm 2x2 ii
 Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#01_chevy_cavalier">'01 Chevy Cavalier</A>
 	<A HREF="by_title.html#5_4bw_u">5/4BW/U</A>
-	<A HREF="by_title.html#a_and_e_contra">A & E Contra</A>
+	<A HREF="by_title.html#a_and_e_contra">A and E Contra</A>
 	<A HREF="by_title.html#a2_corners">A2 Corners</A>
 	<A HREF="by_title.html#aads_reel">AADS Reel</A>
 	<A HREF="by_title.html#aarons_reel">Aaron's Reel</A>
@@ -3812,7 +3785,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#american_spring">American Spring</A>
 	<A HREF="by_title.html#american_summer">American Summer</A>
 	<A HREF="by_title.html#american_summer">The American Summer</A>
-	<A HREF="by_title.html#amherst_and_wooster">Amherst & Wooster</A>
+	<A HREF="by_title.html#amherst_and_wooster">Amherst and Wooster</A>
 	<A HREF="by_title.html#amherst_and_wooster">Amherst and Wooster</A>
 	<A HREF="by_title.html#amicable_settlement">Amicable Settlement</A>
 	<A HREF="by_title.html#amy_absconds">Amy Absconds</A>
@@ -3850,7 +3823,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#any_old_tyme">Any Old Tyme</A>
 	<A HREF="by_title.html#appetizer">Appetizer</A>
 	<A HREF="by_title.html#appins_dance">Appin's Dance</A>
-	<A HREF="by_title.html#apples_and_chocolate">Apples & Chocolate</A>
+	<A HREF="by_title.html#apples_and_chocolate">Apples and Chocolate</A>
 	<A HREF="by_title.html#apples_and_chocolate">Apples and Chocolate</A>
 	<A HREF="by_title.html#april_and_jerrys_contra">April and Jerry's Contra</A>
 	<A HREF="by_title.html#april_fool">The April Fool</A>
@@ -3902,8 +3875,8 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#awesome_double_progression_dance">Awesome Double Progression Dance</A>
 	<A HREF="by_title.html#awesome_double_progression_dance">Awesome double progression dance</A>
 	<A HREF="by_title.html#axiom_of_choice">The Axiom of Choice</A>
-	<A HREF="by_title.html#b_and_b">B & B</A>
-	<A HREF="by_title.html#b_and_b">B&B</A>
+	<A HREF="by_title.html#b_and_b">B and B</A>
+	<A HREF="by_title.html#b_and_b">BandB</A>
 	<A HREF="by_title.html#baby_evelyns_reel">Baby Evelyn's Reel</A>
 	<A HREF="by_title.html#baby_rose">The Baby Rose</A>
 	<A HREF="by_title.html#back_from_vermont">Back From Vermont</A>
@@ -3923,7 +3896,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#bad_hair_day">Bad Hair Day</A>
 	<A HREF="by_title.html#bad_hair_decade">Bad Hair Decade</A>
 	<A HREF="by_title.html#bailey">Bailey</A>
-	<A HREF="by_title.html#bait_and_switch">Bait & Switch</A>
+	<A HREF="by_title.html#bait_and_switch">Bait and Switch</A>
 	<A HREF="by_title.html#baja_california">Baja California</A>
 	<A HREF="by_title.html#balance_and_cross">Balance and Cross</A>
 	<A HREF="by_title.html#balance_and_pass_out">Balance and Pass Out</A>
@@ -4108,7 +4081,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#bobs_boomerang">Bob's Boomerang</A>
 	<A HREF="by_title.html#bobs_delight">Bob's Delight</A>
 	<A HREF="by_title.html#bobs_high_quality_bologna">Bob's High Quality Bologna</A>
-	<A HREF="by_title.html#bobs_j_and_l">Bob's J&L</A>
+	<A HREF="by_title.html#bobs_j_and_l">Bob's JandL</A>
 	<A HREF="by_title.html#bobs_valentine">Bob's Valentine</A>
 	<A HREF="by_title.html#bobs_your_uncle">Bob's Your Uncle</A>
 	<A HREF="by_title.html#bog_boogie">Bog Boogie</A>
@@ -4198,14 +4171,13 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#butternut_squash">Butternut Squash</A>
 	<A HREF="by_title.html#buzz_the_star">Buzz The Star</A>
 	<A HREF="by_title.html#buzzard_in_the_hey">Buzzard in the Hey</A>
-	<A HREF="by_title.html#by_george">"By George"</A>
 	<A HREF="by_title.html#by_the_sweat_of_your_brow">By the Sweat of Your Brow</A>
 	<A HREF="by_title.html#bye_bye_baltimore">Bye Bye Baltimore</A>
 	<A HREF="by_title.html#bye_bye_baltimore">Bye, Bye, Baltimore</A>
 	<A HREF="by_title.html#bye_bye_halo">Bye, Bye Halo</A>
 	<A HREF="by_title.html#byland_abbey">Byland Abbey</A>
-	<A HREF="by_title.html#c_and_b_reel">C & B Reel</A>
-	<A HREF="by_title.html#c_and_ds_wedding_dance">C & D's Wedding Dance</A>
+	<A HREF="by_title.html#c_and_b_reel">C and B Reel</A>
+	<A HREF="by_title.html#c_and_ds_wedding_dance">C and D's Wedding Dance</A>
 	<A HREF="by_title.html#cabin_fever">Cabin Fever</A>
 	<A HREF="by_title.html#cabin_fever_contra_cure">Cabin Fever Contra Cure</A>
 	<A HREF="by_title.html#cactus_wren">Cactus Wren</A>
@@ -4404,7 +4376,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#cockeyed_hey_number_1">Cockeyed Hey #1</A>
 	<A HREF="by_title.html#cockeyed_hey_number_2">Cockeyed Hey #2</A>
 	<A HREF="by_title.html#cockeyed_susan">Cockeyed Susan</A>
-	<A HREF="by_title.html#coeur_dalene_contra">Coeur d'Alène Contra</A>
 	<A HREF="by_title.html#cold_august">Cold August</A>
 	<A HREF="by_title.html#colemans_march">Coleman's March</A>
 	<A HREF="by_title.html#colemans_reel">Coleman's Reel</A>
@@ -4563,8 +4534,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#dance_formerly_known_as_roll_in_the_hey">The Dance Formerly Known as Roll in the Hey</A>
 	<A HREF="by_title.html#dance_gypsy">Dance Gypsy</A>
 	<A HREF="by_title.html#dance_gypsy">The Dance Gypsy</A>
-	<A HREF="by_title.html#dance_number_5373524_version_0_1">Dance number 5373524 (version 0.1)</A>
-	<A HREF="by_title.html#dance_number_6493207_version_0_1">Dance number 6493207 (version 0.1)</A>
 	<A HREF="by_title.html#dance_one_pass_two">Dance One, Pass Two</A>
 	<A HREF="by_title.html#dancers_suprise">Dancer's Suprise</A>
 	<A HREF="by_title.html#dancers_surprise">Dancer's Surprise</A>
@@ -4585,7 +4554,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#dandy">Dandy</A>
 	<A HREF="by_title.html#danish_pastry">Danish Pastry</A>
 	<A HREF="by_title.html#dannys_bbq">Danny's BBQ</A>
-	<A HREF="by_title.html#daring_diane_seeworthy_seaman">Daring Diane (seeworthy Seaman)</A>
 	<A HREF="by_title.html#dark_blue">Dark Blue</A>
 	<A HREF="by_title.html#dark_eyes">Dark Eyes</A>
 	<A HREF="by_title.html#dark_green">Dark Green</A>
@@ -4619,7 +4587,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#delaware_blizzard">Delaware Blizzard</A>
 	<A HREF="by_title.html#delaware_snowstorm">Delaware Snowstorm</A>
 	<A HREF="by_title.html#delicate_balance">A Delicate Balance</A>
-	<A HREF="by_title.html#delphiniums_and_daisies">Delphiniums & Daisies</A>
+	<A HREF="by_title.html#delphiniums_and_daisies">Delphiniums and Daisies</A>
 	<A HREF="by_title.html#delphiniums_and_daisies">Delphiniums and Daisies</A>
 	<A HREF="by_title.html#delphiniums_and_daisies_variation">Delphiniums and Daisies Variation</A>
 	<A HREF="by_title.html#denmark_in_july">Denmark in July</A>
@@ -4680,7 +4648,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#doin_time">Doin' Time</A>
 	<A HREF="by_title.html#don_bosco_hornpipe">Don Bosco Hornpipe</A>
 	<A HREF="by_title.html#don_tremaines_reel">Don Tremaine's Reel</A>
-	<A HREF="by_title.html#donna_and_chris_heartthrob">Donna & Chris Heartthrob</A>
+	<A HREF="by_title.html#donna_and_chris_heartthrob">Donna and Chris Heartthrob</A>
 	<A HREF="by_title.html#dons_dawn_dance">Don's Dawn Dance</A>
 	<A HREF="by_title.html#dons_reel">Don's Reel</A>
 	<A HREF="by_title.html#dont_ask_dont_tell">Don't Ask, Don't Tell</A>
@@ -4758,7 +4726,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#e6">E6</A>
 	<A HREF="by_title.html#eagle_creek_confederate_number_3">Eagle Creek Confederate #3</A>
 	<A HREF="by_title.html#eagle_creek_yankee">Eagle Creek Yankee</A>
-	<A HREF="by_title.html#earl_and_squirrel">Earl & Squirrel</A>
+	<A HREF="by_title.html#earl_and_squirrel">Earl and Squirrel</A>
 	<A HREF="by_title.html#early_bird_special">Early Bird Special</A>
 	<A HREF="by_title.html#early_evening_jig">Early Evening Jig</A>
 	<A HREF="by_title.html#early_exit">Early Exit</A>
@@ -4810,7 +4778,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#ellens_green_jig">Ellen's Green Jig</A>
 	<A HREF="by_title.html#elm_city_reel">Elm City Reel</A>
 	<A HREF="by_title.html#emergency_jig">Emergency Jig</A>
-	<A HREF="by_title.html#emily_and_jerry_tie_the_knot">Emily & Jerry Tie the Knot</A>
+	<A HREF="by_title.html#emily_and_jerry_tie_the_knot">Emily and Jerry Tie the Knot</A>
 	<A HREF="by_title.html#emily_and_jerry_tie_the_knot">Emily and Jerry Tie the Knot</A>
 	<A HREF="by_title.html#emptied_crack">The Emptied Crack</A>
 	<A HREF="by_title.html#end_is_the_beginning">The End is the Beginning</A>
@@ -4825,7 +4793,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#equal_twirl">Equal Twirl</A>
 	<A HREF="by_title.html#equinoctial_contra">Equinoctial Contra</A>
 	<A HREF="by_title.html#equity_reel">Equity Reel</A>
-	<A HREF="by_title.html#era_equal_rights_amendment">E.R.A. (Equal Rights Amendment)</A>
 	<A HREF="by_title.html#erics_answer">Eric's Answer</A>
 	<A HREF="by_title.html#erics_date_on_the_bay">Eric's Date on the Bay</A>
 	<A HREF="by_title.html#erics_fiddle">Eric's Fiddle</A>
@@ -4861,7 +4828,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#eyeful_tour">The Eyeful Tour</A>
 	<A HREF="by_title.html#eyes_habit">The Eye's Habit</A>
 	<A HREF="by_title.html#ez_1">EZ-1</A>
-	<A HREF="by_title.html#fabulous_4_and_1_2">Fabulous 4&1/2</A>
+	<A HREF="by_title.html#fabulous_4_and_1_2">Fabulous 4and1/2</A>
 	<A HREF="by_title.html#face_the_music">Face the Music</A>
 	<A HREF="by_title.html#face_up">Face Up</A>
 	<A HREF="by_title.html#fair_haired_cassidy">Fair-Haired Cassidy</A>
@@ -5041,7 +5008,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#frosty_morning">Frosty Morning</A>
 	<A HREF="by_title.html#frozen_goose">Frozen Goose</A>
 	<A HREF="by_title.html#frozen_lotion">Frozen Lotion</A>
-	<A HREF="by_title.html#fruh_am_abend">Früh Am Abend</A>
 	<A HREF="by_title.html#fruit_harvest_reel">Fruit Harvest Reel</A>
 	<A HREF="by_title.html#fruits_of_my_labour">The fruits of my labour</A>
 	<A HREF="by_title.html#full_monty">Full Monty</A>
@@ -5073,8 +5039,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#genes_victory">Gene's Victory</A>
 	<A HREF="by_title.html#gentle_on_my_mind">Gentle on my Mind</A>
 	<A HREF="by_title.html#gents_in_lead">Gent's in Lead</A>
-	<A HREF="by_title.html#geo_volente_earth_willing">Geo Volente ("Earth Willing")</A>
-	<A HREF="by_title.html#geo_volente_earth_willing">Geo Volente ("Earth willing")</A>
 	<A HREF="by_title.html#geoffs_over_the_hill_and_still_chased_chaste">Geoff's Over the Hill and still Chased (Chaste?)</A>
 	<A HREF="by_title.html#georges_something_or_other">George's Something Or Other</A>
 	<A HREF="by_title.html#gerbil_carnage">Gerbil Carnage</A>
@@ -5100,7 +5064,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#glowing_sunset">Glowing Sunset</A>
 	<A HREF="by_title.html#gnat_sass">The Gnat Sass</A>
 	<A HREF="by_title.html#godfather">The Godfather</A>
-	<A HREF="by_title.html#goin_up_and_down">Goin' Up & Down</A>
+	<A HREF="by_title.html#goin_up_and_down">Goin' Up and Down</A>
 	<A HREF="by_title.html#going_to_saint_paul">Going to St. Paul</A>
 	<A HREF="by_title.html#gold_chain">The Gold Chain</A>
 	<A HREF="by_title.html#gold_rush">Gold Rush</A>
@@ -5301,7 +5265,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#hey_bob">Hey Bob!</A>
 	<A HREF="by_title.html#hey_fever">Hey Fever</A>
 	<A HREF="by_title.html#hey_for_forty">Hey for Forty</A>
-	<A HREF="by_title.html#hey_for_k_and_n">Hey for K. & N.</A>
+	<A HREF="by_title.html#hey_for_k_and_n">Hey for K. and N.</A>
 	<A HREF="by_title.html#hey_for_shadrack">Hey for Shadrack</A>
 	<A HREF="by_title.html#hey_for_who">Hey for Who?</A>
 	<A HREF="by_title.html#hey_gomer_hey_goober">Hey Gomer, Hey Goober</A>
@@ -5328,7 +5292,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#hey_whos_in_the_middle">Hey! Who's in the Middle?</A>
 	<A HREF="by_title.html#heyllamande">Heyllamande</A>
 	<A HREF="by_title.html#heys_both_ways">Heys Both Ways</A>
-	<A HREF="by_title.html#hickmans_hey">"Hickman's Hey"</A>
+	<A HREF="by_title.html#hickmans_hey">Hickman's Hey</A>
 	<A HREF="by_title.html#hidden_draw">The Hidden Draw</A>
 	<A HREF="by_title.html#high_brooms">High Brooms</A>
 	<A HREF="by_title.html#high_gear">High Gear</A>
@@ -5500,7 +5464,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#jeffs_gypsy">Jeff's Gypsy</A>
 	<A HREF="by_title.html#jeffs_jig">Jeff's Jig</A>
 	<A HREF="by_title.html#jeffs_third_dance">Jeff's Third Dance</A>
-	<A HREF="by_title.html#jennie_and_howards_promenade_number_2">Jennie & Howard's Promenade #2</A>
+	<A HREF="by_title.html#jennie_and_howards_promenade_number_2">Jennie and Howard's Promenade #2</A>
 	<A HREF="by_title.html#jennifers_dance">Jennifer's Dance</A>
 	<A HREF="by_title.html#jennifers_reel">Jennifer's Reel</A>
 	<A HREF="by_title.html#jenny_goes_to_camp">Jenny Goes to Camp</A>
@@ -5516,7 +5480,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#jessicas_ride">Jessica's Ride</A>
 	<A HREF="by_title.html#jesss_reel">Jess's Reel</A>
 	<A HREF="by_title.html#jet_lag_rag">Jet Lag Rag</A>
-	<A HREF="by_title.html#jim_and_cindis_wedding">Jim & Cindi's Wedding</A>
+	<A HREF="by_title.html#jim_and_cindis_wedding">Jim and Cindi's Wedding</A>
 	<A HREF="by_title.html#jims_dance">Jim's Dance</A>
 	<A HREF="by_title.html#jims_reel">Jim's Reel</A>
 	<A HREF="by_title.html#jims_whim">Jim's Whim</A>
@@ -5525,7 +5489,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#job_hunt_jig_number_2">Job Hunt Jig #2</A>
 	<A HREF="by_title.html#jocus_contra">Jocus Contra</A>
 	<A HREF="by_title.html#jody">Jody</A>
-	<A HREF="by_title.html#joe_and_jenis_wedding">Joe & Jeni's Wedding</A>
+	<A HREF="by_title.html#joe_and_jenis_wedding">Joe and Jeni's Wedding</A>
 	<A HREF="by_title.html#joe_the_plumber">Joe the Plumber</A>
 	<A HREF="by_title.html#john_and_mary">John and Mary</A>
 	<A HREF="by_title.html#john_oneals_contra">John O'Neal's Contra</A>
@@ -5569,7 +5533,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#juniper_jig">Juniper Jig</A>
 	<A HREF="by_title.html#junket_jackpot">Junket Jackpot</A>
 	<A HREF="by_title.html#jurassic_redheads">Jurassic Redheads</A>
-	<A HREF="by_title.html#jurgens_turn">Jürgen's Turn</A>
 	<A HREF="by_title.html#just_a_splash">Just a Splash</A>
 	<A HREF="by_title.html#just_another_contra">Just Another Contra</A>
 	<A HREF="by_title.html#just_another_whim">Just Another Whim</A>
@@ -5580,11 +5543,11 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#justa_contra">Justa Contra</A>
 	<A HREF="by_title.html#kadies_kontra">Kadie's Kontra</A>
 	<A HREF="by_title.html#kaisers_turnstyle">Kaiser's Turnstyle</A>
-	<A HREF="by_title.html#karen_and_greg_tie_the_knot">Karen & Greg Tie the Knot</A>
+	<A HREF="by_title.html#karen_and_greg_tie_the_knot">Karen and Greg Tie the Knot</A>
 	<A HREF="by_title.html#karens_beginning">Karen's Beginning</A>
 	<A HREF="by_title.html#karens_kool_kurls">Karen's Kool Kurls</A>
 	<A HREF="by_title.html#karens_treasure">Karen's Treasure</A>
-	<A HREF="by_title.html#kathy_and_walter">Kathy & Walter</A>
+	<A HREF="by_title.html#kathy_and_walter">Kathy and Walter</A>
 	<A HREF="by_title.html#kathys_kontra">Kathy's Kontra</A>
 	<A HREF="by_title.html#kathys_smile">Kathy's Smile</A>
 	<A HREF="by_title.html#kathys_smiling_eyes">Kathy's Smiling Eyes</A>
@@ -5638,7 +5601,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#kopps_on_the_loose">Kopp's on the Loose</A>
 	<A HREF="by_title.html#la_ba_contra">La Ba Contra</A>
 	<A HREF="by_title.html#la_bastringue_contra">La Bastringue Contra</A>
-	<A HREF="by_title.html#la_habanera">La Habañera</A>
 	<A HREF="by_title.html#la_petit_ronfleuse">La Petit Ronfleuse</A>
 	<A HREF="by_title.html#labor_day_dance">Labor Day Dance</A>
 	<A HREF="by_title.html#labor_of_love">Labor of Love</A>
@@ -5699,7 +5661,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#latterrissage">L'Atterrissage</A>
 	<A HREF="by_title.html#laughing_gull">Laughing Gull</A>
 	<A HREF="by_title.html#laura_maes_jig">Laura Mae's Jig</A>
-	<A HREF="by_title.html#laura_me_i_dance_with_you">Laura Mé I Dance With You?</A>
 	<A HREF="by_title.html#lauras_contra">Laura's Contra</A>
 	<A HREF="by_title.html#lauras_third_quarter_century">Laura's Third-Quarter Century</A>
 	<A HREF="by_title.html#lauras_three_quarter_century">Laura's Three-Quarter Century</A>
@@ -5839,8 +5800,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#mad_robin_imagination">Mad Robin Imagination</A>
 	<A HREF="by_title.html#mad_robin_swing">Mad Robin Swing</A>
 	<A HREF="by_title.html#mad_slice">Mad Slice</A>
-	<A HREF="by_title.html#made_up_tonight_which_is_no_longer_true">Made Up Tonight (which is no longer true)</A>
-	<A HREF="by_title.html#made_up_tonight_which_is_no_longer_true">Made up Tonight (which is no longer true)</A>
 	<A HREF="by_title.html#madeline_maude_steps_out">Madeline Maude Steps Out</A>
 	<A HREF="by_title.html#maes_maze">Mae's Maze</A>
 	<A HREF="by_title.html#magenta_cambridge">Magenta Cambridge</A>
@@ -5895,13 +5854,13 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#marlboro_country_contra">Marlboro Country Contra</A>
 	<A HREF="by_title.html#marlboro_heys">Marlboro Heys</A>
 	<A HREF="by_title.html#married_mans_favorite">Married Man's Favorite</A>
-	<A HREF="by_title.html#mars_and_venus">Mars & Venus</A>
+	<A HREF="by_title.html#mars_and_venus">Mars and Venus</A>
 	<A HREF="by_title.html#marshes_of_mallow">Marshes of Mallow</A>
 	<A HREF="by_title.html#marta_in_the_jungle">Marta in the Jungle</A>
 	<A HREF="by_title.html#martha_washington">The Martha Washington</A>
 	<A HREF="by_title.html#martha_washingtons_reel">Martha Washington's Reel</A>
 	<A HREF="by_title.html#marthas_choice">Martha's Choice</A>
-	<A HREF="by_title.html#marthas_hot_and_spicy">Martha's Hot & Spicy</A>
+	<A HREF="by_title.html#marthas_hot_and_spicy">Martha's Hot and Spicy</A>
 	<A HREF="by_title.html#mary_gary">Mary Gary</A>
 	<A HREF="by_title.html#mary_js_jig">Mary J's Jig</A>
 	<A HREF="by_title.html#mary_mary">Mary Mary</A>
@@ -6024,7 +5983,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#monterey_special">Monterey Special</A>
 	<A HREF="by_title.html#mood_swings">Mood Swings</A>
 	<A HREF="by_title.html#moody_street">Moody Street</A>
-	<A HREF="by_title.html#moon_and_star_contra">Moon & Star Contra</A>
+	<A HREF="by_title.html#moon_and_star_contra">Moon and Star Contra</A>
 	<A HREF="by_title.html#moon_beam">Moon Beam</A>
 	<A HREF="by_title.html#moon_dance">Moon Dance</A>
 	<A HREF="by_title.html#moon_doggie">Moon Doggie</A>
@@ -6077,7 +6036,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#music_to_my_spirit">Music To My Spirit</A>
 	<A HREF="by_title.html#mutual_enjoyment">Mutual Enjoyment</A>
 	<A HREF="by_title.html#my_bony_lass">My Bony Lass</A>
-	<A HREF="by_title.html#my_ex_exs_fiancees_ex">My Ex-(Ex's Fiancee's Ex)</A>
 	<A HREF="by_title.html#my_first_folly">My First Folly</A>
 	<A HREF="by_title.html#my_home">My Home</A>
 	<A HREF="by_title.html#my_ladys_pleasure">My Lady's Pleasure</A>
@@ -6182,7 +6140,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#no_snow_here_either">No Snow Here, Either</A>
 	<A HREF="by_title.html#no_surprises">No Surprises</A>
 	<A HREF="by_title.html#no_waiting_at_the_end">No Waiting at the End</A>
-	<A HREF="by_title.html#noch_ohne_titel">(noch) ohne titel</A>
 	<A HREF="by_title.html#noisy_oysters">Noisy Oysters</A>
 	<A HREF="by_title.html#nomads_land">Nomad's Land</A>
 	<A HREF="by_title.html#non_tour">The Non-Tour</A>
@@ -6212,7 +6169,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#number_11">Number 11</A>
 	<A HREF="by_title.html#number_fifty">Number Fifty</A>
 	<A HREF="by_title.html#nuremberg_funnel">Nuremberg Funnel</A>
-	<A HREF="by_title.html#nurnberger_trichter">Nürnberger Trichter</A>
 	<A HREF="by_title.html#nuts">Nuts</A>
 	<A HREF="by_title.html#oak_hill_quickstep">Oak Hill Quickstep</A>
 	<A HREF="by_title.html#oaken_grove">Oaken Grove</A>
@@ -6243,7 +6199,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#ohio_river_contra">Ohio River Contra</A>
 	<A HREF="by_title.html#ok_start">OK Start</A>
 	<A HREF="by_title.html#okeechobee_reel">Okeechobee Reel</A>
-	<A HREF="by_title.html#old_and_new_friends">Old & New Friends</A>
+	<A HREF="by_title.html#old_and_new_friends">Old and New Friends</A>
 	<A HREF="by_title.html#old_as_the_hills">Old as the Hills</A>
 	<A HREF="by_title.html#old_brains">Old Brains</A>
 	<A HREF="by_title.html#old_cold_coffee_on_the_dashboard">Old Cold Coffee on the Dashboard</A>
@@ -6302,7 +6258,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#orono_special">Orono Special</A>
 	<A HREF="by_title.html#ostersterne">Ostersterne</A>
 	<A HREF="by_title.html#other_shade_of_green">The Other Shade of Green</A>
-	<A HREF="by_title.html#out_and_about">Out & About</A>
+	<A HREF="by_title.html#out_and_about">Out and About</A>
 	<A HREF="by_title.html#out_bound">Out Bound</A>
 	<A HREF="by_title.html#out_in_left_field">Out in Left Field</A>
 	<A HREF="by_title.html#out_of_circulation">Out of Circulation</A>
@@ -6357,7 +6313,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#paulas_promenade">Paula's Promenade</A>
 	<A HREF="by_title.html#pauls_advice">Paul's Advice</A>
 	<A HREF="by_title.html#pauls_fishing_reel">Paul's Fishing Reel</A>
-	<A HREF="by_title.html#pb_and_j">PB&J</A>
+	<A HREF="by_title.html#pb_and_j">PBandJ</A>
 	<A HREF="by_title.html#peace_and_love_contra">Peace and Love Contra</A>
 	<A HREF="by_title.html#peacock">Peacock</A>
 	<A HREF="by_title.html#peacock_rag">Peacock Rag</A>
@@ -6486,7 +6442,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#push_back">Push Back</A>
 	<A HREF="by_title.html#push_the_button">Push the Button</A>
 	<A HREF="by_title.html#pushover_number_1">Pushover #1</A>
-	<A HREF="by_title.html#pussyrat_and_cashmir">Pussyrat & Cashmir</A>
+	<A HREF="by_title.html#pussyrat_and_cashmir">Pussyrat and Cashmir</A>
 	<A HREF="by_title.html#putney_reel">Putney Reel</A>
 	<A HREF="by_title.html#python_reel">Python Reel</A>
 	<A HREF="by_title.html#quackgrass">Quackgrass</A>
@@ -6505,7 +6461,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#quiet_contra">The Quiet Contra</A>
 	<A HREF="by_title.html#quilting_frolic">The Quilting Frolic</A>
 	<A HREF="by_title.html#quincy_reel">Quincy Reel</A>
-	<A HREF="by_title.html#r_and_o_viii">R&O VIII</A>
+	<A HREF="by_title.html#r_and_o_viii">RandO VIII</A>
 	<A HREF="by_title.html#raccoon_ramble">Raccoon Ramble</A>
 	<A HREF="by_title.html#racetrack_contra">The Racetrack Contra</A>
 	<A HREF="by_title.html#rachel">Rachel</A>
@@ -6520,11 +6476,11 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#rags_to_riches">Rags to Riches</A>
 	<A HREF="by_title.html#rain_dance">Rain Dance</A>
 	<A HREF="by_title.html#rain_drops_on_a_chain">Rain drops on a chain</A>
-	<A HREF="by_title.html#raina_and_jeff">Raina & Jeff</A>
+	<A HREF="by_title.html#raina_and_jeff">Raina and Jeff</A>
 	<A HREF="by_title.html#rainbow_at_dawn">Rainbow @ Dawn</A>
 	<A HREF="by_title.html#rainy_day_jig">Rainy Day Jig</A>
 	<A HREF="by_title.html#rainy_night_contra">Rainy Night Contra</A>
-	<A HREF="by_title.html#ramblin_ramsay_and_meanderin_meyer">Ramblin' Ramsay & Meanderin' Meyer</A>
+	<A HREF="by_title.html#ramblin_ramsay_and_meanderin_meyer">Ramblin' Ramsay and Meanderin' Meyer</A>
 	<A HREF="by_title.html#ramblin_ramsey_and_meanderin_meyer">Ramblin' Ramsey and Meanderin' Meyer</A>
 	<A HREF="by_title.html#rambling_pitchfork">The Rambling Pitchfork</A>
 	<A HREF="by_title.html#rambling_rover">Rambling Rover</A>
@@ -6606,7 +6562,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#ricks_request">Rick's Request</A>
 	<A HREF="by_title.html#riding_whisky">Riding Whisky</A>
 	<A HREF="by_title.html#riff_raff">Riff Raff</A>
-	<A HREF="by_title.html#right_and_left_reel">Right & Left Reel</A>
+	<A HREF="by_title.html#right_and_left_reel">Right and Left Reel</A>
 	<A HREF="by_title.html#right_of_way">Right of Way</A>
 	<A HREF="by_title.html#rileys_reel">Riley's Reel</A>
 	<A HREF="by_title.html#rings_and_things">Rings and Things</A>
@@ -6688,7 +6644,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#rosemarys_good_thyme_contra">Rosemary's Good Thyme Contra</A>
 	<A HREF="by_title.html#rosen_at_the_wheel">Rosen at the Wheel</A>
 	<A HREF="by_title.html#rosen_the_beau">Rosen the Beau</A>
-	<A HREF="by_title.html#rosin_and_bow_reel">Rosin & Bow Reel</A>
+	<A HREF="by_title.html#rosin_and_bow_reel">Rosin and Bow Reel</A>
 	<A HREF="by_title.html#rosss_reel">Ross's Reel</A>
 	<A HREF="by_title.html#rosss_request">Ross's Request</A>
 	<A HREF="by_title.html#rotunda">Rotunda</A>
@@ -6711,7 +6667,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#ru2l8">RU2L8</A>
 	<A HREF="by_title.html#rub_a_dub">Rub-a-Dub</A>
 	<A HREF="by_title.html#ruby_for_the_hostes">Ruby for the Hostes</A>
-	<A HREF="by_title.html#ruckruf">Rückruf</A>
 	<A HREF="by_title.html#ruffwater_rocks">Ruffwater Rocks</A>
 	<A HREF="by_title.html#ruffwaters_25th">Ruffwater's 25th</A>
 	<A HREF="by_title.html#run_boy_run">Run Boy Run</A>
@@ -6720,8 +6675,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#running_the_gamut">Running the Gamut</A>
 	<A HREF="by_title.html#rush">The Rush</A>
 	<A HREF="by_title.html#russell_leaves">Russell Leaves</A>
-	<A HREF="by_title.html#russell_version_1">The Russell (Version 1)</A>
-	<A HREF="by_title.html#russell_version_2">The Russell (Version 2)</A>
 	<A HREF="by_title.html#russian_orange_dressing">Russian-Orange Dressing</A>
 	<A HREF="by_title.html#rustys_reel">Rusty's Reel</A>
 	<A HREF="by_title.html#rutgers_promenade">Rutger's Promenade</A>
@@ -6863,7 +6816,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#silver_dollar_dandy">Silver Dollar Dandy</A>
 	<A HREF="by_title.html#silver_jubilee_jig">Silver Jubilee Jig</A>
 	<A HREF="by_title.html#simones_waltz">Simone's Waltz</A>
-	<A HREF="by_title.html#simple_contra_for_kids_at_heart">Simple Contra for Kids (at heart)</A>
 	<A HREF="by_title.html#simple_gifts">Simple Gifts</A>
 	<A HREF="by_title.html#simple_steps">Simple Steps</A>
 	<A HREF="by_title.html#simplex_hey">Simplex Hey</A>
@@ -6878,7 +6830,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#sinkhole_special">Sinkhole Special</A>
 	<A HREF="by_title.html#six_10s">Six 10s</A>
 	<A HREF="by_title.html#six_lovely_ladies">Six Lovely Ladies</A>
-	<A HREF="by_title.html#sixty_eight_and_34">68 & 34</A>
+	<A HREF="by_title.html#sixty_eight_and_34">68 and 34</A>
 	<A HREF="by_title.html#sixty_five_and_very_much_alive">Sixty-Five and Very Much Alive</A>
 	<A HREF="by_title.html#sixty_miles_an_hour">60 Miles An Hour</A>
 	<A HREF="by_title.html#sixty_miles_an_hour">Sixty Miles an Hour</A>
@@ -7066,7 +7018,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#streetsboro_reel">Streetsboro Reel</A>
 	<A HREF="by_title.html#string_of_swings">String of Swings</A>
 	<A HREF="by_title.html#string_of_trucks">String of Trucks</A>
-	<A HREF="by_title.html#stripes_and_solids">Stripes & Solids</A>
+	<A HREF="by_title.html#stripes_and_solids">Stripes and Solids</A>
 	<A HREF="by_title.html#stripes_and_solids">Stripes and Solids</A>
 	<A HREF="by_title.html#strong_winds">Strong Winds</A>
 	<A HREF="by_title.html#strutting_to_the_hilt">Strutting to the Hilt</A>
@@ -7237,7 +7189,6 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#tgif">T.G.I.F.</A>
 	<A HREF="by_title.html#thank_goodness_its_friday">Thank Goodness, It's Friday</A>
 	<A HREF="by_title.html#thank_goodness_its_friday">Thank Goodness, it's Friday</A>
-	<A HREF="by_title.html#thank_you_barry_for_a_fabulous_vernals">Thank you, Barry (for a fabulous Vernals)</A>
 	<A HREF="by_title.html#thank_you_for_the_music">Thank You for the Music</A>
 	<A HREF="by_title.html#thanks_a_million_mac">Thanks a Million, Mac</A>
 	<A HREF="by_title.html#thanks_charlie">Thanks, Charlie!</A>
@@ -7402,7 +7353,7 @@ Lm 2x2 ip (contra, duple minor, 1s improper)
 	<A HREF="by_title.html#turkey_talk">Turkey Talk</A>
 	<A HREF="by_title.html#turkeys_last_straw">The Turkey's Last Straw</A>
 	<A HREF="by_title.html#turn_a_new_leaf">Turn a New Leaf</A>
-	<A HREF="by_title.html#turn_and_left_thru_to_dixie">Turn & Left Thru to Dixie</A>
+	<A HREF="by_title.html#turn_and_left_thru_to_dixie">Turn and Left Thru to Dixie</A>
 	<A HREF="by_title.html#turn_for_the_better">A Turn For The Better</A>
 	<A HREF="by_title.html#turn_quickly">Turn Quickly</A>
 	<A HREF="by_title.html#turn_the_4th">Turn The 4th</A>
@@ -8023,7 +7974,7 @@ Lm 2x2 pp (contra, duple minor, all proper)
 	<A HREF="by_title.html#friday_the_third_swing">Friday the Third Swing</A>
 	<A HREF="by_title.html#galway_reel">Galway Reel</A>
 	<A HREF="by_title.html#garden_salad">The Garden Salad</A>
-	<A HREF="by_title.html#genes_j_and_l">Gene's J & L</A>
+	<A HREF="by_title.html#genes_j_and_l">Gene's J and L</A>
 	<A HREF="by_title.html#genets_recall">Genet's Recall</A>
 	<A HREF="by_title.html#gentle_persuasion">Gentle Persuasion</A>
 	<A HREF="by_title.html#german_beau_another_version">The German Beau, Another Version</A>
@@ -8092,7 +8043,7 @@ Lm 2x2 pp (contra, duple minor, all proper)
 	<A HREF="by_title.html#jealous_sally">Jealous Sally</A>
 	<A HREF="by_title.html#jeannes_jubilee">Jeanne's Jubilee</A>
 	<A HREF="by_title.html#jedermanns_kontra">Jedermanns Kontra</A>
-	<A HREF="by_title.html#jefferson_and_liberty">Jefferson & Liberty</A>
+	<A HREF="by_title.html#jefferson_and_liberty">Jefferson and Liberty</A>
 	<A HREF="by_title.html#jefferson_and_liberty">Jefferson and Liberty</A>
 	<A HREF="by_title.html#jefferson_and_liberty">The Jefferson and Liberty</A>
 	<A HREF="by_title.html#jefferson_reel">Jefferson Reel</A>
@@ -8130,7 +8081,6 @@ Lm 2x2 pp (contra, duple minor, all proper)
 	<A HREF="by_title.html#laura_suzannes_contra">Laura Suzanne's Contra</A>
 	<A HREF="by_title.html#leading_lady">The Leading Lady</A>
 	<A HREF="by_title.html#leadville_contra">Leadville Contra</A>
-	<A HREF="by_title.html#leah_price_and_the_impala_abangala_dance">Leah Price and the Impala: A Bängala Dance</A>
 	<A HREF="by_title.html#lexington_green">Lexington Green</A>
 	<A HREF="by_title.html#life_let_us_cherish">Life Let Us Cherish</A>
 	<A HREF="by_title.html#light_artillery">Light Artillery</A>
@@ -8317,7 +8267,7 @@ Lm 2x2 pp (contra, duple minor, all proper)
 	<A HREF="by_title.html#square_english_contra">The Square English Contra</A>
 	<A HREF="by_title.html#square_english_contra_dance">The Square English Contra Dance</A>
 	<A HREF="by_title.html#starr_label_reel">Starr Label Reel</A>
-	<A HREF="by_title.html#stars_and_stripes">Stars & Stripes</A>
+	<A HREF="by_title.html#stars_and_stripes">Stars and Stripes</A>
 	<A HREF="by_title.html#stars_and_stripes">Stars and Stripes</A>
 	<A HREF="by_title.html#steamboat">Steamboat</A>
 	<A HREF="by_title.html#steamboat_waltz">Steamboat Waltz</A>
@@ -8357,7 +8307,7 @@ Lm 2x2 pp (contra, duple minor, all proper)
 	<A HREF="by_title.html#to_and_fro">To and Fro</A>
 	<A HREF="by_title.html#to_fill_a_need">To Fill a Need</A>
 	<A HREF="by_title.html#torryburn_lassies">Torryburn Lassies</A>
-	<A HREF="by_title.html#touch_and_go">Touch & Go</A>
+	<A HREF="by_title.html#touch_and_go">Touch and Go</A>
 	<A HREF="by_title.html#tribute_to_arthur_seele">Tribute To Arthur Seele</A>
 	<A HREF="by_title.html#trillium_roll_away">Trillium Roll Away</A>
 	<A HREF="by_title.html#tristas_dance">Trista's Dance</A>
@@ -8514,7 +8464,6 @@ Lm 2x4 (longways sets of 4 facing 4)
 	<A HREF="by_title.html#hl_hunley_submarine_dance">H.L. Hunley Submarine Dance</A>
 	<A HREF="by_title.html#i_get_around">I Get Around</A>
 	<A HREF="by_title.html#illusion_of_eight">The Illusion of Eight</A>
-	<A HREF="by_title.html#jd_just_dog">J.D. (Just Dog)</A>
 	<A HREF="by_title.html#jenny_in_pairs">Jenny in Pairs</A>
 	<A HREF="by_title.html#julias_heymaker">Julia's Heymaker</A>
 	<A HREF="by_title.html#just_bull_headed_i_guess">Just Bull-Headed, I Guess</A>
@@ -8608,7 +8557,7 @@ Lm 2x4 (longways sets of 4 facing 4)
 Lm 2x4 becket
 	<A HREF="by_title.html#e_and_k">E and K</A>
 	<A HREF="by_title.html#indiana">Indiana</A>
-	<A HREF="by_title.html#k_and_e">K&E</A>
+	<A HREF="by_title.html#k_and_e">KandE</A>
 	<A HREF="by_title.html#lost_and_found_and_lost_again">Lost and Found, and Lost Again!</A>
 	<A HREF="by_title.html#major_hey">Major Hey</A>
 	<A HREF="by_title.html#voyager">Voyager</A>
@@ -8697,7 +8646,7 @@ Lm 3x2 ipp (contra, triple minor, 1s improper)
 	<A HREF="by_title.html#jessies_roses">Jessie's Roses</A>
 	<A HREF="by_title.html#jimmy_allen">Jimmy Allen</A>
 	<A HREF="by_title.html#john_drewry">The John Drewry</A>
-	<A HREF="by_title.html#k_and_m">K & M</A>
+	<A HREF="by_title.html#k_and_m">K and M</A>
 	<A HREF="by_title.html#kinreece">Kinreece</A>
 	<A HREF="by_title.html#kitchen_hornpipe">Kitchen Hornpipe</A>
 	<A HREF="by_title.html#kitchen_hornpipe">The Kitchen Hornpipe</A>
@@ -8846,9 +8795,6 @@ Lm 3x2 ppp (contra, triple minor, all proper)
 	<A HREF="by_title.html#good_for_the_tongue">Good for the Tongue</A>
 	<A HREF="by_title.html#graces">The Graces</A>
 	<A HREF="by_title.html#griffiths_fancy">Griffith's Fancy</A>
-	<A HREF="by_title.html#gro_and_szlige_acht">Gro&Szlig;e Acht</A>
-	<A HREF="by_title.html#grosse_acht_number_1">Große Acht #1</A>
-	<A HREF="by_title.html#grosse_acht_number_2">Große Acht #2</A>
 	<A HREF="by_title.html#half_moon">Half Moon</A>
 	<A HREF="by_title.html#hand_organ_hornpipe">Hand-Organ Hornpipe</A>
 	<A HREF="by_title.html#hard_times">Hard Times</A>
@@ -8982,8 +8928,6 @@ Lm 3x2 ppp (contra, triple minor, all proper)
 	<A HREF="by_title.html#wer_ist_dran">Wer Ist Dran?</A>
 	<A HREF="by_title.html#white_cockade">White Cockade</A>
 	<A HREF="by_title.html#who_is_next">Who Is Next?</A>
-	<A HREF="by_title.html#who_what_when_where_version_11">Who, What, When, Where (Version 11)</A>
-	<A HREF="by_title.html#who_what_when_where_version_i">Who, What, When, Where (Version I)</A>
 	<A HREF="by_title.html#wild_goose_chase">Wild Goose Chase</A>
 	<A HREF="by_title.html#wilders_hornpipe">Wilder's Hornpipe</A>
 	<A HREF="by_title.html#wish_to_please">The Wish to Please</A>
@@ -9057,7 +9001,6 @@ Random 2x2 mixer
 	<A HREF="by_title.html#love_em_and_leave_em_mixer">Love 'Em and Leave 'Em Mixer</A>
 	<A HREF="by_title.html#love_em_and_leave_em_mixer">Love 'em and Leave 'em Mixer</A>
 	<A HREF="by_title.html#rogers_left_elbow_mixer">Roger's Left Elbow Mixer</A>
-	<A HREF="by_title.html#set_a_crochet">Set à Crochet</A>
 
 Random 2x3 mixer
 	<A HREF="by_title.html#bovine_bliss_paul_and_wendys_udder_delight">Bovine Bliss, Paul and Wendy's Udder Delight</A>
@@ -9102,7 +9045,6 @@ S 5x2
 	<A HREF="by_title.html#downhill_race">Downhill Race</A>
 	<A HREF="by_title.html#five_plus">Five Plus</A>
 	<A HREF="by_title.html#fivepenny_bit">Fivepenny Bit</A>
-	<A HREF="by_title.html#funf_plus">Fünf Plus</A>
 	<A HREF="by_title.html#lovely_lass_from_leende">The Lovely Lass from Leende</A>
 	<A HREF="by_title.html#play_to_win">Play to Win</A>
 	<A HREF="by_title.html#shepherds_crossing">Shepherd's Crossing</A>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
   <div id="choreo">
-    <h1>Funky new dance:</h1>
+    <h1>{{ title }}</h1>
     {% for phrase in dance %}
         <li>
           {% for move in phrase %}

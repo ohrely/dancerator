@@ -1,6 +1,17 @@
 from model import connect_to_db, db
+from model import Title
+from random import sample
 import algorithm
 import doctest
+
+
+def make_title():
+    """Randmly generate a title for the dance using words from other dances' titles."""
+    num_words = db.session.query(Title).count()
+    word_ids = sample(xrange(num_words), 2)
+    words_for_title = db.session.query(Title.word).filter(Title.word_id.in_(word_ids)).all()
+    random_title = " ".join(word[0] for word in words_for_title)
+    return random_title
 
 
 def make_dance():
@@ -88,3 +99,4 @@ if __name__ == "__main__":
     doctest.testmod(verbose=True)
 
     simple_trans()
+    make_title()
