@@ -15,11 +15,14 @@ def make_title():
 
 
 def make_dance():
+    """Generate dance."""
     dance_moves, da_dict = algorithm.do_it_all()
     return dance_moves, da_dict
 
 
 def count_star(dance, da_dict, i):
+    """Count number of places to move in one star figure.
+    """
     total_moved = 1
     k = i - 1
 
