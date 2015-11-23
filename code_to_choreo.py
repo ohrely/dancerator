@@ -17,6 +17,7 @@ def make_title():
 def make_dance():
     """Generate dance."""
     dance_moves, da_dict = algorithm.do_it_all()
+    print "DANCE MOVES: ", dance_moves
     return dance_moves, da_dict
 
 

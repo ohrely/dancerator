@@ -12,6 +12,7 @@ pbal,bal,partner balance,4,0,Null,0,0,1
 fchn,chain,follow chain,8,Null,1,2,0,2
 crl3,circle,circle left 3 places,8,0,Null,3,3,2
 crl4,circle,circle left 4 places,8,0,Null,0,0,2
+crr3,circle,circle right 3 places,8,Null,Null,1,1,2
 crr4,circle,circle right 4 places,8,Null,Null,0,0,2
 fdn6,dosido,follow do si do to neighbor 1 1/2,8,1,1,2,0,1
 fdp6,dosido,follow do si do to partner 1 1/2,8,1,1,2,0,0
