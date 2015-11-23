@@ -1,35 +1,38 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div id="choreo">
-    <h1>{{ title }}</h1>
-    {% for phrase in dance %}
-        <li>
-          {% for move in phrase %}
-            {% if move|length == 2 %}
-              <span class="visual_move" data={{ move[1] }}>
-                {{ move[0] }}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-1" id="choreo">
+        <h1>{{ title }}</h1>
+        {% for phrase in dance %}
+            <li>
+              {% for move in phrase %}
+                {% if move|length == 2 %}
+                  <span class="visual_move" data={{ move[1] }}>
+                    {{ move[0] }}
+                  </span>
+                {% else %}
+                  {{ move }}
+                {% endif %}
               </span>
-            {% else %}
-              {{ move }}
-            {% endif %}
-          </span>
-          {% endfor %}
-        </li>
-    {% endfor %}
-  </div>
+              {% endfor %}
+            </li>
+        {% endfor %}
+      </div>
 
-  <div id="clips">
-    <h2>Visualize this!<h2>
+      <div class="col-xs-12 col-md-6" id="clips">
+        <div width="500px" id="clips">
+          <img src="../static/something.gif"></img>
+        </div>
 
-    <div width="500px" id="clips">
-      <img src="../static/something.gif"></img>
+        <script>
+          $('.visual_move').on('click', function(){playMovie(data); });
+
+          function playMove(moveId){
+            $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>')
+          }
+        </script>
+      </div>
     </div>
-  <script>
-    $('.visual_move').on('click', function(){playMovie(data); });
-
-    function playMove(moveId){
-      $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>')
-    }
-  </script>
   </div>
 {% endblock %}

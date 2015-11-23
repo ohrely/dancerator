@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div id="homebod">
-    <h1>The Dancerator</h1>
+  <html  class="homebod">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>The Dancerator</h1>
+      </div>
+    </div>
 
-    <input type="button" id="make-dance" onclick="location.href='/new';" value="Dancemaker, Dancemaker, make me a dance!"></input>
+    <div class="row">
+      <div class="col-xs-12">
+        <input type="button" id="make-dance" onclick="location.href='/new';" value="Dancemaker, Dancemaker, make me a dance!"></input>
+      </div>
+    </div>
   </div>
+  </html>
 {% endblock %}

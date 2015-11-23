@@ -2,3 +2,15 @@
 #homebod{
     text-align: center;
 }
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html.homebod {
+    background: url(static/photos/DSC00920.JPG) no-repeat center center fixed;
+    text-align: center;
+}
