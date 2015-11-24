@@ -11,17 +11,11 @@
         {% for phrase in dance %}
             <li>
               <span class="tags">({{ tags[i] }})</span>
-              <span class="moves">
                 {% for move in phrase %}
-                  {% if move|length == 2 %}
-                    <span class="visual_move" data={{ move[1] }}>
-                      {{ move[0] }}
-                    </span>
-                  {% else %}
+                  <span class="moves">
                     {{ move }}
-                  {% endif %}
+                  </span>
                 {% endfor %}
-              </span>
             </li>
             {% set i = i + 1 %}
         {% endfor %}
@@ -34,7 +28,13 @@
         </div>
 
         <script>
-          $('.visual_move').on('click', function(){playMovie(data); });
+          var vidKeys = Object.keys(vids);
+          var vidsNum = vidKeys.length;
+          for (i=0, i < vidsNum; i++){
+            document.body.innerHTML = document.body.innerHTML.replace('/' + vidKeys[i] + '/', '<a class="visual_move" data="../static/' + vids[vidKeys[i]] + '">'vidKeys[i] + '</a>');
+          }
+
+          $('.visual_move').on('click', function(){playMove(data); });
 
           function playMove(moveId){
             $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>')
@@ -43,4 +43,5 @@
       </div>
     </div>
   </div>
+
 {% endblock %}

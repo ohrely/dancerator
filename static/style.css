@@ -1,27 +1,33 @@
 /*Just to make this a little easier on the eyes while I build it.*/
-#homebod{
-    text-align: center;
-}
 
-html {
+body {
     font-family: 'Merriweather Sans', sans-serif;
+    background-color: transparent;
 }
 
 h1 {
     font-weight: bold;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 500%;
 }
 
-.homebod {
+#homebod {
     background: url(/static/photos/DSC00912.JPG) no-repeat center center fixed;
     background-size: cover;
+}
+
+.homebod{
+    padding-top: 13em;
     text-align: center;
+    color: white;
 }
 
 .btn {
+    margin-top: 3em;
     background-color: transparent;
     outline-width: 2px;
     outline-style: solid;
-    outline-color: white;
+    font-size: 150%;
 }
 
 h1.homebod {
@@ -31,6 +37,10 @@ h1.homebod {
     font-size: 400%;
 }
 
+h2 {
+    font-size: 250%;
+}
+
 ol {
     margin-left:0;
     padding-left: 0;
@@ -38,6 +48,7 @@ ol {
 
 ol > li {
     list-style:none; /* Disable the normal item numbering */
+    font-size: 110%;
 }
 
 .tags {
@@ -45,5 +56,6 @@ ol > li {
 }
 
 .moves {
-    padding-left: 1.5em;
+    padding-left: .5em;
+    font-size: 100%;
 }
