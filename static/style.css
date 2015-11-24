@@ -4,13 +4,46 @@
 }
 
 html {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
-html.homebod {
-    background: url(static/photos/DSC00920.JPG) no-repeat center center fixed;
+h1 {
+    font-weight: bold;
+}
+
+.homebod {
+    background: url(/static/photos/DSC00912.JPG) no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
+}
+
+.btn {
+    background-color: transparent;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: white;
+}
+
+h1.homebod {
+    margin-top: 25%;
+    margin-bottom: 3%;
+    color: white;
+    font-size: 400%;
+}
+
+ol {
+    margin-left:0;
+    padding-left: 0;
+}
+
+ol > li {
+    list-style:none; /* Disable the normal item numbering */
+}
+
+.tags {
+    font-weight: bold;
+}
+
+.moves {
+    padding-left: 1.5em;
 }

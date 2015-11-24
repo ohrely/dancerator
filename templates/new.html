@@ -2,27 +2,35 @@
 {% block content %}
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-4 col-md-offset-1" id="choreo">
-        <h1>{{ title }}</h1>
+      <div class="col-xs-12 col-md-5 col-md-offset-1" id="choreo">
+        <h2>{{ title }}</h2>
+
+        <ol>
+        {% set tags = ["A1", "A2", "B1", "B2"] %}
+        {% set i = 0 %}
         {% for phrase in dance %}
             <li>
-              {% for move in phrase %}
-                {% if move|length == 2 %}
-                  <span class="visual_move" data={{ move[1] }}>
-                    {{ move[0] }}
-                  </span>
-                {% else %}
-                  {{ move }}
-                {% endif %}
+              <span class="tags">({{ tags[i] }})</span>
+              <span class="moves">
+                {% for move in phrase %}
+                  {% if move|length == 2 %}
+                    <span class="visual_move" data={{ move[1] }}>
+                      {{ move[0] }}
+                    </span>
+                  {% else %}
+                    {{ move }}
+                  {% endif %}
+                {% endfor %}
               </span>
-              {% endfor %}
             </li>
+            {% set i = i + 1 %}
         {% endfor %}
+        </ol>
       </div>
 
-      <div class="col-xs-12 col-md-6" id="clips">
-        <div width="500px" id="clips">
-          <img src="../static/something.gif"></img>
+      <div class="col-xs-12 col-md-5" id="clips">
+        <div id="clips">
+          <img src="../static/something.gif" width="fill"></img>
         </div>
 
         <script>
