@@ -1,49 +1,49 @@
-fal6,allemande,follows allemande left 1 1/2<br>,8,Null,1,2,0,2
-far6,allemande,follows allemande right 1 1/2<br>,8,Null,1,2,0,2
+fal6,allemande,follows allemande left 1 1/2,8,Null,1,2,0,2
+far6,allemande,follows allemande right 1 1/2,8,Null,1,2,0,2
 lal4,allemande,leads allemande left once around,4,1,0,0,0,2
-lal6,allemande,leads allemande left 1 1/2<br>,8,Null,0,0,2,2
-lar6,allemande,leads allemande right 1 1/2<br>,8,Null,0,0,2,2
-nal6,allemande,neighbor allemande left 1 1/2<br>,8,Null,Null,2311,2311,0
-nar6,allemande,neighbor allemande right 1 1/2<br>,8,Null,Null,2311,2311,0
-pal6,allemande,partner allemande left 1 1/2<br>,8,Null,Null,2311,2311,1
+lal6,allemande,leads allemande left 1 1/2,8,Null,0,0,2,2
+lar6,allemande,leads allemande right 1 1/2,8,Null,0,0,2,2
+nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,2311,2311,0
+nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,2311,2311,0
+pal6,allemande,partner allemande left 1 1/2,8,Null,Null,2311,2311,1
 cbal,bal,circle balance,4,0,Null,0,0,2
 nbal,bal,neighbor balance,4,0,Null,0,0,0
 pbal,bal,partner balance,4,0,Null,0,0,1
-fchn,chain,follows chain<br>,8,Null,1,2,0,2
-crl3,circle,circle left 3 places<br>,8,0,Null,3,3,2
-crl4,circle,circle left 4 places<br>,8,0,Null,0,0,2
-crr3,circle,circle right 3 places<br>,8,Null,Null,1,1,2
-crr4,circle,circle right 4 places<br>,8,Null,Null,0,0,2
-fdn6,dosido,follows do si do to neighbor 1 1/2<br>,8,1,1,2,0,1
-fdp6,dosido,follows do si do to partner 1 1/2<br>,8,1,1,2,0,0
-madf,dosido,mad robin - follows in center first<br>,8,1,Null,0,0,2
-ndo4,dosido,neighbor do si do<br>,8,0,Null,0,0,0
-pdo4,dosido,partner do si do<br>,8,0,Null,0,0,1
-nbox,gnat,neighbor box the gnat<br>,4,1,Null,2311,2311,0
-pbox,gnat,partner box the gnat<br>,4,1,Null,2311,2311,1
-hhey,hey,half hey<br>,8,1,Null,2,2,2
-llfb,lines,long lines forward and back<br>,8,0,Null,0,0,2
+fchn,chain,follows chain,8,Null,1,2,0,2
+crl3,circle,circle left 3 places,8,0,Null,3,3,2
+crl4,circle,circle left 4 places,8,0,Null,0,0,2
+crr3,circle,circle right 3 places,8,Null,Null,1,1,2
+crr4,circle,circle right 4 places,8,Null,Null,0,0,2
+fdn6,dosido,follows do si do to neighbor 1 1/2,8,1,1,2,0,1
+fdp6,dosido,follows do si do to partner 1 1/2,8,1,1,2,0,0
+madf,dosido,mad robin - follows in center first,8,1,Null,0,0,2
+ndo4,dosido,neighbor do si do,8,0,Null,0,0,0
+pdo4,dosido,partner do si do,8,0,Null,0,0,1
+nbox,gnat,neighbor box the gnat,4,1,Null,2311,2311,0
+pbox,gnat,partner box the gnat,4,1,Null,2311,2311,1
+hhey,hey,half hey,8,1,Null,2,2,2
+llfb,lines,long lines forward and back,8,0,Null,0,0,2
 lllr,lines,long lines balance left then right,4,1,Null,0,0,2
 llrl,lines,long lines balance right then left,4,1,Null,0,0,2
-fml6,magnetize,follows magnetize left 1 1/2<br>,8,1,1,2,0,2
-fmr6,magnetize,follows magnetize right 1 1/2<br>,8,1,1,2,0,2
-lml6,magnetize,leads magnetize left 1 1/2<br>,8,1,0,0,2,2
-lmr6,magnetize,leads magnetize right 1 1/2<br>,8,1,0,0,2,2
-nmr4,magnetize,neighbor magnetize right 1<br>,8,1,Null,0,0,0
+fml6,magnetize,follows magnetize left 1 1/2,8,1,1,2,0,2
+fmr6,magnetize,follows magnetize right 1 1/2,8,1,1,2,0,2
+lml6,magnetize,leads magnetize left 1 1/2,8,1,0,0,2,2
+lmr6,magnetize,leads magnetize right 1 1/2,8,1,0,0,2,2
+nmr4,magnetize,neighbor magnetize right 1,8,1,Null,0,0,0
 nmrm,magnetize,neghbor magnetize right melt,8,1,Null,0,0,0
-pmr4,magnetize,partner magnetize right 1<br>,8,1,Null,0,0,1
+pmr4,magnetize,partner magnetize right 1,8,1,Null,0,0,1
 pmrm,magnetize,partner magnetize right melt,8,1,Null,0,0,1
 arch,passthru,twos arch ones dive to next couple,4,1,Null,0,0,0
 pass,passthru,pass through circle to new neighbors,4,Null,Null,0,0,0
-prom,promenade,promenade across the set<br>,8,Null,Null,2,2,2
-frns,roll,follows roll neighbor away with 1/2 sashay<br>,4,1,Null,2311,2311,0
-lrns,roll,leads roll neighbor away with 1/2 sashay<br>,4,1,Null,2311,2311,0
-roml,rory,slide or spin to left as in rory o'more<br>,4,1,Null,2311,2311,2
-romr,rory,slide or spin to right as in rory o'more<br>,4,1,Null,2311,2311,2
+prom,promenade,promenade across the set,8,Null,Null,2,2,2
+frns,roll,follows roll neighbor away with 1/2 sashay,4,1,Null,2311,2311,0
+lrns,roll,leads roll neighbor away with 1/2 sashay,4,1,Null,2311,2311,0
+roml,rory,slide or spin to left as in rory o'more,4,1,Null,2311,2311,2
+romr,rory,slide or spin to right as in rory o'more,4,1,Null,2311,2311,2
 lstr,star,left hand star,2,Null,Null,3,3,2
 rstr,star,right hand star,2,Null,Null,1,1,2
-nswg,swing,neighbor swing<br>,4,Null,Null,2310,2011,0
-pswg,swing,partner swing<br>,4,Null,Null,2310,2011,1
-rlth,thru,right/left thru<br>,8,1,Null,2,2,2
-pcal,twirl,partner callifornia twirl<br>,4,1,Null,3,1,0
-petr,twirl,petronella<br>,4,Null,Null,3,3,2
+nswg,swing,neighbor swing,4,Null,Null,2310,2011,0
+pswg,swing,partner swing,4,Null,Null,2310,2011,1
+rlth,thru,right/left thru,8,1,Null,2,2,2
+pcal,twirl,partner callifornia twirl,4,1,Null,3,1,0
+petr,twirl,petronella,4,Null,Null,3,3,2

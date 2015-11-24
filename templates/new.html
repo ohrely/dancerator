@@ -24,7 +24,7 @@
 
       <div class="col-xs-12 col-md-5" id="clips">
         <div id="clips">
-          <img src="../static/something.gif" width="fill"></img>
+          <h3>Click on one of the moves at the left.</h3>
         </div>
 
         <script>
@@ -48,8 +48,6 @@
               var text = $(this).html();
               $(this).html(text.split(vidKeys[i]).join('<a href="#" class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>'));
             });
-            // document.body.innerHTML = document.body.innerHTML.replace('/' vidKeys[i] '/g', '<a href="#" class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>');
-            console.log("replaced all")
           }
 
           $('.visual_move').on('click', function(evt){playMove(evt.data.url); });

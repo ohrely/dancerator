@@ -60,9 +60,9 @@ def simple_trans():
                 if da_dict[dance[i + 1]].type_code == "star":
                     move_name = None
                 else:
-                    move_name = da_dict[dance[i]].name, count_star(dance, da_dict, i)
+                    move_name = da_dict[dance[i]].name + " " + count_star(dance, da_dict, i)
             except IndexError:
-                move_name = da_dict[dance[i]].name, count_star(dance, da_dict, i)
+                move_name = da_dict[dance[i]].name + " " + count_star(dance, da_dict, i)
         elif da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
             if da_dict[dance[i]].type_code in set(["swing", "hey"]):
                 move_name = None
