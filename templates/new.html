@@ -37,7 +37,7 @@
           vids["magnetize"] = "magnetize.mp4";
           vids["petronella"] = "petr.mp4";
           vids["star"] = "star.mp4";
-          vids["swing"] = "swing.mp4";
+          vids["swing"] = "petr.mp4";
           // vids[""] = ".mp4";
 
           var vidKeys = Object.keys(vids);
@@ -46,14 +46,17 @@
           for (i=0; i < vidsNum; i++){
             $('#choreo').each(function() {
               var text = $(this).html();
-              $(this).html(text.split(vidKeys[i]).join('<a href="#" class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>'));
+              $(this).html(text.split(vidKeys[i]).join('<a class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>'));
             });
           }
 
-          $('.visual_move').on('click', function(evt){playMove(evt.data.url); });
+          $('.visual_move').on('click', function(evt){
+            console.log($(this).data("url"));
+            playMove($(this).data("url"));
+          });
 
           function playMove(moveId){
-            $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>');
+            $('#clips').html('<video src=' + moveId + ' autoplay></video>');
           }
         </script>
       </div>
