@@ -1467,7 +1467,7 @@ Cm 2x2 ip (sicilian circle)
 	<A HREF="by_title.html#second_hand_reel">Second Hand Reel</A>
 	<A HREF="by_title.html#sherard_roundabout">Sherard Roundabout</A>
 	<A HREF="by_title.html#showtime_reel">Showtime Reel</A>
-	<A HREF="by_title.html#sic_transit">Sic Transit ...</A>
+	<A HREF="by_title.html#sic_transit">Sic Transit</A>
 	<A HREF="by_title.html#sicilian_circle">Sicilian Circle</A>
 	<A HREF="by_title.html#sicilian_circle_number_one">Sicilian Circle Number One</A>
 	<A HREF="by_title.html#sicilian_circle_number_two">Sicilian Circle Number Two</A>
@@ -3501,9 +3501,9 @@ Lm 2x2 becket (contra, becket formation)
 	<A HREF="by_title.html#thursdays_child">Thursday's Child</A>
 	<A HREF="by_title.html#time_for_dinner">Time For Dinner</A>
 	<A HREF="by_title.html#tinker_tailor">Tinker Tailor</A>
-	<A HREF="by_title.html#to_dance_is_to_live">. . . To Dance is to Live</A>
+	<A HREF="by_title.html#to_dance_is_to_live">To Dance is to Live</A>
 	<A HREF="by_title.html#to_have_and_to_hold">To Have and to Hold</A>
-	<A HREF="by_title.html#to_live_is_to_dance">To Live is to Dance . . .</A>
+	<A HREF="by_title.html#to_live_is_to_dance">To Live is to Dance</A>
 	<A HREF="by_title.html#toms_delight">Tom's Delight</A>
 	<A HREF="by_title.html#too_right">Too Right</A>
 	<A HREF="by_title.html#top_marks">Top Marks</A>

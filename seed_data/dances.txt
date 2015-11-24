@@ -22,7 +22,6 @@
 ,Chama River Reel,0,nmrm nswg nswg | llfb lal6 | pbal pswg pswg pswg | prom crl3,0,http://dancevideos.childgrove.org/contra/contra-modern/290-chama-river-reel-by-merri-rudd-duple-improper
 ,Alternating Current,2,nbal nswg nswg nswg | rlth lrns frns | far6 pswg pswg | cbal petr cbal pcal,0,http://dancevideos.childgrove.org/contra/contra-modern/319-alternating-current-by-john-coffman-duple-improper
 ,First Star,2,nbal nswg nswg nswg | crl4 crr4 | fchn fchn | lstr lstr lstr lstr rstr rstr rstr rstr,0,http://www.childgrove.org/index.php/about-dances/dance-writers/ted-steele-dances
-,Duck Soup,1,crr3 fdo4 | llrl romr lllr roml | lal4 pswg pswg pswg | llfb fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/274-duck-soupby-david-kirchner-duple-improper
 ,Momma Loo's Reel,3,crl4 nswg nswg | llfb far6 | pbal pswg pswg pswg pswg | fchn crr4,0,http://dancevideos.childgrove.org/contra/contra-modern/195-momma-loos-reel
 ,United We Dance,0,llrl romr lllr roml | nbal nswg nswg nswg | crl3 pswg pswg | fchn lstr lstr lstr lstr,0,http://dancevideos.childgrove.org/contra/contra-modern/107-united-we-dance
 ,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | rlth rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
