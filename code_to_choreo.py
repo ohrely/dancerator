@@ -54,18 +54,18 @@ def simple_trans():
         i_type = da_dict[dance[i]].type_code
         print da_dict[dance[i]].name
         if i < length - 1 and i_type == "hey" and da_dict[dance[i + 1]].type_code == "hey":
-            move_name = "hey for four"
+            move_name = "hey for four<br>"
+        elif da_dict[dance[i]].type_code == "star":
+            try:
+                if da_dict[dance[i + 1]].type_code == "star":
+                    move_name = None
+                else:
+                    move_name = da_dict[dance[i]].name, count_star(dance, da_dict, i)
+            except IndexError:
+                move_name = da_dict[dance[i]].name, count_star(dance, da_dict, i)
         elif da_dict[dance[i]].type_code == da_dict[dance[i - 1]].type_code:
             if da_dict[dance[i]].type_code in set(["swing", "hey"]):
                 move_name = None
-            elif da_dict[dance[i]].type_code == "star":
-                try:
-                    if da_dict[dance[i + 1]].type_code == "star":
-                        move_name = None
-                    else:
-                        move_name = count_star(dance, da_dict, i)
-                except IndexError:
-                    move_name = count_star(dance, da_dict, i)
             elif da_dict[dance[i]].type_code == "thru":
                 move_name = da_dict[dance[i]].name + " again"
             else:
@@ -84,9 +84,6 @@ def simple_trans():
                 translation[3].append(move_name)
             else:
                 print "SOMETHING IS WRONG"
-
-        # for phrase in translation:
-        #     if translation == []
 
         beats = beats + da_dict[dance[i]].beats
         i += 1

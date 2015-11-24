@@ -2,10 +2,10 @@
 {% block content %}
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-5 col-md-offset-1" id="choreo">
+      <div class="col-xs-12 col-md-5 col-md-offset-1">
         <h2>{{ title }}</h2>
 
-        <ol>
+        <ol id="choreo">
         {% set tags = ["A1", "A2", "B1", "B2"] %}
         {% set i = 0 %}
         {% for phrase in dance %}
@@ -28,16 +28,34 @@
         </div>
 
         <script>
+          var vids = new Object();
+
+          vids["allemande"] = "allemande.mp4";
+          vids["box the gnat"] = "gnat.mp4";
+          vids["california"] = "cal.mp4";
+          vids["chain"] = "chain.mp4";
+          vids["magnetize"] = "magnetize.mp4";
+          vids["petronella"] = "petr.mp4";
+          vids["star"] = "star.mp4";
+          vids["swing"] = "swing.mp4";
+          // vids[""] = ".mp4";
+
           var vidKeys = Object.keys(vids);
           var vidsNum = vidKeys.length;
-          for (i=0, i < vidsNum; i++){
-            document.body.innerHTML = document.body.innerHTML.replace('/' + vidKeys[i] + '/', '<a class="visual_move" data="../static/' + vids[vidKeys[i]] + '">'vidKeys[i] + '</a>');
+
+          for (i=0; i < vidsNum; i++){
+            $('#choreo').each(function() {
+              var text = $(this).html();
+              $(this).html(text.split(vidKeys[i]).join('<a href="#" class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>'));
+            });
+            // document.body.innerHTML = document.body.innerHTML.replace('/' vidKeys[i] '/g', '<a href="#" class="visual_move" data-url="../static/' + vids[vidKeys[i]] + '">' + vidKeys[i] + '</a>');
+            console.log("replaced all")
           }
 
-          $('.visual_move').on('click', function(){playMove(data); });
+          $('.visual_move').on('click', function(evt){playMove(evt.data.url); });
 
           function playMove(moveId){
-            $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>')
+            $('#clips').innerHTML('<video src=' + movieId + 'autoplay></video>');
           }
         </script>
       </div>
