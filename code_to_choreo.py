@@ -54,7 +54,7 @@ def simple_trans():
         i_type = da_dict[dance[i]].type_code
         print da_dict[dance[i]].name
         if i < length - 1 and i_type == "hey" and da_dict[dance[i + 1]].type_code == "hey":
-            move_name = "hey for four<br>"
+            move_name = "hey for four"
         elif da_dict[dance[i]].type_code == "star":
             try:
                 if da_dict[dance[i + 1]].type_code == "star":

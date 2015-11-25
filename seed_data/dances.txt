@@ -22,6 +22,15 @@
 ,Chama River Reel,0,nmrm nswg nswg | llfb lal6 | pbal pswg pswg pswg | prom crl3,0,http://dancevideos.childgrove.org/contra/contra-modern/290-chama-river-reel-by-merri-rudd-duple-improper
 ,Alternating Current,2,nbal nswg nswg nswg | rlth lrns frns | far6 pswg pswg | cbal petr cbal pcal,0,http://dancevideos.childgrove.org/contra/contra-modern/319-alternating-current-by-john-coffman-duple-improper
 ,First Star,2,nbal nswg nswg nswg | crl4 crr4 | fchn fchn | lstr lstr lstr lstr rstr rstr rstr rstr,0,http://www.childgrove.org/index.php/about-dances/dance-writers/ted-steele-dances
+,Duck Soup,1,crr3 fdo4 | llrl romr lllr roml | lal4 pswg pswg pswg | llfb fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/274-duck-soupby-david-kirchner-duple-improper
 ,Momma Loo's Reel,3,crl4 nswg nswg | llfb far6 | pbal pswg pswg pswg pswg | fchn crr4,0,http://dancevideos.childgrove.org/contra/contra-modern/195-momma-loos-reel
 ,United We Dance,0,llrl romr lllr roml | nbal nswg nswg nswg | crl3 pswg pswg | fchn lstr lstr lstr lstr,0,http://dancevideos.childgrove.org/contra/contra-modern/107-united-we-dance
 ,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | rlth rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
+,Dancy Nancy,1,nbal nbox lal6 | pmrm pswg pswg | crl3 nswg nswg | llfb hhey,0,http://katyheine.com/#dancy
+,Pie Time,2,crl4 nswg nswg | llfb fchn | hhey pswg pswg | crl3 pbal pcal,0,http://katyheine.com/#pie
+,Ain't Dancing Grand?,0,nal6 lar6 | pbal pswg pswg pswg | rlth fchn | cbal petr cbal petr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Bad Hair Day,3,nbal nbox hhey | nbal nswg nswg nswg | crl3 pswg pswg | llfb lal6,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Bashful Bachelor,3,nar6 hhey | nmrm nswg nswg | crl3 pswg pswg | llfb lal6,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,The Bee Whisperer,1,nbal nbox rstr rstr rstr rstr | nmrm nswg nswg | lal6 pswg pswg | prom fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Betwixt and Between,2,far6 pswg pswg | crl3 nswg nswg | lal6 pswg pswg | cbal petr cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Busybodies,1,crr4 lal6 | hhey pswg pswg | crl3 nswg nswg | llfb fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
