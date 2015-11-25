@@ -340,9 +340,7 @@ class DanceObj(object):
             print ". . . . . . . . . . . . . . . . . . ."
             print ". . . . . . . . . . . . . . . . . . ."
             print ". . . . . . . . . . . . . . . . . . ."
-            self.all_together_now()
-        else:
-            pass
+            return self.all_together_now()
 
         return entire_dance
 
