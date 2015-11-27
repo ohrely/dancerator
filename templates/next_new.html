@@ -1,0 +1,40 @@
+{% extends 'next_base.html' %}
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <h3 id="app-name">The Dancerator</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-1">
+        <h2>{{ title }}</h2>
+
+        <ol id="choreo">
+        {% set tags = ["A1", "A2", "B1", "B2"] %}
+        {% set i = 0 %}
+        {% for phrase in dance %}
+            <li>
+              <span class="tags">({{ tags[i] }})</span>
+                {% for move in phrase %}
+                  <span class="moves">
+                    {{ move }}
+                  </span>
+                {% endfor %}
+            </li>
+            {% set i = i + 1 %}
+        {% endfor %}
+        </ol>
+      </div>
+
+      <div class="col-xs-12 col-md-5 col-md-offset-1" id="video">
+        <div id="clips">
+          <h3>Click on one of the moves at the left to see it here.</h3>
+          <!-- <video src="../static/petr.mp4" autoplay="True" type="video/mp4"></video> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/main.js"></script>
+
+{% endblock %}
