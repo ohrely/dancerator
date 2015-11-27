@@ -18,7 +18,7 @@ app.jinja_env.undefined = StrictUndefined
 def index():
     """Landing page"""
 
-    return render_template("next_homepage.html")
+    return render_template("homepage.html")
 
 
 @app.route('/new')
@@ -30,7 +30,7 @@ def generate():
     dance = simple_trans()
     print dance
 
-    return render_template("next_new.html", dance=dance, title=title)
+    return render_template("new.html", dance=dance, title=title)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 <!doctype html>
 {% block html %}<html>{% endblock %}
+
 <head>
     <title>This is an app.</title>
 
@@ -12,10 +13,9 @@
 </head>
 
 <body>
-
-<!--   <nav class="navbar navbar-inverse navbar-fixed-top">
-    <h3 id="app-name">The Dancerator</h3>
-  </nav> -->
+  {% block title %}
+    <a href="/"><h3 id="app-name">The Dancerator</h3></a>
+  {% endblock %}
 
   {% block content %} content goes here {% endblock %}
 

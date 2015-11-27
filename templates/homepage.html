@@ -1,21 +1,27 @@
 {% extends 'base.html' %}
 
 {% block html %}
+
   <html id="homebod">
+
 {% endblock %}
 
-{% block content %}
-    <div class="homebod" class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>The Dancerator</h1>
-        </div>
-      </div>
+{% block title %}{% endblock %}
 
-      <div class="row">
-        <div class="col-xs-12">
-          <button type="button" class="btn btn-lg btn-secondary" onclick="location.href='/new';" id="make-dance">Make me a dance!</button>
-        </div>
+{% block content %}
+
+  <div class="homebod" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>The Dancerator</h1>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="button" class="btn btn-lg btn-secondary" onclick="location.href='/new';" id="make-dance">Make me a dance!</button>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
