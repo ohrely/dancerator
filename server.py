@@ -1,7 +1,7 @@
 from jinja2 import StrictUndefined
 
 from flask import Flask, render_template
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
 from code_to_choreo import simple_trans, make_title
 import doctest
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     app.debug = True
     connect_to_db(app)
-    DebugToolbarExtension(app)
+    # DebugToolbarExtension(app)
     app.run()
 
     doctest.testmod(verbose=True)

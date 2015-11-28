@@ -26,5 +26,5 @@ $('.visual_move').on('click', function(evt){
 });
 
 function playMove(moveId){
-  $('#clips').html('<video src=' + moveId + ' autoplay="True" type="video/mp4"></video>');
+  $('#clips').html('<video src=' + moveId + ' autoplay="True" muted="True" type="video/mp4"></video>');
 }

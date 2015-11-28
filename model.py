@@ -109,6 +109,7 @@ class Creation(db.Model):
     dance_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     dance_name = db.Column(db.String(48))
     choreo = db.Column(db.String(256))
+    progression = db.Column(db.String(24))
 
     def __repr__(self):
 
@@ -129,3 +130,4 @@ if __name__ == "__main__":
     from server import app
     connect_to_db(app)
     print "Connected to DB."
+    Creation.query.delete()
