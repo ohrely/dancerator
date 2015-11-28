@@ -39,12 +39,10 @@ def count_star(dance, da_dict, i):
     return star_count
 
 
-def simple_trans():
+def simple_trans(dance, da_dict):
     """Translate dance code into readable choreography.
     """
-    dance, da_dict, the_prog = make_dance()
     translation = [[], [], [], []]
-    print "DANCE IS ", dance
 
     i = 0
     beats = 0
@@ -89,6 +87,16 @@ def simple_trans():
         i += 1
 
     print translation
+    return translation
+
+
+def make_choreo():
+    """"""
+    dance, da_dict, the_prog = make_dance()
+    print "DANCE IS ", dance
+
+    translation = simple_trans(dance, da_dict)
+
     return dance, translation, the_prog
 
 
@@ -100,4 +108,4 @@ if __name__ == "__main__":
     doctest.testmod(verbose=True)
 
     make_title()
-    simple_trans()
+    make_choreo()

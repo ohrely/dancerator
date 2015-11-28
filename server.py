@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
 from model import Creation
-from code_to_choreo import simple_trans, make_title
+from code_to_choreo import make_choreo, make_title
 import doctest
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def generate():
 
     title = make_title()
     print title
-    pre_trans, dance, the_prog = simple_trans()
+    pre_trans, dance, the_prog = make_choreo()
     pre_trans = ",".join(pre_trans)
     print dance
 
@@ -37,7 +37,7 @@ def generate():
     db.session.commit()
 
     dance_id = db.session.query(Creation.dance_id).filter(Creation.choreo == pre_trans).first()[0]
-    print "DANCE ID IS ", dance_id
+    print "DANCE_ID IS: ", dance_id
 
     return render_template("new.html", dance=dance, title=title)
 
