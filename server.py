@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
 from model import Creation
-from code_to_choreo import make_choreo, make_title
+from code_to_choreo import make_choreo, simple_trans, make_title
 import doctest
 
 app = Flask(__name__)
@@ -26,7 +26,6 @@ def generate():
     """Create dance, write to db, return page with results"""
 
     title = make_title()
-    print title
     pre_trans, dance, the_prog = make_choreo()
     pre_trans = ",".join(pre_trans)
     # print dance
@@ -39,8 +38,20 @@ def generate():
     dance_id = db.session.query(Creation.dance_id).filter(Creation.choreo == pre_trans).first()[0]
     print "DANCE_ID IS: ", dance_id
 
-    return render_template("new.html", dance=dance, title=title)
+    return render_template("dance.html", dance=dance, title=title)
 
+
+@app.route('/dance/<int:dance_id>')
+def display(dance_id):
+    """Given the id of a dance in the creations table, display choreo page"""
+
+    creation = db.session.query(Creation).get(dance_id)
+    title = creation.dance_name
+    pre_trans = creation.choreo
+    pre_trans = pre_trans.split(",")
+    dance = simple_trans(dance=pre_trans)
+
+    return render_template("dance.html", dance=dance, title=title)
 
 if __name__ == "__main__":
 

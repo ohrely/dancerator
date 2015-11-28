@@ -33,11 +33,15 @@ def count_star(dance, da_dict, i):
     return star_count
 
 
-def simple_trans(dance, da_dict):
+def simple_trans(dance, da_dict=None):
     """Translate dance code into readable choreography.
     """
+
+    print dance
+
     if not da_dict:
         da_dict = algorithm.make_moves()
+        print "HAD TO REMAKE da_dict"
 
     translation = [[], [], [], []]
 
