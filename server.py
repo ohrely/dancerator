@@ -29,7 +29,7 @@ def generate():
     print title
     pre_trans, dance, the_prog = make_choreo()
     pre_trans = ",".join(pre_trans)
-    print dance
+    # print dance
 
     db_dance = Creation(dance_name=title, choreo=pre_trans, progression=the_prog)
 

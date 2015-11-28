@@ -6,19 +6,13 @@ import doctest
 
 
 def make_title():
-    """Randmly generate a title for the dance using words from other dances' titles."""
+    """Randmly generate a title for the dance using words from other dances' titles.
+    """
     num_words = db.session.query(Title).count()
     word_ids = sample(xrange(num_words), 2)
     words_for_title = db.session.query(Title.word).filter(Title.word_id.in_(word_ids)).all()
     random_title = " ".join(word[0] for word in words_for_title)
     return random_title
-
-
-def make_dance():
-    """Generate dance."""
-    dance_moves, da_dict, the_prog = algorithm.do_it_all()
-    print "DANCE MOVES: ", dance_moves
-    return dance_moves, da_dict, the_prog
 
 
 def count_star(dance, da_dict, i):
@@ -42,6 +36,9 @@ def count_star(dance, da_dict, i):
 def simple_trans(dance, da_dict):
     """Translate dance code into readable choreography.
     """
+    if not da_dict:
+        da_dict = algorithm.make_moves()
+
     translation = [[], [], [], []]
 
     i = 0
@@ -91,8 +88,9 @@ def simple_trans(dance, da_dict):
 
 
 def make_choreo():
-    """"""
-    dance, da_dict, the_prog = make_dance()
+    """Calls functions to create new dance and translate it.
+    """
+    dance, da_dict, the_prog = algorithm.do_it_all()
     print "DANCE IS ", dance
 
     translation = simple_trans(dance, da_dict)
