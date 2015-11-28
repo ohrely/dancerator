@@ -1,4 +1,5 @@
 fal6,allemande,follows allemande left 1 1/2,8,Null,1,2,0,2
+far4,allemande,follows allemande right 4,4,Null,1,0,0,2
 far6,allemande,follows allemande right 1 1/2,8,Null,1,2,0,2
 lal4,allemande,leads allemande left once around,4,1,0,0,0,2
 lal6,allemande,leads allemande left 1 1/2,8,Null,0,0,2,2
@@ -7,9 +8,10 @@ nal6,allemande,neighbor allemande left 1 1/2,8,Null,Null,2311,2311,0
 nar6,allemande,neighbor allemande right 1 1/2,8,Null,Null,2311,2311,0
 pal6,allemande,partner allemande left 1 1/2,8,Null,Null,2311,2311,1
 cbal,bal,circle balance,4,0,Null,0,0,2
-nbal,bal,neighbor balance,4,0,Null,0,0,0
-pbal,bal,partner balance,4,0,Null,0,0,1
+nbal,bal,neighbor balance,4,0,Null,0,0,2
+pbal,bal,partner balance,4,0,Null,0,0,2
 fchn,chain,follows chain,8,Null,1,2,0,2
+crl2,circle,circle left 2 places,4,Null,Null,2,2,2
 crl3,circle,circle left 3 places,8,0,Null,3,3,2
 crl4,circle,circle left 4 places,8,0,Null,0,0,2
 crr3,circle,circle right 3 places,8,Null,Null,1,1,2
@@ -26,6 +28,7 @@ llfb,lines,long lines forward and back,8,0,Null,0,0,2
 lllr,lines,long lines balance left then right,4,1,Null,0,0,2
 llrl,lines,long lines balance right then left,4,1,Null,0,0,2
 fml6,magnetize,follows magnetize left 1 1/2,8,1,1,2,0,2
+fmr4,magnetize,follows magnetize right 1,8,1,1,0,0,2
 fmr6,magnetize,follows magnetize right 1 1/2,8,1,1,2,0,2
 lml6,magnetize,leads magnetize left 1 1/2,8,1,0,0,2,2
 lmr6,magnetize,leads magnetize right 1 1/2,8,1,0,0,2,2

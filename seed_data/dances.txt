@@ -4,7 +4,7 @@
 ,Spring Fever,1,llfb nswg nswg | lal6 pswg pswg | crl4 lstr lstr lstr lstr | prom fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/104-spring-fever
 ,Chicken on a Leash,0,nal6 far6 | pbal pswg pswg pswg | lal6 nswg nswg | cbal petr cbal petr,0,http://dancevideos.childgrove.org/contra/contra-modern/291-chicken-on-a-leash-by-john-coffman-duple-improper
 ,Delphiniums and Daisies,0,nal6 fchn | hhey hhey | pswg pswg pswg pswg | crl3 nar6,0,http://dancevideos.childgrove.org/contra/contra-modern/227-delphiniums-and-daises
-,Happy Here,3,nal6 prom | fchn hhey | pbal pswg pswg pswg | crl3 nswg nswg,0,http://dancevideos.childgrove.org/contra/contra-modern/455-happy-hare-by-john-coffman-duple-improper
+,Happy Hare,3,nal6 prom | fchn hhey | pbal pswg pswg pswg | crl3 nswg nswg,0,http://dancevideos.childgrove.org/contra/contra-modern/455-happy-hare-by-john-coffman-duple-improper
 ,Monday,0,nar6 lal6 | pmrm pswg pswg | crl3 nswg nswg | rlth lstr lstr lstr lstr,0,http://dancevideos.childgrove.org/contra/contra-modern/75-monday
 ,Salmon Chanted Evening,0,nar6 lal6 | pmrm pswg pswg | fchn fchn | rlth crl3,0,http://dancevideos.childgrove.org/contra/contra-modern/232-salmon-chanted-evening
 ,Box the gnat Contra,1,nbal nbox pbal pbox | nbal nswg nswg nswg | fal6 pswg pswg | rlth fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/230-box-the-gnat-contra
@@ -25,7 +25,7 @@
 ,Duck Soup,1,crr3 fdo4 | llrl romr lllr roml | lal4 pswg pswg pswg | llfb fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/274-duck-soupby-david-kirchner-duple-improper
 ,Momma Loo's Reel,3,crl4 nswg nswg | llfb far6 | pbal pswg pswg pswg pswg | fchn crr4,0,http://dancevideos.childgrove.org/contra/contra-modern/195-momma-loos-reel
 ,United We Dance,0,llrl romr lllr roml | nbal nswg nswg nswg | crl3 pswg pswg | fchn lstr lstr lstr lstr,0,http://dancevideos.childgrove.org/contra/contra-modern/107-united-we-dance
-,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | rlth rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
+,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | pbal rlth pbal rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
 ,Dancy Nancy,1,nbal nbox lal6 | pmrm pswg pswg | crl3 nswg nswg | llfb hhey,0,http://katyheine.com/#dancy
 ,Pie Time,2,crl4 nswg nswg | llfb fchn | hhey pswg pswg | crl3 pbal pcal,0,http://katyheine.com/#pie
 ,Ain't Dancing Grand?,0,nal6 lar6 | pbal pswg pswg pswg | rlth fchn | cbal petr cbal petr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
@@ -34,3 +34,18 @@
 ,The Bee Whisperer,1,nbal nbox rstr rstr rstr rstr | nmrm nswg nswg | lal6 pswg pswg | prom fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
 ,Betwixt and Between,2,far6 pswg pswg | crl3 nswg nswg | lal6 pswg pswg | cbal petr cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
 ,Busybodies,1,crr4 lal6 | hhey pswg pswg | crl3 nswg nswg | llfb fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Dancing in My Bones,0,nbal nbox hhey | nbal nswg nswg nswg | lal6 pswg pswg | fchn lstr lstr lstr lstr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Field House Mouse,0,nar6 hhey | nmrm nswg nswg | lal6 pswg pswg | fchn lstr lstr lstr lstr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Fire and Brimstone,0,nbal nswg nswg nswg | llfb far6 | pbal pswg pswg pswg | crl3 cbal lrns,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Goldie the Guy Cat,3,crr4 fal6 | pbal pswg pswg pswg | lal6 nswg nswg | rlth crl4,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Hemp Hill Robins,3,nmrm nswg nswg | llfb crl3 | pmrm pswg pswg | fchn madf,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Little Bird Speak,2,lar6 pal6 | prom madf | pbal pswg pswg pswg | cbal petr cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Out of Hand,0,nbal nbox hhey | nmrm nswg nswg | lal6 pswg pswg pswg | fchn lstr lstr lstr lstr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Pig in a Poke,2,nbal nswg nswg nswg | crl2 frns fal6 | pbal pswg pswg pswg | cbal petr cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Requiem for the Hive,3,nar6 hhey | nmrm nswg nswg | lal6 pswg pswg | fchn crr4,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Something About Sue,3,nal6 prom | far6 pswg pswg | fchn hhey | nbal nswg nswg nswg,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Sunday Night at the Monday Club,1,crr3 lal6 | nbal nswg nswg nswg | crl3 pswg pswg | rlth fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Sweet as Honey,2,crr3 fchn | far4 nswg nswg nswg | lal6 pswg | crl3 cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Sweet Potato Pie,1,nbal petr hhey | nbal nswg nswg nswg | lal6 pswg pswg | llfb far6,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Traveling Salesman,0,nbal nbox lal6 | pbal pswg pswg pswg | crl3 nswg nswg | rlth lstr lstr lstr lstr,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
+,Where is the Beef?,3,nal6 llrl romr | lllr roml nswg nswg | crl3 pswg pswg | fchn fmr4,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
