@@ -101,6 +101,20 @@ class Title(db.Model):
         return "<Title word_id={} word={}>".format(self.word_id, self.word)
 
 
+class Creation(db.Model):
+    """Collects dances created by app for later access.
+    """
+    __tablename__ = "creations"
+
+    dance_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    dance_name = db.Column(db.String(48))
+    choreo = db.Column(db.String(256))
+
+    def __repr__(self):
+
+        return "<Creation dance_id={} dance_name={} choreo={}>".format(self.dance_id, self.dance_name, self.choreo)
+
+
 def connect_to_db(app):
     """Connect the database to the Flask app"""
 
