@@ -367,7 +367,10 @@ def make_moves():
 def do_it_all():
     da_dict = make_moves()
     new_dance = DanceObj(da_dict)
-    return new_dance.dance_moves, da_dict
+
+    the_prog = ", ".join([new_dance.last_move, new_dance.first_move])
+
+    return new_dance.dance_moves, da_dict, the_prog
 
 
 if __name__ == "__main__":

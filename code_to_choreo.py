@@ -16,9 +16,9 @@ def make_title():
 
 def make_dance():
     """Generate dance."""
-    dance_moves, da_dict = algorithm.do_it_all()
+    dance_moves, da_dict, the_prog = algorithm.do_it_all()
     print "DANCE MOVES: ", dance_moves
-    return dance_moves, da_dict
+    return dance_moves, da_dict, the_prog
 
 
 def count_star(dance, da_dict, i):
@@ -42,7 +42,7 @@ def count_star(dance, da_dict, i):
 def simple_trans():
     """Translate dance code into readable choreography.
     """
-    dance, da_dict = make_dance()
+    dance, da_dict, the_prog = make_dance()
     translation = [[], [], [], []]
     print "DANCE IS ", dance
 
@@ -83,13 +83,13 @@ def simple_trans():
             elif beats < 64:
                 translation[3].append(move_name)
             else:
-                print "SOMETHING IS WRONG"
+                print "SOMETHING IS WRONG WITH BUCKETS"
 
         beats = beats + da_dict[dance[i]].beats
         i += 1
 
     print translation
-    return translation
+    return dance, translation, the_prog
 
 
 if __name__ == "__main__":
@@ -99,5 +99,5 @@ if __name__ == "__main__":
 
     doctest.testmod(verbose=True)
 
-    simple_trans()
     make_title()
+    simple_trans()
