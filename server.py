@@ -1,6 +1,6 @@
 from jinja2 import StrictUndefined
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask_debugtoolbar import DebugToolbarExtension
 from model import connect_to_db, db
 from model import Creation
@@ -28,7 +28,6 @@ def generate():
     title = make_title()
     pre_trans, dance, the_prog = make_choreo()
     pre_trans = ",".join(pre_trans)
-    # print dance
 
     db_dance = Creation(dance_name=title, choreo=pre_trans, progression=the_prog)
 
@@ -37,8 +36,10 @@ def generate():
 
     dance_id = db.session.query(Creation.dance_id).filter(Creation.choreo == pre_trans).first()[0]
     print "DANCE_ID IS: ", dance_id
+    dance_url = "dance/{}".format(dance_id)
+    print "REDIRECTING TO ", dance_url
 
-    return render_template("dance.html", dance=dance, title=title)
+    return redirect(dance_url)
 
 
 @app.route('/dance/<int:dance_id>')
