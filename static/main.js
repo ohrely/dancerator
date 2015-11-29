@@ -1,5 +1,6 @@
-var vids = new Object();
+var vids = {};
 
+// TODO modularize via database.
 vids["allemande"] = "allemande.mp4";
 vids["box the gnat"] = "gnat.mp4";
 vids["california"] = "cal.mp4";
@@ -20,6 +21,7 @@ vids["swing"] = "swing.mp4";
 var vidKeys = Object.keys(vids);
 var vidsNum = vidKeys.length;
 
+// Add event listener 
 for (i=0; i < vidsNum; i++){
   $('#choreo').each(function() {
     var text = $(this).html();

@@ -40,6 +40,7 @@ h1.homebod {
 h2 {
     font-size: 250%;
     padding-bottom: .5em;
+    margin-top: 0;
 }
 
 h3#app-name {
@@ -47,7 +48,8 @@ h3#app-name {
     padding-bottom: 5%;
 }
 
-ol {
+ol
+ {
     margin-left:0;
     padding-left: 0;
 }
