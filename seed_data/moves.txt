@@ -47,6 +47,6 @@ lstr,star,left hand star,2,Null,Null,3,3,2
 rstr,star,right hand star,2,Null,Null,1,1,2
 nswg,swing,neighbor swing,4,Null,Null,2310,2011,0
 pswg,swing,partner swing,4,Null,Null,2310,2011,1
-rlth,thru,right/left thru,8,1,Null,2,2,2
+rlth,thru,right/left through,8,1,Null,2,2,2
 pcal,twirl,partner callifornia twirl,4,1,Null,3,1,0
 petr,twirl,petronella,4,Null,Null,3,3,2
