@@ -54,6 +54,13 @@ def display(dance_id):
 
     return render_template("dance.html", dance=dance, title=title)
 
+
+@app.route('/ack')
+def thanks():
+    """Acknowlegements page"""
+
+    return render_template("ack.html")
+
 if __name__ == "__main__":
 
     app.debug = True

@@ -75,3 +75,13 @@ video {
     width: 100%;
     height: auto;
 }
+
+#save {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#fun-title {
+    font-weight: bold;
+}
