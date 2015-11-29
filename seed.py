@@ -172,5 +172,5 @@ if __name__ == "__main__":
 
     add_types("seed_data/types.txt")
     add_moves("seed_data/moves.txt")
-    # seed_dances("seed_data/dances.txt")
+    seed_dances("seed_data/dances.txt")
     # seed_titles("seed_data/dance_names.txt")

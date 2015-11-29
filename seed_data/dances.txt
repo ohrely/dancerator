@@ -32,9 +32,9 @@
 ,Box the gnat Contra,1,nbal nbox pbal pbox | nbal nswg nswg nswg | fal6 pswg pswg | rlth fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/230-box-the-gnat-contra
 ,The Bee Whisperer,1,nbal nbox rstr rstr rstr rstr | nmrm nswg nswg | lal6 pswg pswg | prom fchn,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
 ,Pig in a Poke,2,nbal nswg nswg nswg | crl2 frns fal6 | pbal pswg pswg pswg | cbal petr cbal pcal,0,https://sites.google.com/site/capecontradance/home/contra-dances-by-john-coffman#n
-,Drama in Middle School,1,nbal nswg nswg nswg | crl3 cbal pbox | rstr rstr rstr rstr pswg pswg | llfb fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/318-drama-in-middle-school
+,Drama in Middle School,1,nbal nswg nswg nswg | crl3 pbal pbox | rstr rstr rstr rstr pswg pswg | llfb fchn,0,http://dancevideos.childgrove.org/contra/contra-modern/318-drama-in-middle-school
 ,The Baby Rose,0,nbal nswg nswg nswg | crl3 pdo4 | pbal pswg pswg pswg | fchn lstr lstr lstr lstr,0,http://dancevideos.childgrove.org/contra/contra-modern/238-the-baby-rose
-,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | pbal rlth pbal rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
+,Working Stiff,1,nbal nswg nswg nswg | crl3 pswg | fchn madf | rlth rlth,0,http://dancevideos.childgrove.org/contra/contra-modern/180-working-stiff
 ,First Star,2,nbal nswg nswg nswg | crl4 crr4 | fchn fchn | lstr lstr lstr lstr rstr rstr rstr rstr,0,http://www.childgrove.org/index.php/about-dances/dance-writers/ted-steele-dances
 ,Hay in the Barn,1,nbal nswg nswg nswg | fchn hhey | pbal pswg pswg pswg | fchn hhey,0,http://dancevideos.childgrove.org/contra/contra-modern/142-hay-in-the-barn
 ,E6,0,nbal nswg nswg nswg | hhey fchn | hhey pswg pswg | crl3 cbal arch,0,http://dancevideos.childgrove.org/contra/contra-modern/225-e6
