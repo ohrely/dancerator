@@ -21,7 +21,7 @@ vids["swing"] = "swing.mp4";
 var vidKeys = Object.keys(vids);
 var vidsNum = vidKeys.length;
 
-// Add event listener 
+// Turn moves into child elements
 for (i=0; i < vidsNum; i++){
   $('#choreo').each(function() {
     var text = $(this).html();
@@ -29,11 +29,13 @@ for (i=0; i < vidsNum; i++){
   });
 }
 
+// Add event listeners to moves
 $('.visual_move').on('click', function(evt){
   console.log($(this).data("url"));
   playMove($(this).data("url"));
 });
 
-function playMove(moveId){
-  $('#clips').html('<video src=' + moveId + ' autoplay="True" muted="True" type="video/mp4"></video>');
+// Play clip
+function playMove(moveUrl){
+  $('#clips').html('<video src=' + moveUrl + ' autoplay="True" muted="True" type="video/mp4"></video>');
 }

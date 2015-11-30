@@ -69,8 +69,18 @@ ol > li {
 }
 
 #video {
-    min-height: 200px;
     padding: 0px;
+}
+
+#clear {
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+#tip {
+    z-index: 1;
+    position: absolute;
 }
 
 video {
@@ -86,4 +96,21 @@ video {
 
 #fun-title {
     font-weight: bold;
+}
+
+a:link {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+a:visited {
+    font-style: normal;
+}
+
+a:hover {
+    font-style: normal;
+}
+
+a:active {
+    font-style: normal;
 }
