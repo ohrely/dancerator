@@ -3,6 +3,11 @@
 body {
     font-family: 'Merriweather Sans', sans-serif;
     background-color: transparent;
+    color: #080605;
+}
+
+a, a:visited #app-name {
+    color: #080605;
 }
 
 h1 {
@@ -22,7 +27,7 @@ h1 {
     color: white;
 }
 
-.btn {
+#make-dance {
     margin-top: 3em;
     background-color: transparent;
     outline-width: 2px;
@@ -45,7 +50,7 @@ h2 {
 
 h3#app-name {
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 
 ol
@@ -88,29 +93,32 @@ video {
     height: auto;
 }
 
-#save {
-    padding-top: 20px;
-    text-align: center;
-    font-size: 1.25em;
-}
-
 #fun-title {
     font-weight: bold;
 }
 
-a:link {
-    color: #FF0000;
-    text-decoration: none;
-}
-
-a:visited {
-    font-style: normal;
+a, a:visited, a:active {
+    color: #1471FF;
 }
 
 a:hover {
-    font-style: normal;
+    color: #AD230D;
+    text-decoration: none;
 }
 
-a:active {
-    font-style: normal;
+#bottom-text {
+    text-align: center;
+}
+
+#save {
+    padding: 20px 20px 20px 0px;
+    font-size: 1.25em;
+}
+
+#make-again {
+    background-color: transparent;
+    outline-width: 2px;
+    outline-style: solid;
+    margin-top: 1em;
+    margin-bottom: 4em;
 }
