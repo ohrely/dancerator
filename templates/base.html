@@ -2,7 +2,7 @@
 {% block html %}<html>{% endblock %}
 
 <head>
-    <title>This is an app.</title>
+    <title>The Dancerator</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -14,7 +14,17 @@
 
 <body>
   {% block title %}
-    <a href="/"><h3 id="app-name">The Dancerator</h3></a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+          <a href="/"><img src="../static/logo/logo_black.png" class="logo"></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <hr>
+      </div>
+    </div>
   {% endblock %}
 
   {% block content %} content goes here {% endblock %}

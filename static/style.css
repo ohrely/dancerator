@@ -6,14 +6,18 @@ body {
     color: #080605;
 }
 
-a, a:visited #app-name {
-    color: #080605;
+a, a:visited, a:active {
+    color: #1471FF;
 }
 
-h1 {
-    font-weight: bold;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 500%;
+a:hover {
+    color: #AD230D;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
 }
 
 #homebod {
@@ -48,13 +52,7 @@ h2 {
     margin-top: 0;
 }
 
-h3#app-name {
-    text-align: center;
-    padding-bottom: 3%;
-}
-
-ol
- {
+ol {
     margin-left:0;
     padding-left: 0;
 }
@@ -86,6 +84,11 @@ ol > li {
 #tip {
     z-index: 1;
     position: absolute;
+    padding: 2em;
+}
+
+#blue {
+    color: #1471FF;
 }
 
 video {
@@ -95,15 +98,6 @@ video {
 
 #fun-title {
     font-weight: bold;
-}
-
-a, a:visited, a:active {
-    color: #1471FF;
-}
-
-a:hover {
-    color: #AD230D;
-    text-decoration: none;
 }
 
 #bottom-text {
@@ -119,6 +113,5 @@ a:hover {
     background-color: transparent;
     outline-width: 2px;
     outline-style: solid;
-    margin-top: 1em;
     margin-bottom: 4em;
 }
