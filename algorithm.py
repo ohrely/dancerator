@@ -326,7 +326,6 @@ class DanceObj(object):
         print "PROGRESSION: ", self.last_move, self.first_move, self.start
         print "BEATS TO FILL: ", self.beats_to_fill
 
-        # entire_dance, works = self.build_dance(self.first_move, empty_dance, follow_start, self.last_move)
         entire_dance, works = self.build_dance(curr_key=self.first_move, last_move=self.last_move, start=self.start)
         print "DANCE CREATED: ", entire_dance
 

@@ -168,7 +168,7 @@ if __name__ == "__main__":
     from server import app
     connect_to_db(app)
 
-    doctest.testmod(verbose=True)
+    doctest.testmod(verbose=False)
 
     add_types("seed_data/types.txt")
     add_moves("seed_data/moves.txt")
