@@ -194,7 +194,7 @@ class DanceObj(object):
                 return False
 
     def orphan_wrangling(self, curr_key, dance, curr_len):
-        """
+        """Ensure that non-standalone moves get at least one repeat.
         """
         if self.move_dict[curr_key].orphanable is False:
             curr_values = self.move_dict[curr_key].values
@@ -256,7 +256,7 @@ class DanceObj(object):
             return False
 
     def build_dance(self, curr_key, last_move, start, dance=None):
-        """
+        """Recursively create dance, backtrack if a move doesn't work.
         """
         if not dance:
             dance = []
