@@ -11,12 +11,10 @@ def make_medley(prog=None, total=None):
 
         prog = random_prog[0] + ", " + random_prog[1]
 
-    print prog
-
     if not total:
         total = 3
 
-    return
+    return prog
 
 if __name__ == "__main__":
 
